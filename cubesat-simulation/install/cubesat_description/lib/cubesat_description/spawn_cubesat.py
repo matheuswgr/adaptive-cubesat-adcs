@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-from ctypes.wintypes import PINT
 import os
 import sys
 import rclpy
@@ -16,8 +15,6 @@ def main(args=None):
         with open(sys.argv[1], 'r') as content_file:
             content = content_file.read()
     
-    print(content)
-
     req = SpawnEntity.Request()
     req.name = "cubesat"
     req.xml = content
