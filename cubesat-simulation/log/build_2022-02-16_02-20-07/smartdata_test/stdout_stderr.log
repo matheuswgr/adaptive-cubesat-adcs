@@ -1,0 +1,45 @@
+[35m[1mScanning dependencies of target smartdata_test[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o[0m
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:2:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:[m[K In constructor ‘[01m[KRemoteSmartData<Transducer, Value>::RemoteSmartData(Region*, int, int, std::__cxx11::string, Coordinates*, std::__cxx11::string, std::__cxx11::string)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:39:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Ktype[m[K’
+             if [01;31m[Ktype[m[K == "sensor"
+                [01;31m[K^~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:43:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+             [01;31m[Kelse[m[K if (type == "actuator")
+             [01;31m[K^~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:[m[K In member function ‘[01m[Kvoid RemoteSmartData<Transducer, Value>::decodePacket(std_msgs::msg::Float32MultiArray)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:95:39:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst Float32MultiArray {aka const std_msgs::msg::Float32MultiArray_<std::allocator<void> >}[m[K’
+             this->smartdataValue = msg[01;31m[K->[m[Kdata[6];
+                                       [01;31m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:96:31:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst Float32MultiArray {aka const std_msgs::msg::Float32MultiArray_<std::allocator<void> >}[m[K’
+             this->expiry = msg[01;31m[K->[m[Kdata[7];
+                               [01;31m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:36:109:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRegion::Region(int, int, int, int, int, int, int)[m[K’
+     rclcpp::spin(std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0,0,0,0,0,0,0[01;31m[K)[m[K,1,1000,"testing2",new Coordinates(0,0,0),"testing","sensor"));
+                                                                                                             [01;31m[K^[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:4:0[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:1[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:33:9:[m[K [01;36m[Knote: [m[Kcandidate: Region::Region(float, float, float, float, long unsigned int, long unsigned int)
+         [01;36m[KRegion[m[K(float x, float y, float z, float radius, unsigned long initialTime, unsigned long finalTime)
+         [01;36m[K^~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:33:9:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 7 provided
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:23:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr Region::Region(const Region&)
+ class [01;36m[KRegion[m[K
+       [01;36m[K^~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:23:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 7 provided
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:23:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr Region::Region(Region&&)
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:23:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 7 provided
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:3:0[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<_UNIT, Value>::actuate(const Value&) [with long unsigned int _UNIT = 1; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:39:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h:18:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         virtual void actuate(const Value &[01;35m[Kvalue[m[K){}
+                                           [01;35m[K^~~~~[m[K
+CMakeFiles/smartdata_test.dir/build.make:81: recipe for target 'CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o' failed
+make[2]: *** [CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o] Error 1
+make[1]: *** [CMakeFiles/smartdata_test.dir/all] Error 2
+CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/smartdata_test.dir/all' failed
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

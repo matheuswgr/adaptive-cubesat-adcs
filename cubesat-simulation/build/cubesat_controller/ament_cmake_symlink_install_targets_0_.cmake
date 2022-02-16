@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controller/motor_controller" "TARGETS" "motor_controller" "DESTINATION" "lib/cubesat_controller")

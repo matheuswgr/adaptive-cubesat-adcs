@@ -1,0 +1,47 @@
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:1:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:9:37:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+ class ResponsiveSmartData :  public [01;31m[Krclcpp[m[K::Node, public SmartData<Transducer,Value>
+                                     [01;31m[K^~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:9:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[KNode[m[K’
+ class ResponsiveSmartData :  public rclcpp::[01;31m[KNode[m[K, public SmartData<Transducer,Value>
+                                             [01;31m[K^~~~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:1:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:83:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+ }[01;35m[K;[m[K
+  [01;35m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:35:133:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(std::shared_ptr<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >)[m[K’
+     rclcpp::spin(std::make_shared<ResponsiveSmartData<Dummy_Transducer<1,float>,float>>(1,1,1,1000,"testing",new Coordinates(0,0,0))[01;31m[K)[m[K;
+                                                                                                                                     [01;31m[K^[m[K
+In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144:0[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/remoteSmartdata.h:5[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:2[m[K:
+[01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:44:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)
+ [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+ [01;36m[K^~~~[m[K
+[01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:44:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr {aka std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>}[m[K’
+[01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:48:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin(rclcpp::Node::SharedPtr)
+ [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+ [01;36m[K^~~~[m[K
+[01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:48:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr {aka std::shared_ptr<rclcpp::Node>}[m[K’
+In file included from [01m[K/usr/include/c++/7/bits/stl_list.h:64:0[m[K,
+                 from [01m[K/usr/include/c++/7/list:63[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/smartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:1[m[K:
+/usr/include/c++/7/ext/aligned_buffer.h: In instantiation of ‘[01m[Kstruct __gnu_cxx::__aligned_buffer<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >[m[K’:
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:514:35:[m[K   required from ‘[01m[Kclass std::_Sp_counted_ptr_inplace<ResponsiveSmartData<Dummy_Transducer<1, float>, float>, std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >, (__gnu_cxx::_Lock_policy)2>::_Impl[m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:561:13:[m[K   required from ‘[01m[Kclass std::_Sp_counted_ptr_inplace<ResponsiveSmartData<Dummy_Transducer<1, float>, float>, std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >, (__gnu_cxx::_Lock_policy)2>[m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:634:43:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(std::_Sp_make_shared_tag, _Tp*, const _Alloc&, _Args&& ...) [with _Tp = ResponsiveSmartData<Dummy_Transducer<1, float>, float>; _Alloc = std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >; _Args = {int, int, int, int, const char (&)[8], Coordinates*}; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2][m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1295:35:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_make_shared_tag, const _Alloc&, _Args&& ...) [with _Alloc = std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >; _Args = {int, int, int, int, const char (&)[8], Coordinates*}; _Tp = ResponsiveSmartData<Dummy_Transducer<1, float>, float>; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2][m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:344:64:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_make_shared_tag, const _Alloc&, _Args&& ...) [with _Alloc = std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >; _Args = {int, int, int, int, const char (&)[8], Coordinates*}; _Tp = ResponsiveSmartData<Dummy_Transducer<1, float>, float>][m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:690:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = ResponsiveSmartData<Dummy_Transducer<1, float>, float>; _Alloc = std::allocator<ResponsiveSmartData<Dummy_Transducer<1, float>, float> >; _Args = {int, int, int, int, const char (&)[8], Coordinates*}][m[K’
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:706:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = ResponsiveSmartData<Dummy_Transducer<1, float>, float>; _Args = {int, int, int, int, const char (&)[8], Coordinates*}][m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:35:132:[m[K   required from here
+[01m[K/usr/include/c++/7/ext/aligned_buffer.h:85:34:[m[K [01;31m[Kerror: [m[Kinvalid application of ‘[01m[Ksizeof[m[K’ to incomplete type ‘[01m[KResponsiveSmartData<Dummy_Transducer<1, float>, float>[m[K’
+     : std::aligned_storage<sizeof[01;31m[K([m[K_Tp), std::alignment_of<_Tp>::value>
+                                  [01;31m[K^[m[K
+[01m[K/usr/include/c++/7/ext/aligned_buffer.h:85:34:[m[K [01;31m[Kerror: [m[Kinvalid application of ‘[01m[Ksizeof[m[K’ to incomplete type ‘[01m[KResponsiveSmartData<Dummy_Transducer<1, float>, float>[m[K’
+make[2]: *** [CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o] Error 1
+make[1]: *** [CMakeFiles/smartdata_test.dir/all] Error 2
+make: *** [all] Error 2
