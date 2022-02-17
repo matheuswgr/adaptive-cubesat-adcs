@@ -28,6 +28,8 @@ namespace gazebo
             rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr velocity_publisher;
             rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr current_publisher;
             rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr dutycycle_subscriber;
+            std::string pluginName;
+            std::string jointName;
 
         public: 
             DcMotorPlugin(){}
@@ -35,17 +37,24 @@ namespace gazebo
             virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
             {
                 this->model = _model;
-                this->joint = this->model->GetJoint("reaction_wheel_z_axis_shaft");
+                this->pluginName = _sdf->GetAttribute("name")->GetAsString();
+
+                this->jointName = _sdf->Get<std::string>("motor_shaft_joint");
+
+
+                this->joint = this->model->GetJoint(this->jointName);
                 this->updateConnection = event::Events::ConnectWorldUpdateBegin(std::bind(&DcMotorPlugin::OnUpdate, this));
                 this->last_update_time = this->model->GetWorld()->SimTime().Float();
                 this->ros_node = gazebo_ros::Node::Get(_sdf);
+                RCLCPP_INFO(this->ros_node->get_logger(),"%s", this->jointName);
+
 
                 this->timer = this->ros_node->create_wall_timer(std::chrono::milliseconds(1000), std::bind(&DcMotorPlugin::Publish, this));
 
-                this->velocity_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>("motor_velocity", 10);
-                this->current_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>("motor_current", 10);
+                this->velocity_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>(this->jointName + "/velocity", 10);
+                this->current_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>(this->jointName + "/current", 10);
 
-                this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Int32>("duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
+                this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Int32>(this->jointName + "/duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
 
                 this->dc_motor = new DcMotor(1, 0.001, 0.005,0.1,12);
             }
@@ -64,11 +73,9 @@ namespace gazebo
                 auto message = std_msgs::msg::Float32();
                 message.data = dc_motor->velocity;
 
-                RCLCPP_INFO(this->ros_node->get_logger(), "Publishing velocity: '%f'", message.data);
                 velocity_publisher->publish(message);
 
                 message.data = dc_motor->current;
-                RCLCPP_INFO(this->ros_node->get_logger(), "Publishing current: '%f'", message.data);
                 current_publisher->publish(message);
             }
 

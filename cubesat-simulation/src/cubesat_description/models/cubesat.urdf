@@ -4,9 +4,6 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="cubesat" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <gazebo>
-    <plugin name='dc_motor' filename='/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_gazebo/plugins/dc_motor_plugin/build/libdc_motor_plugin.so'/>
-  </gazebo>
   <link name="frame">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -111,6 +108,46 @@
     <parent link="frame"/>
     <child link="reaction_wheel_z_axis"/>
     <axis xyz="0 0 1"/>
-  </joint>s
+  </joint>
+
+    <gazebo>
+        <plugin name='dc_motor_reaction_wheel_x'
+                filename='/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_gazebo/plugins/dc_motor_plugin/build/libdc_motor_plugin.so'>
+          <motor_shaft_joint>reaction_wheel_x_axis_shaft</motor_shaft_joint>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin name='dc_motor_reaction_wheel_y'
+                filename='/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_gazebo/plugins/dc_motor_plugin/build/libdc_motor_plugin.so'>
+          <motor_shaft_joint>reaction_wheel_y_axis_shaft</motor_shaft_joint>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin name='dc_motor_reaction_wheel_z'
+                filename='/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_gazebo/plugins/dc_motor_plugin/build/libdc_motor_plugin.so'>
+          <motor_shaft_joint>reaction_wheel_z_axis_shaft</motor_shaft_joint>
+        </plugin>
+    </gazebo>
+    
+    <gazebo reference="frame">
+      <turnGravityOff>true</turnGravityOff>
+      <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>1000</update_rate>
+        <visualize>1</visualize>
+        <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>frame</bodyName>
+        <updateRateHZ>1000.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
   
 </robot>

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DLIBBULLET_VERSION=2.87 -DLIBBULLET_VERSION_GT_282 -Ddc_motor_plugin_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/gazebo-9 -I/usr/include/bullet -I/usr/include/simbody -I/usr/include/sdformat-6.3 -I/usr/include/OGRE -I/usr/include/OGRE/Terrain -I/usr/include/OGRE/Paging -I/home/matheuswagner/ros2_dashing/ros2-linux/include -I/opt/ros/dashing/include -isystem /usr/include/ignition/math4 -isystem /usr/include/ignition/transport4 -isystem /usr/include/ignition/msgs1 -isystem /usr/include/ignition/common1 -isystem /usr/include/ignition/fuel_tools1 -isystem /usr/include/uuid
+CXX_INCLUDES = -I/usr/include/gazebo-9 -I/usr/include/bullet -I/usr/include/simbody -I/usr/include/sdformat-6.3 -I/usr/include/OGRE -I/usr/include/OGRE/Terrain -I/usr/include/OGRE/Paging -I/opt/ros/dashing/include -isystem /usr/include/ignition/math4 -isystem /usr/include/ignition/transport4 -isystem /usr/include/ignition/msgs1 -isystem /usr/include/ignition/common1 -isystem /usr/include/ignition/fuel_tools1 -isystem /usr/include/uuid
 
 CXX_FLAGS =  -std=c++11 -std=c++11 -fPIC -Wall -Wextra -Wpedantic -I/usr/include/uuid -I/usr/include/x86_64-linux-gnu -std=gnu++14
 

@@ -24,7 +24,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
   "/usr/include/OGRE/Paging"
-  "/home/matheuswagner/ros2_dashing/ros2-linux/include"
   "/opt/ros/dashing/include"
   "/usr/include/ignition/math4"
   "/usr/include/ignition/transport4"
