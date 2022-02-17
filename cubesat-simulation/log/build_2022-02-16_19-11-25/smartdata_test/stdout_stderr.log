@@ -1,0 +1,162 @@
+[35m[1mScanning dependencies of target smartdata_test[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o[0m
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:2:0[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<_UNIT, Value>::actuate(const Value&) [with long unsigned int _UNIT = 1; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:37:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h:18:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         virtual void actuate(const Value &[01;35m[Kvalue[m[K){}
+                                           [01;35m[K^~~~~[m[K
+[ 50%] [32m[1mLinking CXX executable smartdata_test[0m
+[ 50%] Built target smartdata_test
+[35m[1mScanning dependencies of target remote_smartdata_test[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o[0m
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:3:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:12:69:[m[K [01;31m[Kerror: [m[K‘[01m[KTransducer[m[K’ was not declared in this scope
+ class TransformerSmartData :  public rclcpp::Node, public SmartData<[01;31m[KTransducer[m[K,Value>
+                                                                     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:12:69:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksrand48_r[m[K’
+ class TransformerSmartData :  public rclcpp::Node, public SmartData<[01;36m[KTransducer[m[K,Value>
+                                                                     [01;36m[K^~~~~~~~~~[m[K
+                                                                     [32m[Ksrand48_r[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:12:85:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+ class TransformerSmartData :  public rclcpp::Node, public SmartData<Transducer,Value[01;31m[K>[m[K
+                                                                                     [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:20:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+         std::list<SmartData[01;31m[K>[m[K* inputSmartData;
+                            [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:20:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:20:28:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:21:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+         std::list<SmartData[01;31m[K>[m[K* outputSmartData;
+                            [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:21:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:21:28:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:26:24:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kint[m[K’
+         Transformation([01;31m[Kint[m[K period, std::string nodeName, Coordinates* location, std::list<SmartData>* inputSmartData, std::list<SmartData>* outputSmartData) : Node(nodeName)
+                        [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transformerSmartdata.h:26:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kint[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:39:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+     void transform(std::list<SmartData[01;31m[K>[m[K* inputData, std::list<SmartData>* outputData)
+                                       [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:39:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:72:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+     void transform(std::list<SmartData>* inputData, std::list<SmartData[01;31m[K>[m[K* outputData)
+                                                                        [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:72:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:42:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:[m[K In member function ‘[01m[Kvoid Dummy_Transformation<UNIT, Value>::transform(int*, int*)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:32:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+         for(std::list<SmartData[01;31m[K>[m[K::iterator it=inputData->beign(); it != inputData->end(); ++it)
+                                [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:32:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:32:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kit[m[K’
+         for(std::list<SmartData>::iterator [01;31m[Kit[m[K=inputData->beign(); it != inputData->end(); ++it)
+                                            [01;31m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kit[m[K’ was not declared in this scope
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:44:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator [01;36m[Kit[m[K=inputData->beign(); it != inputData->end(); ++it)
+                                            [01;36m[K^~[m[K
+                                            [32m[Kint[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:58:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kbeign[m[K’ in ‘[01m[KinputData->[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator it=inputData->[01;31m[Kbeign[m[K(); it != inputData->end(); ++it)
+                                                          [01;31m[K^~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:84:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kend[m[K’ in ‘[01m[KinputData->[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->[01;31m[Kend[m[K(); ++it)
+                                                                                    [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:89:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+         for(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->end()[01;31m[K;[m[K ++it)
+                                                                                         [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+         [01;35m[Kfor[m[K(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->end(); ++it)
+         [01;35m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:91:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+         for(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->end(); [01;36m[K++[m[Kit)
+                                                                                           [01;36m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kit[m[K’ was not declared in this scope
+         for(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->end(); ++[01;31m[Kit[m[K)
+                                                                                             [01;31m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:45:93:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator it=inputData->beign(); it != inputData->end(); ++[01;36m[Kit[m[K)
+                                                                                             [01;36m[K^~[m[K
+                                                                                             [32m[Kint[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:32:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+         for(std::list<SmartData[01;31m[K>[m[K::iterator it=outputData->beign(); it != outputData->end(); ++it)
+                                [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:32:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:32:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kit[m[K’
+         for(std::list<SmartData>::iterator [01;31m[Kit[m[K=outputData->beign(); it != outputData->end(); ++it)
+                                            [01;31m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:59:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kbeign[m[K’ in ‘[01m[KoutputData->[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator it=outputData->[01;31m[Kbeign[m[K(); it != outputData->end(); ++it)
+                                                           [01;31m[K^~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:86:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kend[m[K’ in ‘[01m[KoutputData->[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+         for(std::list<SmartData>::iterator it=outputData->beign(); it != outputData->[01;31m[Kend[m[K(); ++it)
+                                                                                      [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:91:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+         for(std::list<SmartData>::iterator it=outputData->beign(); it != outputData->end()[01;31m[K;[m[K ++it)
+                                                                                           [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+         [01;35m[Kfor[m[K(std::list<SmartData>::iterator it=outputData->beign(); it != outputData->end(); ++it)
+         [01;35m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:51:93:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+         for(std::list<SmartData>::iterator it=outputData->beign(); it != outputData->end(); [01;36m[K++[m[Kit)
+                                                                                             [01;36m[K^~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:61:24:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+     std::list<SmartData[01;31m[K>[m[K inputData;
+                        [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:61:24:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:61:24:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:62:24:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::__cxx11::list[m[K’
+     std::list<SmartData[01;31m[K>[m[K outputData;
+                        [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:62:24:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[KSmartData[m[K’
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:62:24:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:64:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::node[m[K’ has not been declared
+     rclcpp::[01;31m[Knode[m[K::Node::SharedPtr sensor = std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),1,1000,"testing_sensor",new Coordinates(0,0,0),"testing_sensor","sensor");
+             [01;31m[K^~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:65:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::node[m[K’ has not been declared
+     rclcpp::[01;31m[Knode[m[K::Node::SharedPtr actuator = std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),1,1000,"testing_actuator",new Coordinates(0,0,0),"testing_actuator","actuator");
+             [01;31m[K^~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:67:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpush_front[m[K’ in ‘[01m[KinputData[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     inputData.[01;31m[Kpush_front[m[K(*sensor);
+               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:67:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor[m[K’ was not declared in this scope
+     inputData.push_front(*[01;31m[Ksensor[m[K);
+                           [01;31m[K^~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:67:27:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kstrstr[m[K’
+     inputData.push_front(*[01;36m[Ksensor[m[K);
+                           [01;36m[K^~~~~~[m[K
+                           [32m[Kstrstr[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:68:16:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpush_front[m[K’ in ‘[01m[KoutputData[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+     outputData.[01;31m[Kpush_front[m[K(*outputData);
+                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:68:28:[m[K [01;31m[Kerror: [m[Kinvalid type argument of unary ‘[01m[K*[m[K’ (have ‘[01m[Kint[m[K’)
+     outputData.push_front(*[01;31m[KoutputData[m[K);
+                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:71:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::node[m[K’ has not been declared
+     rclcpp::[01;31m[Knode[m[K::Node::SharedPtr transformation = std::make_shared<TransformerSmartData<Dummy_Transformation<1,float>,float>>(500,"testing_transform",&inputData,&outputData );
+             [01;31m[K^~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:80:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransformation[m[K’ was not declared in this scope
+         rclcpp::spin_some([01;31m[Ktransformation[m[K);
+                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:80:27:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KDummy_Transformation[m[K’
+         rclcpp::spin_some([01;36m[Ktransformation[m[K);
+                           [01;36m[K^~~~~~~~~~~~~~[m[K
+                           [32m[KDummy_Transformation[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:81:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kactuator[m[K’ was not declared in this scope
+         rclcpp::spin_some([01;31m[Kactuator[m[K);
+                           [01;31m[K^~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp:81:27:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kauto[m[K’
+         rclcpp::spin_some([01;36m[Kactuator[m[K);
+                           [01;36m[K^~~~~~~~[m[K
+                           [32m[Kauto[m[K
+make[2]: *** [CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o] Error 1
+CMakeFiles/remote_smartdata_test.dir/build.make:81: recipe for target 'CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o' failed
+CMakeFiles/Makefile2:151: recipe for target 'CMakeFiles/remote_smartdata_test.dir/all' failed
+make[1]: *** [CMakeFiles/remote_smartdata_test.dir/all] Error 2
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

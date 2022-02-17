@@ -1,0 +1,58 @@
+-- Found ament_cmake: 0.7.6 (/home/matheuswagner/ros2_dashing/ros2-linux/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 0.7.16 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rclcpp/cmake)
+-- Found rosidl_adapter: 0.7.10 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rosidl_adapter/cmake)
+-- Found rmw_implementation_cmake: 0.7.2 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 0.7.1 (/home/matheuswagner/ros2_dashing/ros2-linux/share/std_msgs/cmake)
+-- Found ament_lint_auto: 0.7.12 (/home/matheuswagner/ros2_dashing/ros2-linux/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/smartdata_test
+[35m[1mScanning dependencies of target smartdata_test[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o[0m
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:1:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:[m[K In constructor ‘[01m[KResponsiveSmartData<Transducer, Value>::ResponsiveSmartData(unsigned int, int, int, int, std::__cxx11::string, Coordinates*, std::__cxx11::string)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:56:127:[m[K [01;31m[Kerror: [m[K‘[01m[KRemoteSmartData[m[K’ was not declared in this scope
+                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&[01;31m[KRemoteSmartData[m[K<Transducer, Value>::handleRemoteUpdate, this, std::placeholders::_1));
+                                                                                                                               [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:56:127:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KResponsiveSmartData[m[K’
+                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&[01;36m[KRemoteSmartData[m[K<Transducer, Value>::handleRemoteUpdate, this, std::placeholders::_1));
+                                                                                                                               [01;36m[K^~~~~~~~~~~~~~~[m[K
+                                                                                                                               [32m[KResponsiveSmartData[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:56:153:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&RemoteSmartData<Transducer[01;31m[K,[m[K Value>::handleRemoteUpdate, this, std::placeholders::_1));
+                                                                                                                                                         [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:56:160:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&RemoteSmartData<Transducer, Value[01;31m[K>[m[K::handleRemoteUpdate, this, std::placeholders::_1));
+                                                                                                                                                                [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:56:163:[m[K [01;31m[Kerror: [m[K‘[01m[K::handleRemoteUpdate[m[K’ has not been declared
+                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&RemoteSmartData<Transducer, Value>::[01;31m[KhandleRemoteUpdate[m[K, this, std::placeholders::_1));
+                                                                                                                                                                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:[m[K In member function ‘[01m[KValue ResponsiveSmartData<Transducer, Value>::update()[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:76:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kths[m[K’ was not declared in this scope
+                     this->transducer->actuate([01;31m[Kths[m[K->smartdataValue);
+                                               [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/responsiveSmartdata.h:76:47:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kthis[m[K’
+                     this->transducer->actuate([01;36m[Kths[m[K->smartdataValue);
+                                               [01;36m[K^~~[m[K
+                                               [32m[Kthis[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:2:0[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<_UNIT, Value>::actuate(const Value&) [with long unsigned int _UNIT = 1; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/smartdata_test.cpp:36:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/../../../include/transducer.h:18:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         virtual void actuate(const Value &[01;35m[Kvalue[m[K){}
+                                           [01;35m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o] Error 1
+CMakeFiles/smartdata_test.dir/build.make:81: recipe for target 'CMakeFiles/smartdata_test.dir/src/smartdata_test.cpp.o' failed
+make[1]: *** [CMakeFiles/smartdata_test.dir/all] Error 2
+CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/smartdata_test.dir/all' failed
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

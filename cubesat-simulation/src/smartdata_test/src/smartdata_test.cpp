@@ -31,7 +31,6 @@ private:
 int main(int argc, char * argv[])
 { 
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<ResponsiveSmartData<Dummy_Transducer<1,float>,float>>(1,1,1,1000,"testing",new Coordinates(0,0,0)));
-    rclcpp::shutdown();
+    rclcpp::spin(std::make_shared<ResponsiveSmartData<Dummy_Transducer<1,float>,float>>(1,1,1,1000,"testing_sensor",new Coordinates(0,0,0),""));
     return 0;
 }

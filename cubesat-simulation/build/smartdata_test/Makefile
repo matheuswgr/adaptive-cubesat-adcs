@@ -109,6 +109,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -142,17 +153,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -225,6 +225,46 @@ remote_smartdata_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/remote_smartdata_test.dir/build.make CMakeFiles/remote_smartdata_test.dir/build
 .PHONY : remote_smartdata_test/fast
 
+#=============================================================================
+# Target rules for targets named actuator_smartdata_test
+
+# Build rule for target.
+actuator_smartdata_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 actuator_smartdata_test
+.PHONY : actuator_smartdata_test
+
+# fast build rule for target.
+actuator_smartdata_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actuator_smartdata_test.dir/build.make CMakeFiles/actuator_smartdata_test.dir/build
+.PHONY : actuator_smartdata_test/fast
+
+src/actuator_smartdata_test.o: src/actuator_smartdata_test.cpp.o
+
+.PHONY : src/actuator_smartdata_test.o
+
+# target to build an object file
+src/actuator_smartdata_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actuator_smartdata_test.dir/build.make CMakeFiles/actuator_smartdata_test.dir/src/actuator_smartdata_test.cpp.o
+.PHONY : src/actuator_smartdata_test.cpp.o
+
+src/actuator_smartdata_test.i: src/actuator_smartdata_test.cpp.i
+
+.PHONY : src/actuator_smartdata_test.i
+
+# target to preprocess a source file
+src/actuator_smartdata_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actuator_smartdata_test.dir/build.make CMakeFiles/actuator_smartdata_test.dir/src/actuator_smartdata_test.cpp.i
+.PHONY : src/actuator_smartdata_test.cpp.i
+
+src/actuator_smartdata_test.s: src/actuator_smartdata_test.cpp.s
+
+.PHONY : src/actuator_smartdata_test.s
+
+# target to generate assembly for a file
+src/actuator_smartdata_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/actuator_smartdata_test.dir/build.make CMakeFiles/actuator_smartdata_test.dir/src/actuator_smartdata_test.cpp.s
+.PHONY : src/actuator_smartdata_test.cpp.s
+
 src/remote_smartdata_test.o: src/remote_smartdata_test.cpp.o
 
 .PHONY : src/remote_smartdata_test.o
@@ -293,8 +333,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... uninstall"
+	@echo "... actuator_smartdata_test"
 	@echo "... remote_smartdata_test"
 	@echo "... smartdata_test"
+	@echo "... src/actuator_smartdata_test.o"
+	@echo "... src/actuator_smartdata_test.i"
+	@echo "... src/actuator_smartdata_test.s"
 	@echo "... src/remote_smartdata_test.o"
 	@echo "... src/remote_smartdata_test.i"
 	@echo "... src/remote_smartdata_test.s"

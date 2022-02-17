@@ -347,4 +347,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/smartdata_test.dir/DependInfo.cmake"
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/remote_smartdata_test.dir/DependInfo.cmake"
+  "CMakeFiles/actuator_smartdata_test.dir/DependInfo.cmake"
   )

@@ -2,15 +2,24 @@
 #define __responsive_smartdata_h
 
 #include "smartdata.h"
+#include "transformerSmartdata.h"
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include "std_msgs/msg/multi_array_dimension.hpp"
 
 template<typename Transducer, typename Value>
-class ResponsiveSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
+class ResponsiveSmartData :  public rclcpp::Node, public SmartData
 {
     friend Transducer;
-    friend class TransformerSmartData;  
+    
+    template<typename Transformer, typename ValueList>
+    friend class TransformerSmartData; 
+
+    protected:
+        static const unsigned long UNIT = Transducer::UNIT;
+        static const bool active = Transducer::active;  
+
+        //Value smartdataValue;
 
     private:
 
@@ -22,9 +31,10 @@ class ResponsiveSmartData :  public rclcpp::Node, public SmartData<Transducer,Va
 
         rclcpp::TimerBase::SharedPtr refreshTimer;
         rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr publisher;
+        rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr subscription;
         
     public:
-        ResponsiveSmartData(unsigned int dev, int expiry, int mode, int period, std::string nodeName, Coordinates* location) : Node(nodeName)
+        ResponsiveSmartData(unsigned int dev, int expiry, int mode, int period, std::string nodeName, Coordinates* location, std::string commandsTopic) : Node(nodeName)
         {
             this->transducer = new Transducer();
             this->smartdataValue = transducer->sense();
@@ -35,7 +45,17 @@ class ResponsiveSmartData :  public rclcpp::Node, public SmartData<Transducer,Va
             this->locationCoordinates = location;
             
             this->refreshTimer = this->create_wall_timer(std::chrono::milliseconds(this->period), std::bind(&ResponsiveSmartData<Transducer, Value>::update, this));
-            this->publisher = this->create_publisher<std_msgs::msg::Float32MultiArray>(nodeName, 10);
+            
+            if(mode == 1)
+            {
+                this->publisher = this->create_publisher<std_msgs::msg::Float32MultiArray>(nodeName, 10);
+            }
+            else if (mode == 2)
+            {
+                this->publisher = this->create_publisher<std_msgs::msg::Float32MultiArray>(nodeName, 10);
+                this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(commandsTopic, 10,std::bind(&ResponsiveSmartData<Transducer, Value>::handleRemoteUpdate, this, std::placeholders::_1));
+            }
+            
         }
 
         Value value()
@@ -45,12 +65,23 @@ class ResponsiveSmartData :  public rclcpp::Node, public SmartData<Transducer,Va
 
         Value update()
         {
-            this->smartdataValue = this->transducer->sense();
-            auto message = std_msgs::msg::Float32MultiArray();
-            
-            this->buildPacket(&message);
+            if (mode == 1 || mode == 2)
+            {  
+                if (mode == 1)
+                {
+                    this->smartdataValue = this->transducer->sense();
+                }
+                else
+                {
+                    this->transducer->actuate(this->smartdataValue);
+                }
+                
+                auto message = std_msgs::msg::Float32MultiArray();
+                
+                this->buildPacket(&message);
 
-            this->publisher->publish(message);
+                this->publisher->publish(message);
+            }
 
             return this->smartdataValue;
         }
@@ -80,6 +111,18 @@ class ResponsiveSmartData :  public rclcpp::Node, public SmartData<Transducer,Va
             message->data[5] = (float)this->UNIT;
             message->data[6] = (float)this->smartdataValue;
             message->data[7] = (float)this->expiry;
+        }
+        
+        void decodePacket(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
+        {
+            this->smartdataValue = msg->data[6];
+            this->expiry = msg->data[7];
+        }
+
+        void handleRemoteUpdate(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
+        {
+            this->decodePacket(msg);
+            this->update();
         }
 };
 

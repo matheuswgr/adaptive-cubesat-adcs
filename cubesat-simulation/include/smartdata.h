@@ -41,24 +41,22 @@ class Region
         }
 };
 
-template<typename Transducer, typename Value>
 class SmartData
 {  
-    friend Transducer;
+    template<typename Transformer, typename ValueList>
     friend class TransformerSmartData; 
 
     protected:
-        static const unsigned long UNIT = Transducer::UNIT;
-        static const bool active = Transducer::active;  
-
-        Value smartdataValue;
         Coordinates* locationCoordinates;
         unsigned int period;
         unsigned long currentTime;
+    
+    public:
+        float smartdataValue;
 
     public:
-        virtual Value value() = 0;
-        virtual Value update() = 0;
+        //virtual Value value() = 0;
+        //virtual Value update() = 0;
         virtual void wait() =0;
         
         Coordinates location()

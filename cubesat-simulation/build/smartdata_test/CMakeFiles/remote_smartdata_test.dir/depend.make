@@ -5,6 +5,7 @@ CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/math
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/include/responsiveSmartdata.h
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/include/smartdata.h
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/include/transducer.h
+CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/include/transformerSmartdata.h
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/smartdata_test/src/remote_smartdata_test.cpp
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/ros2_dashing/ros2-linux/include/builtin_interfaces/msg/duration.hpp
 CMakeFiles/remote_smartdata_test.dir/src/remote_smartdata_test.cpp.o: /home/matheuswagner/ros2_dashing/ros2-linux/include/builtin_interfaces/msg/duration__struct.hpp

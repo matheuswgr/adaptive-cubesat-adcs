@@ -2,23 +2,30 @@
 #define __remote_smartdata_h
 
 #include "smartdata.h"
+#include "transformerSmartdata.h"
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include "std_msgs/msg/multi_array_dimension.hpp"
 
 template<typename Transducer, typename Value>
-class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
+class RemoteSmartData :  public rclcpp::Node, public SmartData
 {
     friend Transducer;
+
+    template<typename Transformer, typename ValueList>
     friend class TransformerSmartData; 
+
+    protected:
+        static const unsigned long UNIT = Transducer::UNIT;
+        static const bool active = Transducer::active;  
+
+        //Value smartdataValue;
 
     private:
 
         Transducer* transducer;
         
-        int device;
         unsigned long expiry;        
-        int mode;
         std::string type;
 
         Region *interestRegion;
@@ -30,6 +37,7 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
     public:
         RemoteSmartData(Region *interestRegion, int expiry, int period, std::string nodeName, Coordinates* location, std::string topicRegistered, std::string type) : Node(nodeName)
         {
+            RCLCPP_INFO(this->get_logger(), "here");
             this->transducer = new Transducer();
             this->smartdataValue = transducer->sense();
             this->interestRegion = interestRegion;
@@ -37,12 +45,10 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
             this->period = period;
             this->locationCoordinates = location;
             this->type = type;
-            RCLCPP_INFO(this->get_logger(), "Updated to: '%f'", 0.0);
 
             if (type == "sensor")
             {
                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(topicRegistered, 10,std::bind(&RemoteSmartData<Transducer, Value>::handleRemoteUpdate, this, std::placeholders::_1));
-                        RCLCPP_INFO(this->get_logger(), "Updated to: '%f'",0.1);
 
             }
             else if (type == "actuator")
@@ -68,8 +74,6 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
                 this->publisher->publish(message);
             }
 
-            RCLCPP_INFO(this->get_logger(), "Updated to: '%f'", this->smartdataValue);
-
             return this->smartdataValue;
         }
         
@@ -93,7 +97,7 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
             message->data[0] = (float)this->locationCoordinates->x;
             message->data[1] = (float)this->locationCoordinates->y;
             message->data[2] = (float)this->locationCoordinates->z;
-            message->data[3] = (float)this->device;
+            message->data[3] =  0.0;
             message->data[4] = (float)this->currentTime;
             message->data[5] = (float)this->UNIT;
             message->data[6] = (float)this->smartdataValue;
@@ -108,7 +112,6 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData<Transducer,Value>
 
         void handleRemoteUpdate(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
         {
-            RCLCPP_INFO(this->get_logger(), "Updated to: '%f'",0.2);
             this->decodePacket(msg);
             this->update();
         }

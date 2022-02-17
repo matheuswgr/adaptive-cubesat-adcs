@@ -22,9 +22,12 @@ find_package(std_msgs REQUIRED)
 
 add_executable(smartdata_test src/smartdata_test.cpp)
 add_executable(remote_smartdata_test src/remote_smartdata_test.cpp)
+add_executable(actuator_smartdata_test src/actuator_smartdata_test.cpp)
+
 
 ament_target_dependencies(smartdata_test rclcpp std_msgs)
 ament_target_dependencies(remote_smartdata_test rclcpp std_msgs)
+ament_target_dependencies(actuator_smartdata_test rclcpp std_msgs)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -40,6 +43,7 @@ endif()
 install(TARGETS
   smartdata_test
   remote_smartdata_test
+  actuator_smartdata_test
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
