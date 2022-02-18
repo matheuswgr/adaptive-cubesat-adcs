@@ -1,0 +1,421 @@
+[0.071s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8
+[0.159s] -- Found rclcpp: 0.7.16 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rclcpp/cmake)
+[0.192s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.962s] -- Found rosidl_adapter: 0.7.10 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rosidl_adapter/cmake)
+[1.322s] -- Found rmw_implementation_cmake: 0.7.2 (/home/matheuswagner/ros2_dashing/ros2-linux/share/rmw_implementation_cmake/cmake)
+[1.361s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.431s] -- Looking for pthread.h
+[1.641s] -- Looking for pthread.h - found
+[1.642s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.733s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.734s] -- Looking for pthread_create in pthreads
+[1.784s] -- Looking for pthread_create in pthreads - not found
+[1.784s] -- Looking for pthread_create in pthread
+[1.858s] -- Looking for pthread_create in pthread - found
+[1.859s] -- Found Threads: TRUE  
+[1.946s] -- Found std_msgs: 0.7.1 (/home/matheuswagner/ros2_dashing/ros2-linux/share/std_msgs/cmake)
+[1.963s] -- Found ament_lint_auto: 0.7.12 (/home/matheuswagner/ros2_dashing/ros2-linux/share/ament_lint_auto/cmake)
+[2.131s] -- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+[2.132s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.132s] -- Configured cppcheck include dirs: 
+[2.133s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.133s] -- Added test 'lint_cmake' to check CMake code style
+[2.134s] -- Added test 'uncrustify' to check C / C++ code style
+[2.135s] -- Added test 'xmllint' to check XML markup files
+[2.135s] -- Configuring done
+[2.617s] -- Generating done
+[2.624s] -- Build files have been written to: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors
+[2.671s] [35m[1mScanning dependencies of target imu_adapter[0m
+[4.136s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[5.887s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In constructor ‘[01m[KImuAdapter::ImuAdapter()[m[K’:
+[5.887s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:62:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.888s]        subcription = this->create_subscription<std_msgs::msg::[01;31m[KString[m[K>(
+[5.888s]                                                               [01;31m[K^~~~~~[m[K
+[5.888s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:62:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.888s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:75:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope
+[5.889s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, [01;31m[K_1[m[K));
+[5.889s]                                                                            [01;31m[K^~[m[K
+[5.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:75:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+[5.889s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:2:0[m[K:
+[5.889s] [01m[K/usr/include/c++/7/functional:275:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_1[m[K’
+[5.889s]      extern const _Placeholder<1> [01;36m[K_1[m[K;
+[5.889s]                                   [01;36m[K^~[m[K
+[5.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.889s]        velocityXPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_velocity_x", 10);
+[5.889s]                                                                   [01;31m[K^~~~~~[m[K
+[5.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:94:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [15], int)[m[K’
+[5.890s]        velocityXPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_x", 10[01;31m[K)[m[K;
+[5.890s]                                                                                               [01;31m[K^[m[K
+[5.890s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.890s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.890s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.890s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.890s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.890s]    [01;36m[Kcreate_publisher[m[K(
+[5.890s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.890s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.891s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.891s]        velocityXPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_x", 10[01;31m[K)[m[K;
+[5.891s]                                                                                               [01;31m[K^[m[K
+[5.891s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.891s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.891s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.891s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.891s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.891s]    [01;36m[Kcreate_publisher[m[K(
+[5.891s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.891s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.891s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.892s]        velocityXPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_x", 10[01;31m[K)[m[K;
+[5.892s]                                                                                               [01;31m[K^[m[K
+[5.892s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.892s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.892s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.892s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.892s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.892s]    [01;36m[Kcreate_publisher[m[K(
+[5.892s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.892s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.892s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:24:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.893s]        velocityXPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_x", 10[01;31m[K)[m[K;
+[5.893s]                                                                                               [01;31m[K^[m[K
+[5.893s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.893s]        velocityYPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_velocity_y", 10);
+[5.893s]                                                                   [01;31m[K^~~~~~[m[K
+[5.893s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.893s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:94:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [15], int)[m[K’
+[5.893s]        velocityYPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_y", 10[01;31m[K)[m[K;
+[5.893s]                                                                                               [01;31m[K^[m[K
+[5.893s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.894s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.894s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.894s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.894s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.894s]    [01;36m[Kcreate_publisher[m[K(
+[5.895s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.895s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.895s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.895s]        velocityYPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_y", 10[01;31m[K)[m[K;
+[5.895s]                                                                                               [01;31m[K^[m[K
+[5.895s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.895s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.895s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.895s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.895s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.896s]    [01;36m[Kcreate_publisher[m[K(
+[5.896s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.896s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.896s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.896s]        velocityYPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_y", 10[01;31m[K)[m[K;
+[5.896s]                                                                                               [01;31m[K^[m[K
+[5.896s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.896s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.896s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.896s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.896s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.896s]    [01;36m[Kcreate_publisher[m[K(
+[5.897s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.897s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.897s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.897s]        velocityYPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_y", 10[01;31m[K)[m[K;
+[5.897s]                                                                                               [01;31m[K^[m[K
+[5.897s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.897s]        velocityZPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_velocity_z", 10);
+[5.897s]                                                                   [01;31m[K^~~~~~[m[K
+[5.897s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:66:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.897s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:94:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [15], int)[m[K’
+[5.897s]        velocityZPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_z", 10[01;31m[K)[m[K;
+[5.897s]                                                                                               [01;31m[K^[m[K
+[5.898s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.898s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.898s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.898s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.898s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.898s]    [01;36m[Kcreate_publisher[m[K(
+[5.898s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.898s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.898s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.898s]        velocityZPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_z", 10[01;31m[K)[m[K;
+[5.898s]                                                                                               [01;31m[K^[m[K
+[5.899s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.899s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.899s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.899s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.899s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.899s]    [01;36m[Kcreate_publisher[m[K(
+[5.899s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.899s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.899s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.899s]        velocityZPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_z", 10[01;31m[K)[m[K;
+[5.899s]                                                                                               [01;31m[K^[m[K
+[5.899s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.900s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.900s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.900s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.900s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.900s]    [01;36m[Kcreate_publisher[m[K(
+[5.900s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.900s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.900s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:94:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.900s]        velocityZPublisher = this->create_publisher<std_msgs::msg::String>("imu_velocity_z", 10[01;31m[K)[m[K;
+[5.900s]                                                                                               [01;31m[K^[m[K
+[5.900s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.900s]        orientationOPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_orientation_o", 10);
+[5.901s]                                                                      [01;31m[K^~~~~~[m[K
+[5.901s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.901s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [18], int)[m[K’
+[5.901s]        orientationOPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_o", 10[01;31m[K)[m[K;
+[5.901s]                                                                                                     [01;31m[K^[m[K
+[5.901s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.901s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.901s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.901s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.901s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.901s]    [01;36m[Kcreate_publisher[m[K(
+[5.901s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.902s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.902s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.902s]        orientationOPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_o", 10[01;31m[K)[m[K;
+[5.902s]                                                                                                     [01;31m[K^[m[K
+[5.902s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.902s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.902s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.902s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.902s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.902s]    [01;36m[Kcreate_publisher[m[K(
+[5.902s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.902s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.903s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.903s]        orientationOPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_o", 10[01;31m[K)[m[K;
+[5.903s]                                                                                                     [01;31m[K^[m[K
+[5.903s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.903s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.903s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.903s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.903s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.903s]    [01;36m[Kcreate_publisher[m[K(
+[5.903s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.903s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.903s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:28:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.904s]        orientationOPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_o", 10[01;31m[K)[m[K;
+[5.904s]                                                                                                     [01;31m[K^[m[K
+[5.904s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.904s]        orientationXPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_orientation_x", 10);
+[5.904s]                                                                      [01;31m[K^~~~~~[m[K
+[5.904s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.904s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [18], int)[m[K’
+[5.904s]        orientationXPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_x", 10[01;31m[K)[m[K;
+[5.904s]                                                                                                     [01;31m[K^[m[K
+[5.904s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.904s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.904s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.905s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.905s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.905s]    [01;36m[Kcreate_publisher[m[K(
+[5.905s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.905s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.905s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.905s]        orientationXPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_x", 10[01;31m[K)[m[K;
+[5.905s]                                                                                                     [01;31m[K^[m[K
+[5.905s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.905s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.905s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.905s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.905s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.906s]    [01;36m[Kcreate_publisher[m[K(
+[5.906s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.906s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.906s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.906s]        orientationXPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_x", 10[01;31m[K)[m[K;
+[5.906s]                                                                                                     [01;31m[K^[m[K
+[5.906s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.906s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.906s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.906s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.906s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.907s]    [01;36m[Kcreate_publisher[m[K(
+[5.907s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.907s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.907s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:29:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.907s]        orientationXPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_x", 10[01;31m[K)[m[K;
+[5.907s]                                                                                                     [01;31m[K^[m[K
+[5.907s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.907s]        orientationYPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_orientation_y", 10);
+[5.907s]                                                                      [01;31m[K^~~~~~[m[K
+[5.907s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.907s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [18], int)[m[K’
+[5.907s]        orientationYPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_y", 10[01;31m[K)[m[K;
+[5.907s]                                                                                                     [01;31m[K^[m[K
+[5.908s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.908s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.908s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.908s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.908s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.908s]    [01;36m[Kcreate_publisher[m[K(
+[5.908s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.908s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.908s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.908s]        orientationYPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_y", 10[01;31m[K)[m[K;
+[5.908s]                                                                                                     [01;31m[K^[m[K
+[5.908s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.908s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.909s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.909s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.909s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.909s]    [01;36m[Kcreate_publisher[m[K(
+[5.909s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.909s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.909s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.909s]        orientationYPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_y", 10[01;31m[K)[m[K;
+[5.909s]                                                                                                     [01;31m[K^[m[K
+[5.909s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.909s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.910s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.910s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.910s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.910s]    [01;36m[Kcreate_publisher[m[K(
+[5.910s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.910s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.910s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.910s]        orientationYPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_y", 10[01;31m[K)[m[K;
+[5.910s]                                                                                                     [01;31m[K^[m[K
+[5.910s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.910s]        orientationZPublisher = this->create_publisher<std_msgs::msg::[01;31m[KString[m[K>("imu_orientation_z", 10);
+[5.911s]                                                                      [01;31m[K^~~~~~[m[K
+[5.911s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:69:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[5.911s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [18], int)[m[K’
+[5.911s]        orientationZPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_z", 10[01;31m[K)[m[K;
+[5.911s]                                                                                                     [01;31m[K^[m[K
+[5.911s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.911s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.911s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.911s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.911s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)
+[5.912s]    [01;36m[Kcreate_publisher[m[K(
+[5.912s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.912s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:177:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.912s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.912s]        orientationZPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_z", 10[01;31m[K)[m[K;
+[5.912s]                                                                                                     [01;31m[K^[m[K
+[5.912s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.912s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.912s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.912s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.912s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, size_t, std::shared_ptr<_Up>)
+[5.912s]    [01;36m[Kcreate_publisher[m[K(
+[5.913s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.913s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:198:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.913s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.913s]        orientationZPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_z", 10[01;31m[K)[m[K;
+[5.913s]                                                                                                     [01;31m[K^[m[K
+[5.913s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[5.913s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[5.913s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[5.913s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[5.913s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rmw_qos_profile_t&, std::shared_ptr<_Up>)
+[5.913s]    [01;36m[Kcreate_publisher[m[K(
+[5.914s]    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.914s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:217:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.914s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:31:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.914s]        orientationZPublisher = this->create_publisher<std_msgs::msg::String>("imu_orientation_z", 10[01;31m[K)[m[K;
+[5.914s]                                                                                                     [01;31m[K^[m[K
+[5.914s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu)[m[K’:
+[5.914s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:59:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.914s]        this->BuildEmptyPacket(messageVelocityX[01;31m[K)[m[K;
+[5.914s]                                               [01;31m[K^[m[K
+[5.914s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.914s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.914s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.915s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.915s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:60:23:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.915s]        messageVelocityX[01;31m[K->[m[Kdata[6] = msg->angular_velocity.x
+[5.915s]                        [01;31m[K^~[m[K
+[5.915s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:60:38:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.915s]        messageVelocityX->data[6] = msg[01;31m[K->[m[Kangular_velocity.x
+[5.915s]                                       [01;31m[K^~[m[K
+[5.915s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:64:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.915s]        this->BuildEmptyPacket(messageVelocityY[01;31m[K)[m[K;
+[5.915s]                                               [01;31m[K^[m[K
+[5.915s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.915s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.915s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.916s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.916s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:65:23:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.916s]        messageVelocityY[01;31m[K->[m[Kdata[6] = msg->angular_velocity.y
+[5.916s]                        [01;31m[K^~[m[K
+[5.916s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:65:38:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.916s]        messageVelocityY->data[6] = msg[01;31m[K->[m[Kangular_velocity.y
+[5.916s]                                       [01;31m[K^~[m[K
+[5.916s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:69:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.916s]        this->BuildEmptyPacket(messageVelocityZ[01;31m[K)[m[K;
+[5.916s]                                               [01;31m[K^[m[K
+[5.916s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.916s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.916s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.917s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.917s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:70:23:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.917s]        messageVelocityZ[01;31m[K->[m[Kdata[6] = msg->angular_velocity.z
+[5.917s]                        [01;31m[K^~[m[K
+[5.917s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:70:38:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.917s]        messageVelocityZ->data[6] = msg[01;31m[K->[m[Kangular_velocity.z
+[5.917s]                                       [01;31m[K^~[m[K
+[5.917s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:74:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.917s]        this->BuildEmptyPacket(messageOrientationO[01;31m[K)[m[K;
+[5.917s]                                                  [01;31m[K^[m[K
+[5.917s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.917s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.917s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:75:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.918s]        messageOrientationO[01;31m[K->[m[Kdata[6] = msg->orientation.w
+[5.918s]                           [01;31m[K^~[m[K
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:75:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.918s]        messageOrientationO->data[6] = msg[01;31m[K->[m[Korientation.w
+[5.918s]                                          [01;31m[K^~[m[K
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:79:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.918s]        this->BuildEmptyPacket(messageOrientationX[01;31m[K)[m[K;
+[5.918s]                                                  [01;31m[K^[m[K
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.918s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.918s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.918s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.919s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:80:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.919s]        messageOrientationX[01;31m[K->[m[Kdata[6] = msg->orientation.x
+[5.919s]                           [01;31m[K^~[m[K
+[5.919s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:80:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.919s]        messageOrientationX->data[6] = msg[01;31m[K->[m[Korientation.x
+[5.919s]                                          [01;31m[K^~[m[K
+[5.919s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:84:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.919s]        this->BuildEmptyPacket(messageOrientationY[01;31m[K)[m[K;
+[5.919s]                                                  [01;31m[K^[m[K
+[5.919s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.919s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.919s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.919s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:85:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.920s]        messageOrientationY[01;31m[K->[m[Kdata[6] = msg->orientation.y
+[5.920s]                           [01;31m[K^~[m[K
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:85:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.920s]        messageOrientationY->data[6] = msg[01;31m[K->[m[Korientation.y
+[5.920s]                                          [01;31m[K^~[m[K
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:89:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[5.920s]        this->BuildEmptyPacket(messageOrientationZ[01;31m[K)[m[K;
+[5.920s]                                                  [01;31m[K^[m[K
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[5.920s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[5.920s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[5.920s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:90:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’
+[5.921s]        messageOrientationZ[01;31m[K->[m[Kdata[6] = msg->orientation.z
+[5.921s]                           [01;31m[K^~[m[K
+[5.921s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:90:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Imu {aka sensor_msgs::msg::Imu_<std::allocator<void> >}[m[K’
+[5.921s]        messageOrientationZ->data[6] = msg[01;31m[K->[m[Korientation.z
+[5.921s]                                          [01;31m[K^~[m[K
+[6.162s] CMakeFiles/imu_adapter.dir/build.make:81: recipe for target 'CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o' failed
+[6.162s] make[2]: *** [CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+[6.162s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/imu_adapter.dir/all' failed
+[6.162s] make[1]: *** [CMakeFiles/imu_adapter.dir/all] Error 2
+[6.163s] Makefile:159: recipe for target 'all' failed
+[6.163s] make: *** [all] Error 2
+[6.164s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8

@@ -1,0 +1,57 @@
+[0.065s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8
+[0.090s] [35m[1mScanning dependencies of target imu_adapter[0m
+[0.103s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[1.222s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In constructor ‘[01m[KImuAdapter::ImuAdapter()[m[K’:
+[1.222s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_adapter[m[K’ was not declared in this scope
+[1.222s]        subcription = this->create_subscription<[01;31m[Kimu_adapter[m[K::msg::Imu>(
+[1.222s]                                                [01;31m[K^~~~~~~~~~~[m[K
+[1.223s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:47:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KImuAdapter[m[K’
+[1.223s]        subcription = this->create_subscription<[01;36m[Kimu_adapter[m[K::msg::Imu>(
+[1.223s]                                                [01;36m[K^~~~~~~~~~~[m[K
+[1.223s]                                                [32m[KImuAdapter[m[K
+[1.224s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[1.225s]        subcription = this->[01;31m[Kcreate_subscription<imu_adapter::msg::Imu>[m[K(
+[1.225s]                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.236s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:97:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_subscription<<expression error> >(const char [15], int, std::_Bind_helper<false, void (ImuAdapter::*)(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >), ImuAdapter*, const std::_Placeholder<1>&>::type)[m[K’
+[1.236s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, std::placeholders::_1)[01;31m[K)[m[K;
+[1.236s]                                                                                                  [01;31m[K^[m[K
+[1.236s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[1.236s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[1.236s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[1.237s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[1.237s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:242:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename rclcpp::message_memory_strategy::MessageMemoryStrategy<typename rclcpp::subscription_traits::has_message_type<CallbackT>::type, AllocatorT>::SharedPtr)
+[1.237s]    [01;36m[Kcreate_subscription[m[K(
+[1.237s]    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.237s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:242:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.237s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:97:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.237s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, std::placeholders::_1)[01;31m[K)[m[K;
+[1.237s]                                                                                                  [01;31m[K^[m[K
+[1.237s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[1.237s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[1.237s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[1.237s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[1.238s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:279:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class CallbackT, class Alloc, class SubscriptionT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, CallbackT&&, const rmw_qos_profile_t&, rclcpp::callback_group::CallbackGroup::SharedPtr, bool, typename rclcpp::message_memory_strategy::MessageMemoryStrategy<typename rclcpp::subscription_traits::has_message_type<CallbackT>::type, AllocatorT>::SharedPtr, std::shared_ptr<PublisherT>)
+[1.238s]    [01;36m[Kcreate_subscription[m[K(
+[1.238s]    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.238s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:279:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.238s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:97:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.238s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, std::placeholders::_1)[01;31m[K)[m[K;
+[1.238s]                                                                                                  [01;31m[K^[m[K
+[1.238s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/single_threaded_executor.hpp:28:0[m[K,
+[1.238s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:22[m[K,
+[1.238s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[1.238s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:6[m[K:
+[1.238s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:316:3:[m[K [01;36m[Knote: [m[Kcandidate: template<class MessageT, class CallbackT, class Alloc, class SubscriptionT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, CallbackT&&, size_t, rclcpp::callback_group::CallbackGroup::SharedPtr, bool, typename rclcpp::message_memory_strategy::MessageMemoryStrategy<typename rclcpp::subscription_traits::has_message_type<CallbackT>::type, AllocatorT>::SharedPtr, std::shared_ptr<PublisherT>)
+[1.238s]    [01;36m[Kcreate_subscription[m[K(
+[1.239s]    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.239s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/node.hpp:316:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.239s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:97:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.239s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, std::placeholders::_1)[01;31m[K)[m[K;
+[1.239s]                                                                                                  [01;31m[K^[m[K
+[1.747s] CMakeFiles/imu_adapter.dir/build.make:81: recipe for target 'CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o' failed
+[1.747s] make[2]: *** [CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+[1.747s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/imu_adapter.dir/all' failed
+[1.747s] make[1]: *** [CMakeFiles/imu_adapter.dir/all] Error 2
+[1.748s] Makefile:159: recipe for target 'all' failed
+[1.748s] make: *** [all] Error 2
+[1.749s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8

@@ -1,0 +1,196 @@
+[0.054s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers -- -j8 -l8
+[0.085s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o[0m
+[1.098s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:3:0[m[K:
+[1.098s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:14:9:[m[K [01;31m[Kerror: [m[Kneed ‘[01m[Ktypename[m[K’ before ‘[01m[Krclcpp::Subscription<Message>::SharedPtr[m[K’ because ‘[01m[Krclcpp::Subscription<Message>[m[K’ is a dependent scope
+[1.098s]          [01;31m[Krclcpp[m[K::Subscription<Message>::SharedPtr subscription;
+[1.099s]          [01;31m[K^~~~~~[m[K
+[1.099s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:15:9:[m[K [01;31m[Kerror: [m[Kneed ‘[01m[Ktypename[m[K’ before ‘[01m[Krclcpp::Publisher<Message>::SharedPtr[m[K’ because ‘[01m[Krclcpp::Publisher<Message>[m[K’ is a dependent scope
+[1.099s]          [01;31m[Krclcpp[m[K::Publisher<Message>::SharedPtr publisher;
+[1.099s]          [01;31m[K^~~~~~[m[K
+[1.099s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:24:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs::msg::Float[m[K’ has not been declared
+[1.099s]          void handleValueUpdate(std_msgs::msg::[01;31m[KFloat[m[K::SharedPtr msg)
+[1.099s]                                                [01;31m[K^~~~~[m[K
+[1.099s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:24:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kmsg[m[K’
+[1.099s]          void handleValueUpdate(std_msgs::msg::Float::SharedPtr [01;31m[Kmsg[m[K)
+[1.099s]                                                                 [01;31m[K^~~[m[K
+[1.099s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:[m[K In member function ‘[01m[Kvoid PluginTransducer<_UNIT, Value, Message>::handleValueUpdate(int)[m[K’:
+[1.100s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:26:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[1.100s]              sd->smartdataValue = [01;31m[Kmsg[m[K.data;
+[1.100s]                                   [01;31m[K^~~[m[K
+[1.100s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:26:34:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.100s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rcl_interfaces/msg/intra_process_message.hpp:7:0[m[K,
+[1.100s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/publisher.hpp:31[m[K,
+[1.100s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/callback_group.hpp:24[m[K,
+[1.100s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/any_executable.hpp:20[m[K,
+[1.100s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.100s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executor.hpp:33[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/multi_threaded_executor.hpp:24[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:21[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.101s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.102s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rcl_interfaces/msg/intra_process_message__struct.hpp:36:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[1.102s]  namespace [01;36m[Kmsg[m[K
+[1.102s]            [01;36m[K^~~[m[K
+[1.102s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/builtin_interfaces/msg/time.hpp:7:0[m[K,
+[1.102s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/time.hpp:18[m[K,
+[1.102s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/clock.hpp:21[m[K,
+[1.102s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/timer.hpp:26[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/callback_group.hpp:27[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/any_executable.hpp:20[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executor.hpp:33[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors/multi_threaded_executor.hpp:24[m[K,
+[1.103s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:21[m[K,
+[1.104s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144[m[K,
+[1.104s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.104s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.104s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.104s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/builtin_interfaces/msg/time__struct.hpp:36:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[1.104s]  namespace [01;36m[Kmsg[m[K
+[1.105s]            [01;36m[K^~~[m[K
+[1.105s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/std_msgs/msg/multi_array_layout__struct.hpp:29:0[m[K,
+[1.105s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/std_msgs/msg/float32_multi_array__struct.hpp:29[m[K,
+[1.105s]                  from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/std_msgs/msg/float32_multi_array.hpp:7[m[K,
+[1.105s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:8[m[K,
+[1.105s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.105s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.105s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/std_msgs/msg/multi_array_dimension__struct.hpp:36:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[1.106s]  namespace [01;36m[Kmsg[m[K
+[1.106s]            [01;36m[K^~~[m[K
+[1.106s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:3:0[m[K:
+[1.106s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:[m[K In member function ‘[01m[Kvoid PluginTransducer<_UNIT, Value, Message>::actuate(const Value&)[m[K’:
+[1.106s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:36:43:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.106s]              auto message = std_msgs::msg::[01;31m[KFloat32[m[K();
+[1.106s]                                            [01;31m[K^~~~~~~[m[K
+[1.106s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/pluginTransducer.h:39:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher[m[K’ was not declared in this scope
+[1.106s]              [01;31m[Kpublisher[m[K->publish(message);
+[1.106s]              [01;31m[K^~~~~~~~~[m[K
+[1.106s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.106s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:37:25:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.106s]      auto currentSensorX [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.107s]                          [01;31m[K^~~[m[K
+[1.107s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:25:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.107s]      auto currentSensorY [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/current","sensor");
+[1.107s]                          [01;31m[K^~~[m[K
+[1.107s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:39:25:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.107s]      auto currentSensorZ [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/current","sensor");
+[1.107s]                          [01;31m[K^~~[m[K
+[1.107s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:41:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.107s]      auto wheelSpeedSensorX [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/velocity","sensor");
+[1.107s]                             [01;31m[K^~~[m[K
+[1.107s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:42:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.107s]      auto wheelSpeedSensorY [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/velocity","sensor");
+[1.108s]                             [01;31m[K^~~[m[K
+[1.108s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:43:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.108s]      auto wheelSpeedSensorZ [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/velocity","sensor");
+[1.108s]                             [01;31m[K^~~[m[K
+[1.108s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:45:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.108s]      auto frameSpeedSensorX [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_x",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.108s]                             [01;31m[K^~~[m[K
+[1.108s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:46:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.108s]      auto frameSpeedSensorY [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_y",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.108s]                             [01;31m[K^~~[m[K
+[1.108s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:47:28:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.109s]      auto frameSpeedSensorZ [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_z",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.109s]                             [01;31m[K^~~[m[K
+[1.109s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:49:27:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.109s]      auto frameOrientation [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_o",new Coordinates(0,0,0),"imu_orientation_o","sensor");
+[1.109s]                            [01;31m[K^~~[m[K
+[1.109s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:50:27:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.109s]      auto frameOrientation [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_x",new Coordinates(0,0,0),"imu_orientation_x","sensor");
+[1.109s]                            [01;31m[K^~~[m[K
+[1.109s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:51:27:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.109s]      auto frameOrientation [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_y",new Coordinates(0,0,0),"imu_orientation_y","sensor");
+[1.109s]                            [01;31m[K^~~[m[K
+[1.109s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:52:27:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.110s]      auto frameOrientation [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_z",new Coordinates(0,0,0),"imu_orientation_z","sensor");
+[1.110s]                            [01;31m[K^~~[m[K
+[1.110s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:54:26:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentSensorX[m[K’ was not declared in this scope
+[1.110s]      inputData.push_front([01;31m[KcurrentSensorX[m[K);
+[1.110s]                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.110s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:55:26:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentSensorY[m[K’ was not declared in this scope
+[1.110s]      inputData.push_front([01;31m[KcurrentSensorY[m[K);
+[1.110s]                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.111s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:56:26:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentSensorZ[m[K’ was not declared in this scope
+[1.111s]      inputData.push_front([01;31m[KcurrentSensorZ[m[K);
+[1.111s]                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.113s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:58:26:[m[K [01;31m[Kerror: [m[K‘[01m[KwheelSpeedSensorX[m[K’ was not declared in this scope
+[1.113s]      inputData.push_front([01;31m[KwheelSpeedSensorX[m[K);
+[1.113s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.116s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:59:26:[m[K [01;31m[Kerror: [m[K‘[01m[KwheelSpeedSensorY[m[K’ was not declared in this scope
+[1.116s]      inputData.push_front([01;31m[KwheelSpeedSensorY[m[K);
+[1.117s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.120s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:60:26:[m[K [01;31m[Kerror: [m[K‘[01m[KwheelSpeedSensorZ[m[K’ was not declared in this scope
+[1.120s]      inputData.push_front([01;31m[KwheelSpeedSensorZ[m[K);
+[1.120s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.123s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:62:26:[m[K [01;31m[Kerror: [m[K‘[01m[KframeSpeedSensorX[m[K’ was not declared in this scope
+[1.123s]      inputData.push_front([01;31m[KframeSpeedSensorX[m[K);
+[1.123s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.126s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:63:26:[m[K [01;31m[Kerror: [m[K‘[01m[KframeSpeedSensorY[m[K’ was not declared in this scope
+[1.126s]      inputData.push_front([01;31m[KframeSpeedSensorY[m[K);
+[1.126s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.130s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:64:26:[m[K [01;31m[Kerror: [m[K‘[01m[KframeSpeedSensorZ[m[K’ was not declared in this scope
+[1.130s]      inputData.push_front([01;31m[KframeSpeedSensorZ[m[K);
+[1.130s]                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:66:26:[m[K [01;31m[Kerror: [m[K‘[01m[KframeOrientation[m[K’ was not declared in this scope
+[1.134s]      inputData.push_front([01;31m[KframeOrientation[m[K);
+[1.134s]                           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.138s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:68:26:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.138s]      auto dutyCycleWheelX [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/duty_cycle","sensor");
+[1.138s]                           [01;31m[K^~~[m[K
+[1.138s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:69:26:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.138s]      auto dutyCycleWheelY [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/duty_cycle","sensor");
+[1.138s]                           [01;31m[K^~~[m[K
+[1.139s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:70:26:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kstd[m[K’
+[1.139s]      auto dutyCycleWheelZ [01;31m[Kstd[m[K::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/duty_cycle","sensor");
+[1.139s]                           [01;31m[K^~~[m[K
+[1.139s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:72:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdutyCycleWheelX[m[K’ was not declared in this scope
+[1.139s]      outputData.push_front([01;31m[KdutyCycleWheelX[m[K);
+[1.139s]                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.141s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:73:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdutyCycleWheelY[m[K’ was not declared in this scope
+[1.142s]      outputData.push_front([01;31m[KdutyCycleWheelY[m[K);
+[1.142s]                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.145s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:74:27:[m[K [01;31m[Kerror: [m[K‘[01m[KdutyCycleWheelZ[m[K’ was not declared in this scope
+[1.145s]      outputData.push_front([01;31m[KdutyCycleWheelZ[m[K);
+[1.145s]                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.158s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:84:34:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin_some(std::shared_ptr<SmartData>&)[m[K’
+[1.158s]              rclcpp::spin_some(*it[01;31m[K)[m[K;
+[1.158s]                                   [01;31m[K^[m[K
+[1.158s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144:0[m[K,
+[1.158s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.158s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.158s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.159s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)
+[1.159s]  [01;36m[Kspin_some[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[1.159s]  [01;36m[K^~~~~~~~~[m[K
+[1.159s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr {aka std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>}[m[K’
+[1.159s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::Node::SharedPtr)
+[1.159s]  [01;36m[Kspin_some[m[K(rclcpp::Node::SharedPtr node_ptr);
+[1.159s]  [01;36m[K^~~~~~~~~[m[K
+[1.159s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr {aka std::shared_ptr<rclcpp::Node>}[m[K’
+[1.162s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:91:34:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin_some(std::shared_ptr<SmartData>&)[m[K’
+[1.162s]              rclcpp::spin_some(*it[01;31m[K)[m[K;
+[1.162s]                                   [01;31m[K^[m[K
+[1.162s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144:0[m[K,
+[1.162s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.162s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.162s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.163s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)
+[1.163s]  [01;36m[Kspin_some[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[1.163s]  [01;36m[K^~~~~~~~~[m[K
+[1.163s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr {aka std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>}[m[K’
+[1.163s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::Node::SharedPtr)
+[1.163s]  [01;36m[Kspin_some[m[K(rclcpp::Node::SharedPtr node_ptr);
+[1.163s]  [01;36m[K^~~~~~~~~[m[K
+[1.163s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr {aka std::shared_ptr<rclcpp::Node>}[m[K’
+[1.440s] CMakeFiles/controller_sd.dir/build.make:81: recipe for target 'CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o' failed
+[1.440s] make[2]: *** [CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o] Error 1
+[1.441s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/controller_sd.dir/all' failed
+[1.441s] make[1]: *** [CMakeFiles/controller_sd.dir/all] Error 2
+[1.441s] Makefile:159: recipe for target 'all' failed
+[1.441s] make: *** [all] Error 2
+[1.442s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers -- -j8 -l8

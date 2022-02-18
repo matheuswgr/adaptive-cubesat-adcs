@@ -5,6 +5,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float32.hpp"
+#include "std_msgs/msg/float32_multi_array.hpp"
 #include "std_msgs/msg/int32.hpp"
 #include <chrono>
 #include <functional>
@@ -27,7 +28,7 @@ namespace gazebo
             rclcpp::TimerBase::SharedPtr timer;
             rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr velocity_publisher;
             rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr current_publisher;
-            rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr dutycycle_subscriber;
+            rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr dutycycle_subscriber;
             std::string pluginName;
             std::string jointName;
 
@@ -48,13 +49,10 @@ namespace gazebo
                 this->ros_node = gazebo_ros::Node::Get(_sdf);
                 RCLCPP_INFO(this->ros_node->get_logger(),"%s", this->jointName);
 
-
-                this->timer = this->ros_node->create_wall_timer(std::chrono::milliseconds(1000), std::bind(&DcMotorPlugin::Publish, this));
-
                 this->velocity_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>(this->jointName + "/velocity", 10);
                 this->current_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>(this->jointName + "/current", 10);
 
-                this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Int32>(this->jointName + "/duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
+                this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Float32MultiArray>(this->jointName + "/duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
 
                 this->dc_motor = new DcMotor(1, 0.001, 0.005,0.1,12);
             }
@@ -66,10 +64,6 @@ namespace gazebo
                 float velocity = (float)this->joint->GetVelocity(0);
                 dc_motor->propagateState(time_step,velocity);
                 this->joint->SetForce(0,dc_motor->torque);
-            }
-
-            void Publish()
-            {
                 auto message = std_msgs::msg::Float32();
                 message.data = dc_motor->velocity;
 
@@ -79,9 +73,9 @@ namespace gazebo
                 current_publisher->publish(message);
             }
 
-            void OnDutyCycleUpdate(const std_msgs::msg::Int32::SharedPtr msg)
+            void OnDutyCycleUpdate(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
             {
-                dc_motor->duty_cycle = ((float) msg->data)/100.0;
+                dc_motor->duty_cycle = ((float) msg->data[6])/100.0;
             }
     };
     GZ_REGISTER_MODEL_PLUGIN(DcMotorPlugin)

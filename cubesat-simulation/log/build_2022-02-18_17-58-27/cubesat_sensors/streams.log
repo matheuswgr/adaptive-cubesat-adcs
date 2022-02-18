@@ -1,0 +1,29 @@
+[0.585s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8
+[0.624s] [35m[1mScanning dependencies of target imu_adapter[0m
+[0.641s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[1.856s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In constructor ‘[01m[KImuAdapter::ImuAdapter()[m[K’:
+[1.856s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope
+[1.856s]        [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.857s]        [01;31m[K^~~~~~[m[K
+[1.857s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:25:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktimer_t[m[K’
+[1.857s]        [01;36m[Ktimer_[m[K = this->create_wall_timer(
+[1.857s]        [01;36m[K^~~~~~[m[K
+[1.858s]        [32m[Ktimer_t[m[K
+[1.858s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:26:25:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisher[m[K’ has not been declared
+[1.858s]        500ms, std::bind(&[01;31m[KMinimalPublisher[m[K::timer_callback, this));
+[1.858s]                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::timer_callback()[m[K’:
+[1.889s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:102:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope
+[1.890s]        [01;31m[Kpublisher_[m[K->publish(message);
+[1.890s]        [01;31m[K^~~~~~~~~~[m[K
+[1.892s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:102:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Krcl_publisher_t[m[K’
+[1.892s]        [01;36m[Kpublisher_[m[K->publish(message);
+[1.892s]        [01;36m[K^~~~~~~~~~[m[K
+[1.892s]        [32m[Krcl_publisher_t[m[K
+[2.798s] CMakeFiles/imu_adapter.dir/build.make:81: recipe for target 'CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o' failed
+[2.798s] make[2]: *** [CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+[2.798s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/imu_adapter.dir/all' failed
+[2.798s] Makefile:159: recipe for target 'all' failed
+[2.799s] make[1]: *** [CMakeFiles/imu_adapter.dir/all] Error 2
+[2.799s] make: *** [all] Error 2
+[2.800s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8

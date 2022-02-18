@@ -69,7 +69,10 @@ class ResponsiveSmartData :  public rclcpp::Node, public SmartData
             {  
                 if (mode == 1)
                 {
-                    this->smartdataValue = this->transducer->sense();
+                    if(!this->transducer.active)
+                    {
+                        this->smartdataValue = this->transducer->sense();
+                    }
                 }
                 else
                 {

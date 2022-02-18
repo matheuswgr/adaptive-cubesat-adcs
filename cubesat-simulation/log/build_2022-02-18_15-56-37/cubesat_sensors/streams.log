@@ -1,0 +1,100 @@
+[0.066s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8
+[0.094s] [35m[1mScanning dependencies of target imu_adapter[0m
+[0.107s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[1.205s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In constructor ‘[01m[KImuAdapter::ImuAdapter()[m[K’:
+[1.205s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_adapter[m[K’ was not declared in this scope
+[1.205s]        subcription = this->create_subscription<[01;31m[Kimu_adapter[m[K::msg::Imu>(
+[1.205s]                                                [01;31m[K^~~~~~~~~~~[m[K
+[1.206s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:47:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KImuAdapter[m[K’
+[1.207s]        subcription = this->create_subscription<[01;36m[Kimu_adapter[m[K::msg::Imu>(
+[1.207s]                                                [01;36m[K^~~~~~~~~~~[m[K
+[1.207s]                                                [32m[KImuAdapter[m[K
+[1.207s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:21:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[1.207s]        subcription = this->[01;31m[Kcreate_subscription<imu_adapter::msg::Imu>[m[K(
+[1.207s]                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.207s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:75:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope
+[1.208s]        "imu_plugin/out", 10, std::bind(&ImuAdapter::AtMessageArival, this, [01;31m[K_1[m[K));
+[1.208s]                                                                            [01;31m[K^~[m[K
+[1.208s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:22:75:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+[1.208s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:2:0[m[K:
+[1.208s] [01m[K/usr/include/c++/7/functional:275:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_1[m[K’
+[1.208s]      extern const _Placeholder<1> [01;36m[K_1[m[K;
+[1.208s]                                   [01;36m[K^~[m[K
+[1.227s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.227s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:59:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.227s]        this->BuildEmptyPacket(messageVelocityX[01;31m[K)[m[K;
+[1.228s]                                               [01;31m[K^[m[K
+[1.228s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.228s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.228s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.228s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.228s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:61:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KvelocityXPublisher[m[K’
+[1.228s]        [01;31m[KvelocityXPublisher[m[K->publish(messageVelocityX);
+[1.228s]        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.229s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:64:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.229s]        this->BuildEmptyPacket(messageVelocityY[01;31m[K)[m[K;
+[1.229s]                                               [01;31m[K^[m[K
+[1.229s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.229s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.229s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.229s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.229s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:66:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KvelocityYPublisher[m[K’
+[1.230s]        [01;31m[KvelocityYPublisher[m[K->publish(messageVelocityY);
+[1.230s]        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.230s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:69:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.230s]        this->BuildEmptyPacket(messageVelocityZ[01;31m[K)[m[K;
+[1.230s]                                               [01;31m[K^[m[K
+[1.230s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.230s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.230s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.230s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.231s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:71:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KvelocityZPublisher[m[K’
+[1.231s]        [01;31m[KvelocityZPublisher[m[K->publish(messageVelocityZ);
+[1.231s]        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.231s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:74:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.231s]        this->BuildEmptyPacket(messageOrientationO[01;31m[K)[m[K;
+[1.231s]                                                  [01;31m[K^[m[K
+[1.231s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.231s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.231s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.232s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.232s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:76:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KorientationOPublisher[m[K’
+[1.232s]        [01;31m[KorientationOPublisher[m[K->publish(messageOrientationO);
+[1.232s]        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.232s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:79:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.232s]        this->BuildEmptyPacket(messageOrientationX[01;31m[K)[m[K;
+[1.232s]                                                  [01;31m[K^[m[K
+[1.232s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.232s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.232s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.232s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.233s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:81:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KorientationXPublisher[m[K’
+[1.233s]        [01;31m[KorientationXPublisher[m[K->publish(messageOrientationX);
+[1.233s]        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.233s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:84:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.233s]        this->BuildEmptyPacket(messageOrientationY[01;31m[K)[m[K;
+[1.233s]                                                  [01;31m[K^[m[K
+[1.233s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.233s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.234s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.234s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.234s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:86:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KorientationYPublisher[m[K’
+[1.234s]        [01;31m[KorientationYPublisher[m[K->publish(messageOrientationY);
+[1.234s]        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.234s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:89:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray_<std::allocator<void> >&)[m[K’
+[1.234s]        this->BuildEmptyPacket(messageOrientationZ[01;31m[K)[m[K;
+[1.234s]                                                  [01;31m[K^[m[K
+[1.234s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[Kcandidate: void ImuAdapter::BuildEmptyPacket(std_msgs::msg::Float32MultiArray*)
+[1.235s]      void [01;36m[KBuildEmptyPacket[m[K(std_msgs::msg::Float32MultiArray *message)
+[1.235s]           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.235s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:35:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::Float32MultiArray_<std::allocator<void> >[m[K’ to ‘[01m[Kstd_msgs::msg::Float32MultiArray* {aka std_msgs::msg::Float32MultiArray_<std::allocator<void> >*}[m[K’
+[1.235s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:91:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KorientationZPublisher[m[K’
+[1.235s]        [01;31m[KorientationZPublisher[m[K->publish(messageOrientationZ);
+[1.235s]        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.650s] CMakeFiles/imu_adapter.dir/build.make:81: recipe for target 'CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o' failed
+[1.650s] make[2]: *** [CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+[1.650s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/imu_adapter.dir/all' failed
+[1.650s] make[1]: *** [CMakeFiles/imu_adapter.dir/all] Error 2
+[1.650s] Makefile:159: recipe for target 'all' failed
+[1.650s] make: *** [all] Error 2
+[1.652s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8

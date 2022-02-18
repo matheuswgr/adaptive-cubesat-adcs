@@ -6,6 +6,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include "std_msgs/msg/multi_array_dimension.hpp"
+#include "sensor_msgs/msg/imu.hpp"
+
 
 template<typename Transducer, typename Value>
 class RemoteSmartData :  public rclcpp::Node, public SmartData
@@ -37,9 +39,7 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData
     public:
         RemoteSmartData(Region *interestRegion, int expiry, int period, std::string nodeName, Coordinates* location, std::string topicRegistered, std::string type) : Node(nodeName)
         {
-            RCLCPP_INFO(this->get_logger(), "here");
             this->transducer = new Transducer();
-            this->smartdataValue = transducer->sense();
             this->interestRegion = interestRegion;
             this->expiry = expiry;
             this->period = period;
@@ -49,7 +49,6 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData
             if (type == "sensor")
             {
                 this->subscription = this->create_subscription<std_msgs::msg::Float32MultiArray>(topicRegistered, 10,std::bind(&RemoteSmartData<Transducer, Value>::handleRemoteUpdate, this, std::placeholders::_1));
-
             }
             else if (type == "actuator")
             {
@@ -112,6 +111,7 @@ class RemoteSmartData :  public rclcpp::Node, public SmartData
 
         void handleRemoteUpdate(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
         {
+
             this->decodePacket(msg);
             this->update();
         }

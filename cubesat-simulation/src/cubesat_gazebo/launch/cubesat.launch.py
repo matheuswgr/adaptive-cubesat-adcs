@@ -32,10 +32,18 @@ def generate_launch_description():
         )
     )    
     
-    controller_node = launch_ros.actions.Node(
-            package='cubesat_controller',
-            node_executable='motor_controller',
-            name='motor_controller'
+    imu_adapter = launch_ros.actions.Node(
+            package='cubesat_sensors',
+            node_executable='imu_adapter',
+            name='imu_adapter',
+            parameters=[{'use_sim_time': True}],
+        )
+
+    controller = launch_ros.actions.Node(
+            package='cubesat_controllers',
+            node_executable='controller_sd',
+            name='controller_sd',
+            parameters=[{'use_sim_time': True}],
         )
 
     bag_node = launch.actions.ExecuteProcess(
@@ -46,6 +54,7 @@ def generate_launch_description():
     return LaunchDescription([
         start_world,
         spawn_robot_world,
-        #controller_node,
-        bag_node
+        imu_adapter,
+        controller,
+        #bag_node
     ])

@@ -191,9 +191,15 @@ CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/includ
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32__struct.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32__traits.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32_multi_array.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32_multi_array__struct.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/float32_multi_array__traits.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/int32.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/int32__struct.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/int32__traits.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/multi_array_dimension__struct.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/multi_array_layout__struct.hpp
+CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/multi_array_layout__traits.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/string.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/string__struct.hpp
 CMakeFiles/dc_motor_plugin.dir/src/dc_motor_plugin.cc.o: /opt/ros/dashing/include/std_msgs/msg/string__traits.hpp

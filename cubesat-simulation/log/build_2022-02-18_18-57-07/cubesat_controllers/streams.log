@@ -1,0 +1,155 @@
+[0.063s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers -- -j8 -l8
+[0.086s] [35m[1mScanning dependencies of target controller_sd[0m
+[0.096s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o[0m
+[1.119s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.119s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:43:[m[K [01;31m[Kerror: [m[K‘[01m[KRemoteSmartData[m[K’ was not declared in this scope
+[1.119s]      auto currentSensorX= std::make_shared<[01;31m[KRemoteSmartData[m[K<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.119s]                                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.121s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:43:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KResponsiveSmartData[m[K’
+[1.121s]      auto currentSensorX= std::make_shared<[01;36m[KRemoteSmartData[m[K<Dummy_Transducer<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.122s]                                            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.122s]                                            [32m[KResponsiveSmartData[m[K
+[1.122s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:59:[m[K [01;31m[Kerror: [m[K‘[01m[KDummy_Transducer[m[K’ was not declared in this scope
+[1.122s]      auto currentSensorX= std::make_shared<RemoteSmartData<[01;31m[KDummy_Transducer[m[K<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.123s]                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.125s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:59:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KTransducer[m[K’
+[1.125s]      auto currentSensorX= std::make_shared<RemoteSmartData<[01;36m[KDummy_Transducer[m[K<1,float>,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.125s]                                                            [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.125s]                                                            [32m[KTransducer[m[K
+[1.125s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:31:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.126s]      auto currentSensorX= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.126s]                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.126s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:31:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.126s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:38:85:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.126s]      auto currentSensorX= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/current","sensor");
+[1.126s]                                                                                      [01;31m[K^~~~~[m[K
+[1.126s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:39:31:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.126s]      auto currentSensorY =std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/current","sensor");
+[1.126s]                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.127s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:39:31:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.127s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:39:85:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.127s]      auto currentSensorY =std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/current","sensor");
+[1.127s]                                                                                      [01;31m[K^~~~~[m[K
+[1.127s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:40:31:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.127s]      auto currentSensorZ =std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/current","sensor");
+[1.127s]                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.127s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:40:31:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.127s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:40:85:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.128s]      auto currentSensorZ =std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"current_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/current","sensor");
+[1.128s]                                                                                      [01;31m[K^~~~~[m[K
+[1.128s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:42:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.128s]      auto wheelSpeedSensorX= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/velocity","sensor");
+[1.128s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.128s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:42:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.128s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:42:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.128s]      auto wheelSpeedSensorX= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/velocity","sensor");
+[1.128s]                                                                                         [01;31m[K^~~~~[m[K
+[1.129s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:43:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.129s]      auto wheelSpeedSensorY= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/velocity","sensor");
+[1.129s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.129s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:43:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.129s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:43:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.129s]      auto wheelSpeedSensorY= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/velocity","sensor");
+[1.129s]                                                                                         [01;31m[K^~~~~[m[K
+[1.129s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:44:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.129s]      auto wheelSpeedSensorZ= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/velocity","sensor");
+[1.129s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.130s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:44:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.130s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:44:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.130s]      auto wheelSpeedSensorZ= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"wheel_speed_sensor_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/velocity","sensor");
+[1.130s]                                                                                         [01;31m[K^~~~~[m[K
+[1.130s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:46:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.130s]      auto frameSpeedSensorX= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_x",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.130s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.130s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:46:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.131s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:46:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.131s]      auto frameSpeedSensorX= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_x",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.131s]                                                                                         [01;31m[K^~~~~[m[K
+[1.131s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:47:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.131s]      auto frameSpeedSensorY= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_y",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.131s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.131s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:47:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.131s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:47:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.132s]      auto frameSpeedSensorY= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_y",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.132s]                                                                                         [01;31m[K^~~~~[m[K
+[1.132s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:48:34:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.132s]      auto frameSpeedSensorZ= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_z",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.132s]                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.132s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:48:34:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.132s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:48:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.132s]      auto frameSpeedSensorZ= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"frame_speed_sensor_z",new Coordinates(0,0,0),"imu_plugin/out","sensor");
+[1.133s]                                                                                         [01;31m[K^~~~~[m[K
+[1.133s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:50:33:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.133s]      auto frameOrientation= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_o",new Coordinates(0,0,0),"imu_orientation_o","sensor");
+[1.133s]                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.133s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:50:33:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.133s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:50:87:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.133s]      auto frameOrientation= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_o",new Coordinates(0,0,0),"imu_orientation_o","sensor");
+[1.133s]                                                                                        [01;31m[K^~~~~[m[K
+[1.133s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:51:87:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.133s]      auto frameOrientation= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_x",new Coordinates(0,0,0),"imu_orientation_x","sensor");
+[1.133s]                                                                                        [01;31m[K^~~~~[m[K
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:52:87:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.134s]      auto frameOrientation= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_y",new Coordinates(0,0,0),"imu_orientation_y","sensor");
+[1.134s]                                                                                        [01;31m[K^~~~~[m[K
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:53:87:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.134s]      auto frameOrientation= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"orientation_z",new Coordinates(0,0,0),"imu_orientation_z","sensor");
+[1.134s]                                                                                        [01;31m[K^~~~~[m[K
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:69:32:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.134s]      auto dutyCycleWheelX= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/duty_cycle","sensor");
+[1.134s]                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:69:32:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.134s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:69:86:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.134s]      auto dutyCycleWheelX= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_x",new Coordinates(0,0,0),"dc_motor_reaction_wheel_x/duty_cycle","sensor");
+[1.134s]                                                                                       [01;31m[K^~~~~[m[K
+[1.135s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:70:32:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.135s]      auto dutyCycleWheelY= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/duty_cycle","sensor");
+[1.135s]                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.135s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:70:32:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.135s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:70:86:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.135s]      auto dutyCycleWheelY= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_y",new Coordinates(0,0,0),"dc_motor_reaction_wheel_y/duty_cycle","sensor");
+[1.135s]                                                                                       [01;31m[K^~~~~[m[K
+[1.135s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:71:32:[m[K [01;31m[Kerror: [m[Kunable to deduce ‘[01m[Kauto[m[K’ from ‘[01m[Kmake_shared<<expression error>, float>[m[K’
+[1.135s]      auto dutyCycleWheelZ= std::[01;31m[Kmake_shared<RemoteSmartData<Dummy_Transducer<1,float>[m[K,float>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/duty_cycle","sensor");
+[1.135s]                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.136s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:71:32:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[Kauto[m[K’
+[1.136s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:71:86:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfloat[m[K’
+[1.136s]      auto dutyCycleWheelZ= std::make_shared<RemoteSmartData<Dummy_Transducer<1,float>,[01;31m[Kfloat[m[K>>(new Region(0.0,0.0,0.0,0.0,0,0),2,2,"duty_cycle_z",new Coordinates(0,0,0),"dc_motor_reaction_wheel_z/duty_cycle","sensor");
+[1.136s]                                                                                       [01;31m[K^~~~~[m[K
+[1.136s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:85:33:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin_some(std::__cxx11::list<std::shared_ptr<SmartData> >::iterator&)[m[K’
+[1.136s]              rclcpp::spin_some(it[01;31m[K)[m[K;
+[1.136s]                                  [01;31m[K^[m[K
+[1.136s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144:0[m[K,
+[1.136s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.136s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.136s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.137s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)
+[1.137s]  [01;36m[Kspin_some[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[1.137s]  [01;36m[K^~~~~~~~~[m[K
+[1.137s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::__cxx11::list<std::shared_ptr<SmartData> >::iterator {aka std::_List_iterator<std::shared_ptr<SmartData> >}[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr {aka std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>}[m[K’
+[1.137s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::Node::SharedPtr)
+[1.137s]  [01;36m[Kspin_some[m[K(rclcpp::Node::SharedPtr node_ptr);
+[1.137s]  [01;36m[K^~~~~~~~~[m[K
+[1.137s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::__cxx11::list<std::shared_ptr<SmartData> >::iterator {aka std::_List_iterator<std::shared_ptr<SmartData> >}[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr {aka std::shared_ptr<rclcpp::Node>}[m[K’
+[1.140s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:92:34:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin_some(std::shared_ptr<SmartData>&)[m[K’
+[1.140s]              rclcpp::spin_some(*it[01;31m[K)[m[K;
+[1.140s]                                   [01;31m[K^[m[K
+[1.140s] In file included from [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/rclcpp.hpp:144:0[m[K,
+[1.140s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/transformerSmartdata.h:7[m[K,
+[1.140s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/../../../include/responsiveSmartdata.h:5[m[K,
+[1.140s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_controllers/src/controller_sd.cpp:1[m[K:
+[1.140s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)
+[1.140s]  [01;36m[Kspin_some[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[1.141s]  [01;36m[K^~~~~~~~~[m[K
+[1.141s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:34:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr {aka std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>}[m[K’
+[1.141s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[Kcandidate: void rclcpp::spin_some(rclcpp::Node::SharedPtr)
+[1.141s]  [01;36m[Kspin_some[m[K(rclcpp::Node::SharedPtr node_ptr);
+[1.141s]  [01;36m[K^~~~~~~~~[m[K
+[1.141s] [01m[K/home/matheuswagner/ros2_dashing/ros2-linux/include/rclcpp/executors.hpp:38:1:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<SmartData>[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr {aka std::shared_ptr<rclcpp::Node>}[m[K’
+[1.372s] make[2]: *** [CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o] Error 1
+[1.373s] make[1]: *** [CMakeFiles/controller_sd.dir/all] Error 2
+[1.373s] CMakeFiles/controller_sd.dir/build.make:81: recipe for target 'CMakeFiles/controller_sd.dir/src/controller_sd.cpp.o' failed
+[1.373s] CMakeFiles/Makefile2:95: recipe for target 'CMakeFiles/controller_sd.dir/all' failed
+[1.373s] Makefile:159: recipe for target 'all' failed
+[1.373s] make: *** [all] Error 2
+[1.374s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/dashing /usr/local/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_controllers -- -j8 -l8

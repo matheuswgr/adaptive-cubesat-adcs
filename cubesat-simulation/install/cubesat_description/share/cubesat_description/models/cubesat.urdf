@@ -130,17 +130,18 @@
           <motor_shaft_joint>reaction_wheel_z_axis_shaft</motor_shaft_joint>
         </plugin>
     </gazebo>
+    
     <gazebo reference="frame">
-    <turnGravityOff>true</turnGravityOff>
-    <sensor name="imu_sensor" type="imu">
-      <always_on>true</always_on>
-      <update_rate>1000</update_rate>
-            <visualize>1</visualize>
-            <topic>__default_topic__</topic>
+      <turnGravityOff>true</turnGravityOff>
+      <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>1</visualize>
+        <topic>__default_topic__</topic>
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <topicName>imu</topicName>
         <bodyName>frame</bodyName>
-        <updateRateHZ>1000.0</updateRateHZ>
+        <updateRateHZ>10</updateRateHZ>
         <gaussianNoise>0.0</gaussianNoise>
         <xyzOffset>0 0 0</xyzOffset>
         <rpyOffset>0 0 0</rpyOffset>
@@ -148,4 +149,5 @@
       <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
+  
 </robot>
