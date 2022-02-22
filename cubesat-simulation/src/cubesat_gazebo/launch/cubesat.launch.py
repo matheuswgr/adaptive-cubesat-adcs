@@ -46,6 +46,13 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True}],
         )
 
+    concept = launch_ros.actions.Node(
+            package='concept',
+            node_executable='concept',
+            name='concept',
+            parameters=[{'use_sim_time': True}],
+        )
+
     bag_node = launch.actions.ExecuteProcess(
             cmd=['ros2', 'bag', 'record', '-a'],
             output='log'
@@ -55,6 +62,7 @@ def generate_launch_description():
         start_world,
         spawn_robot_world,
         imu_adapter,
-        controller,
+        #controller,
+        concept,
         #bag_node
     ])

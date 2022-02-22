@@ -1,0 +1,80 @@
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:5:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:[m[K In member function ‘[01m[Kvirtual void ProportionalController::control()[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:36:29:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+             for(int i = 0; [01;35m[Ki<this->inputSmartData->size()[m[K; i++)
+                            [01;35m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:40:29:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+             for(int i = 0; [01;35m[Ki<this->outputSmartData->size()[m[K; i++)
+                            [01;35m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:42:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SmartData[m[K’ has no member named ‘[01m[KsmartdataValue[m[K’; did you mean ‘[01m[KsetValue[m[K’?
+                 this->outputSmartData->at(i)->[01;31m[KsmartdataValue[m[K = this->controlSignal;
+                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+                                               [32m[KsetValue[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:4:0[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h: In instantiation of ‘[01m[Kvoid SmartData::setValue(Value) [with Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/plugin_amperimeter.h:46:50:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:41:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         void setValue(Value [01;35m[Kvalue[m[K){}
+                             [01;35m[K^~~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h: In instantiation of ‘[01m[KValue SmartData::update() [with Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/plugin_amperimeter.h:47:44:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:38:24:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+         Value update(){[01;35m[K}[m[K
+                        [01;35m[K^[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h: In instantiation of ‘[01m[KValue SmartData::value() [with Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/plugin_motor_driver.h:44:58:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:35:23:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+         Value value(){[01;35m[K}[m[K
+                       [01;35m[K^[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1:0[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h: In instantiation of ‘[01m[KLocalSmartData<Value, Transducer>::LocalSmartData(int, long unsigned int, long unsigned int, int) [with Value = float; Transducer = PluginAmperimeter][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:13:71:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:42:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic std::__cxx11::string TopicServer::serve(long unsigned int, int)[m[K’ is private within this context
+             std::string topicName = [01;31m[KTopicServer::serve(this->transducer->UNIT, dev)[m[K;
+                                     [01;31m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:8:0[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/topic_server.h:9:24:[m[K [01;36m[Knote: [m[Kdeclared private here
+     static std::string [01;36m[Kserve[m[K(unsigned long unit, int dev)
+                        [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:42:74:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class PluginAmperimeter {aka class PluginAmperimeter}[m[K’ has no member named ‘[01m[KUNIT[m[K’
+             std::string topicName = TopicServer::serve([01;31m[Kthis->transducer->UNIT[m[K, dev);
+                                                        [01;31m[K~~~~~~~~~~~~~~~~~~^~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h: In instantiation of ‘[01m[Kvoid LocalSmartData<Value, Transducer>::notify() [with Value = float; Transducer = PluginAmperimeter][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:46:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:78:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPluginAmperimeter::handleInterrupt()[m[K’
+                 [01;31m[Kthis[m[K->transducer->handleInterrupt();
+                 [01;31m[K^~~~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:3:0[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/plugin_amperimeter.h:43:14:[m[K [01;36m[Knote: [m[Kcandidate: void PluginAmperimeter::handleInterrupt(std_msgs::msg::Float32_<std::allocator<void> >::SharedPtr)
+         void [01;36m[KhandleInterrupt[m[K(std_msgs::msg::Float32::SharedPtr message)
+              [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/plugin_amperimeter.h:43:14:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:7:0[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 2; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:46:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         virtual void actuate(const Value &[01;35m[Kvalue[m[K){}
+                                           [01;35m[K^~~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 2; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:46:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+         virtual Value sense(){[01;35m[K}[m[K
+                               [01;35m[K^[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 1; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:46:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+         virtual void actuate(const Value &[01;35m[Kvalue[m[K){}
+                                           [01;35m[K^~~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 1; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:46:1:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+         virtual Value sense(){[01;35m[K}[m[K
+                               [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/concept.dir/src/concept.cpp.o] Error 1
+make[1]: *** [CMakeFiles/concept.dir/all] Error 2
+make: *** [all] Error 2
