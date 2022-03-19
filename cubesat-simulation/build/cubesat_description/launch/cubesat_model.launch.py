@@ -1,1 +1,0 @@
-/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_description/launch/cubesat_model.launch.py
