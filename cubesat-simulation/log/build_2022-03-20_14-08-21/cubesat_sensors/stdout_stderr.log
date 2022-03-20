@@ -1,0 +1,74 @@
+[35m[1mScanning dependencies of target imu_adapter[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:118:51:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+  118 |     std::normal_distribution<float> velocityNoise([01;31m[K0.0[m[K,5e-2);
+      |                                                   [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:118:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+  119 |     std::normal_distribution<float> orientationNoise([01;31m[K0.0[m[K,1e-3);
+      |                                                      [01;31m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:61:65:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   61 |       message.data[6] = msg->angular_velocity.x + velocityNoise([01;31m[KvelocityNoiseGenerator[m[K);
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                 [01;31m[K|[m[K
+      |                                                                 [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:118:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::velocityNoise(int)[m[K’
+  118 |     std::normal_distribution<float> velocityNoise([01;36m[K0.0[m[K,5e-2);
+      |                                                   [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:66:74:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   66 |       messageVelocityY.data[6] = msg->angular_velocity.y + velocityNoise([01;31m[KvelocityNoiseGenerator[m[K);
+      |                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                          [01;31m[K|[m[K
+      |                                                                          [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:118:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::velocityNoise(int)[m[K’
+  118 |     std::normal_distribution<float> velocityNoise([01;36m[K0.0[m[K,5e-2);
+      |                                                   [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:71:74:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   71 |       messageVelocityZ.data[6] = msg->angular_velocity.z + velocityNoise([01;31m[KvelocityNoiseGenerator[m[K);
+      |                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                          [01;31m[K|[m[K
+      |                                                                          [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:118:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::velocityNoise(int)[m[K’
+  118 |     std::normal_distribution<float> velocityNoise([01;36m[K0.0[m[K,5e-2);
+      |                                                   [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:78:75:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   78 |       messageOrientationO.data[6] = msg->orientation.w + orientationNoise([01;31m[KorientationNoiseGenerator[m[K);
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [01;31m[K|[m[K
+      |                                                                           [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::orientationNoise(int)[m[K’
+  119 |     std::normal_distribution<float> orientationNoise([01;36m[K0.0[m[K,1e-3);
+      |                                                      [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:82:75:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   82 |       messageOrientationX.data[6] = msg->orientation.x + orientationNoise([01;31m[KorientationNoiseGenerator[m[K);
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [01;31m[K|[m[K
+      |                                                                           [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::orientationNoise(int)[m[K’
+  119 |     std::normal_distribution<float> orientationNoise([01;36m[K0.0[m[K,1e-3);
+      |                                                      [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:86:75:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   86 |       messageOrientationY.data[6] = msg->orientation.y + orientationNoise([01;31m[KorientationNoiseGenerator[m[K);
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [01;31m[K|[m[K
+      |                                                                           [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::orientationNoise(int)[m[K’
+  119 |     std::normal_distribution<float> orientationNoise([01;36m[K0.0[m[K,1e-3);
+      |                                                      [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:90:75:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::default_random_engine[m[K’ {aka ‘[01m[Kstd::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>[m[K’} to ‘[01m[Kint[m[K’
+   90 |       messageOrientationZ.data[6] = msg->orientation.z + orientationNoise([01;31m[KorientationNoiseGenerator[m[K);
+      |                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                           [01;31m[K|[m[K
+      |                                                                           [01;31m[Kstd::default_random_engine {aka std::linear_congruential_engine<long unsigned int, 16807, 0, 2147483647>}[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:119:54:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::normal_distribution<float> ImuAdapter::orientationNoise(int)[m[K’
+  119 |     std::normal_distribution<float> orientationNoise([01;36m[K0.0[m[K,1e-3);
+      |                                                      [01;36m[K^~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:92:41:[m[K [01;31m[Kerror: [m[K‘[01m[KmessageOrientationW[m[K’ was not declared in this scope; did you mean ‘[01m[KmessageOrientationZ[m[K’?
+   92 |       float orientationNorm = std::sqrt([01;31m[KmessageOrientationW[m[K.data[6]*messageOrientationW.data[6] + messageOrientationX.data[6]*messageOrientationX.data[6] +
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                         [32m[KmessageOrientationZ[m[K
+make[2]: *** [CMakeFiles/imu_adapter.dir/build.make:63: CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/imu_adapter.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

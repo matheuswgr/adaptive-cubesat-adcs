@@ -69,12 +69,12 @@ class ControllerSmartData
 
         void notify()
         {
-            RCLCPP_INFO(this->inputSmartData.front()->transducer->get_logger(), "I'm being notified");
+            //RCLCPP_INFO(this->inputSmartData.front()->transducer->get_logger(), "I'm being notified");
         }
 
         void notify(int id)
         {
-            RCLCPP_INFO(this->inputSmartData.front()->transducer->get_logger(), "I'm being notified by %d",id);
+            //RCLCPP_INFO(this->inputSmartData.front()->transducer->get_logger(), "I'm being notified by %d",id);
             this->freshnessList[id] = true;
 
             bool timeToUpdate = true;

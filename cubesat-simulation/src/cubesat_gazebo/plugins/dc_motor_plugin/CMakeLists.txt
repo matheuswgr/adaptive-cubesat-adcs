@@ -21,7 +21,6 @@ find_package(rclcpp REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(std_msgs REQUIRED)
 
-
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -40,6 +39,6 @@ target_link_libraries(dc_motor_plugin ${GAZEBO_LIBRARIES})
 add_library(dc_motor_model SHARED src/dc_motor_model.cc)
 target_link_libraries(dc_motor_model ${GAZEBO_LIBRARIES})
 
-ament_target_dependencies(dc_motor_plugin rclcpp gazebo_ros std_msgs chrono)
+ament_target_dependencies(dc_motor_plugin rclcpp gazebo_ros std_msgs)
 
 ament_package()

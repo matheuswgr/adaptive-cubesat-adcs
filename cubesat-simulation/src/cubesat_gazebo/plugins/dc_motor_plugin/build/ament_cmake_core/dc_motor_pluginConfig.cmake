@@ -26,7 +26,10 @@ if(NOT "" STREQUAL "")
   if(NOT "" STREQUAL "TRUE")
     set(_msg "${_msg} ()")
   endif()
-  message(WARNING "${_msg}")
+  # optionally quiet the deprecation message
+  if(NOT ${dc_motor_plugin_DEPRECATED_QUIET})
+    message(DEPRECATION "${_msg}")
+  endif()
 endif()
 
 # flag package as ament-based to distinguish it after being find_package()-ed

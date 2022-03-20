@@ -10,6 +10,7 @@
 #include <chrono>
 #include <functional>
 #include <memory>
+#include <random>
 
 #include "dc_motor_model.cc"
 
@@ -22,6 +23,7 @@ namespace gazebo
             physics::ModelPtr model;
             float last_update_time;
             float time_step;
+            float elapsed_time;
             event::ConnectionPtr updateConnection;
             gazebo_ros::Node::SharedPtr ros_node;
             physics::JointPtr joint;
@@ -31,12 +33,15 @@ namespace gazebo
             rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr dutycycle_subscriber;
             std::string pluginName;
             std::string jointName;
+            std::default_random_engine velocityNoiseGenerator;
+            std::normal_distribution<float> velocityNoise;
 
         public: 
             DcMotorPlugin(){}
         
             virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
             {
+                velocityNoise = std::normal_distribution<float>(0.0,40);
                 this->model = _model;
                 this->pluginName = _sdf->GetAttribute("name")->GetAsString();
 
@@ -53,24 +58,32 @@ namespace gazebo
                 this->current_publisher = this->ros_node->create_publisher<std_msgs::msg::Float32>(this->jointName + "/current", 10);
 
                 this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Float32>(this->jointName + "/duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
+                RCLCPP_INFO(this->ros_node->get_logger(), "Subscribing to: " + this->jointName + "/duty_cycle");
 
-                this->dc_motor = new DcMotor(16, 26e-6, 8.98e-4,0.902e-4,4);
+                this->dc_motor = new DcMotor(16, 26e-6, 8.98e-4,9.02e-4,4);
+                elapsed_time = 0;
             }
 
             void OnUpdate()
             {  
                 time_step = this->model->GetWorld()->SimTime().Float() - last_update_time;
+                elapsed_time = elapsed_time + time_step;
                 last_update_time = this->model->GetWorld()->SimTime().Float();
                 float velocity = (float)this->joint->GetVelocity(0);
                 dc_motor->propagateState(time_step,velocity);
                 this->joint->SetForce(0,dc_motor->torque);
-                auto message = std_msgs::msg::Float32();
-                message.data = dc_motor->velocity;
 
-                velocity_publisher->publish(message);
+                if(elapsed_time > 1.67e-3)
+                {
+                    elapsed_time = 0;
+                    auto message = std_msgs::msg::Float32();
+                    message.data = dc_motor->velocity + velocityNoise(velocityNoiseGenerator);
 
-                message.data = dc_motor->current;
-                current_publisher->publish(message);
+                    velocity_publisher->publish(message);
+
+                    message.data = dc_motor->current;
+                    current_publisher->publish(message);   
+                }
             }
 
             void OnDutyCycleUpdate(const std_msgs::msg::Float32::SharedPtr msg)

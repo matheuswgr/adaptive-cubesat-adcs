@@ -8,7 +8,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.5"/>
-      <inertia ixx="0.00333" ixy="0.0" ixz="0.0" iyy="0.00333" iyz="0.0" izz="0.00333"/>
+      <inertia ixx="0.00222" ixy="0.0" ixz="0.0" iyy="0.00222" iyz="0.0" izz="0.00222"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -26,7 +26,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.5"/>
-      <inertia ixx="0.0008" ixy="0.0" ixz="0.0" iyy="0.000804166666667" iyz="0.0" izz="0.0016"/>
+      <inertia ixx="0.0000000029" ixy="0.0" ixz="0.0" iyy="0.0000000029" iyz="0.0" izz="0.000000587"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -44,7 +44,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.5"/>
-      <inertia ixx="0.000804166666667" ixy="0.0" ixz="0.0" iyy="0.000804166666667" iyz="0.0" izz="0.0016"/>
+      <inertia ixx="0.0000000029" ixy="0.0" ixz="0.0" iyy="0.0000000029" iyz="0.0" izz="0.000000587"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -62,7 +62,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.5"/>
-      <inertia ixx="0.000804166666667" ixy="0.0" ixz="0.0" iyy="0.000804166666667" iyz="0.0" izz="0.0016"/>
+      <inertia ixx="0.0000000029" ixy="0.0" ixz="0.0" iyy="0.0000000029" iyz="0.0" izz="0.000000587"/>
     </inertial>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -135,14 +135,14 @@
       <turnGravityOff>true</turnGravityOff>
       <sensor name="imu_sensor" type="imu">
         <always_on>true</always_on>
-        <update_rate>1000</update_rate>
+        <update_rate>150</update_rate>
         <visualize>1</visualize>
         <topic>__default_topic__</topic>
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <topicName>imu</topicName>
         <bodyName>frame</bodyName>
-        <updateRateHZ>1000</updateRateHZ>
-        <gaussianNoise>0.0</gaussianNoise>
+        <updateRateHZ>200</updateRateHZ>
+        <gaussianNoise>0.05</gaussianNoise>
         <xyzOffset>0 0 0</xyzOffset>
         <rpyOffset>0 0 0</rpyOffset>
       </plugin>

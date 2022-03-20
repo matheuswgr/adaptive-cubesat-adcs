@@ -32,7 +32,8 @@ class DcMotor
         {
             this->velocity = velocity;
 
-            current = current + time_step*(dc_bus_voltage*duty_cycle - current*resistance - velocity*velocity_constant)/inductance;
+            current = (dc_bus_voltage*duty_cycle - velocity*velocity_constant)/resistance;
+            //current = current + time_step*(dc_bus_voltage*duty_cycle - current*resistance - velocity*velocity_constant)/inductance;
             torque = current*torque_constant;
         }
 };

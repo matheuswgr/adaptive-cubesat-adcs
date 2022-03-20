@@ -35,6 +35,7 @@ class LocalSmartData : public SmartData, public Observer, public Observed<Contro
         Value smartdataValue;
 
     public:
+        LocalSmartData(){}
         LocalSmartData(int dev, unsigned long expiry, unsigned long period, int mode)
         {
             this->dev = dev;
@@ -46,7 +47,7 @@ class LocalSmartData : public SmartData, public Observer, public Observed<Contro
             std::string nodeName = NodeNameServer::serve(this->transducer->unit, dev);
 
             this->transducer = std::make_shared<Transducer>(nodeName);
-            RCLCPP_INFO(this->transducer->get_logger(), "I'm being created");
+            RCLCPP_INFO(this->transducer->get_logger(), "I'm being created with the name: " + nodeName);
             this->transducer->attach(this);
             this->transducer->initialize(topicName);
         }
@@ -59,14 +60,14 @@ class LocalSmartData : public SmartData, public Observer, public Observed<Contro
         Value update()
         {
             this->expiry = this->transducer->get_clock()->now().nanoseconds() + this->period*1000000;
-            RCLCPP_INFO(this->transducer->get_logger(), "I'm about to notify");
+//            RCLCPP_INFO(this->transducer->get_logger(), "I'm about to notify");
             this->notifyObserversWithId();
             return this->smartdataValue;
         }
 
         void setValue(Value value)
         {
-            RCLCPP_INFO(this->transducer->get_logger(), "I'm being written to");
+            //RCLCPP_INFO(this->transducer->get_logger(), "I'm being written to");
             this->smartdataValue = value;
         }
 
@@ -79,6 +80,7 @@ class LocalSmartData : public SmartData, public Observer, public Observed<Contro
         {
             if (COMMANDED == mode)
             {
+                //RCLCPP_INFO(this->transducer->get_logger(), "I'm being notified");
                 this->transducer->handleValueUpdate();
             }
         }

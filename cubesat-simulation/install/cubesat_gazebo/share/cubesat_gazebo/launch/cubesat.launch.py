@@ -53,16 +53,16 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True}],
         )
 
-    bag_node = launch.actions.ExecuteProcess(
-            cmd=['ros2', 'bag', 'record', '-a'],
-            output='log'
-        )
+   # bag_node = launch.actions.ExecuteProcess(
+   #         cmd=['ros2', 'bag', 'record', '-a'],
+   #         output='log'
+   #     )
 
     return LaunchDescription([
         start_world,
         spawn_robot_world,
         imu_adapter,
         #controller,
-        concept,
+        #concept,
         #bag_node
     ])

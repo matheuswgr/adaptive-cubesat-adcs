@@ -1,0 +1,88 @@
+[0.046s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept -- -j8 -l8
+[0.319s] [35m[1mScanning dependencies of target concept[0m
+[0.319s] [ 50%] [32mBuilding CXX object CMakeFiles/concept.dir/src/concept.cpp.o[0m
+[0.462s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:5[m[K,
+[0.462s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:4[m[K,
+[0.462s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+[0.463s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/observer.h:[m[K In member function ‘[01m[Kvirtual void Observer::notify(int)[m[K’:
+[0.463s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/observer.h:8:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.463s]     8 |         virtual void notify([01;35m[Kint id[m[K){};
+[0.463s]       |                             [01;35m[K~~~~^~[m[K
+[0.464s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:4[m[K,
+[0.464s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+[0.464s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual float SmartData::value()[m[K’:
+[0.464s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:34:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[0.464s]    34 |         virtual float value(){[01;35m[K}[m[K
+[0.465s]       |                               [01;35m[K^[m[K
+[0.465s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual float SmartData::update()[m[K’:
+[0.465s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:36:32:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[0.465s]    36 |         virtual float update(){[01;35m[K}[m[K
+[0.466s]       |                                [01;35m[K^[m[K
+[0.466s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual void SmartData::setValue(float)[m[K’:
+[0.466s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:38:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.466s]    38 |         virtual void setValue([01;35m[Kfloat value[m[K){}
+[0.466s]       |                               [01;35m[K~~~~~~^~~~~[m[K
+[3.282s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:3[m[K:
+[3.282s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h: In instantiation of ‘[01m[Kfloat ControllerSmartData<Controller, SDIN, SDOUT>::update() [with Controller = ProportionalController<LocalSmartData<float, PluginAmperimeter>, LocalSmartData<float, PluginMotorDriver> >; SDIN = LocalSmartData<float, PluginAmperimeter>; SDOUT = LocalSmartData<float, PluginMotorDriver>][m[K’:
+[3.282s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h:53:15:[m[K   required from here
+[3.283s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h:55:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<bool, std::allocator<bool> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.283s]    55 |             for(int i = 0; [01;35m[Ki<this->freshnessList.size()[m[K; i++)
+[3.283s]       |                            [01;35m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.283s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h: In instantiation of ‘[01m[Kvoid ControllerSmartData<Controller, SDIN, SDOUT>::notify(int) [with Controller = ProportionalController<LocalSmartData<float, PluginAmperimeter>, LocalSmartData<float, PluginMotorDriver> >; SDIN = LocalSmartData<float, PluginAmperimeter>; SDOUT = LocalSmartData<float, PluginMotorDriver>][m[K’:
+[3.283s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h:75:14:[m[K   required from here
+[3.283s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/controller_smartdata.h:81:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<bool, std::allocator<bool> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.284s]    81 |             for(int i = 0; [01;35m[Ki<this->freshnessList.size()[m[K; i++)
+[3.284s]       |                            [01;35m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.284s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:6[m[K:
+[3.284s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h: In instantiation of ‘[01m[Kvoid ProportionalController<SDIN, SDOUT>::control() [with SDIN = LocalSmartData<float, PluginAmperimeter>; SDOUT = LocalSmartData<float, PluginMotorDriver>][m[K’:
+[3.284s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:34:14:[m[K   required from here
+[3.284s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:36:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::shared_ptr<LocalSmartData<float, PluginAmperimeter> >, std::allocator<std::shared_ptr<LocalSmartData<float, PluginAmperimeter> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.284s]    36 |             for(int i = 0; i<this->inputSmartData.size(); i++)
+[3.285s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/proportional_controller.h:50:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::shared_ptr<LocalSmartData<float, PluginMotorDriver> >, std::allocator<std::shared_ptr<LocalSmartData<float, PluginMotorDriver> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.285s]    50 |             for(int i = 0; i<this->outputSmartData.size(); i++)
+[3.285s] In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/smartdata.h:7[m[K,
+[3.285s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/local_smartdata.h:4[m[K,
+[3.285s]                  from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/concept.cpp:1[m[K:
+[3.285s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 2; Value = float][m[K’:
+[3.286s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:22:[m[K   required from here
+[3.286s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.286s]    17 |         virtual void actuate([01;35m[Kconst Value &value[m[K){}
+[3.286s]       |                              [01;35m[K~~~~~~~~~~~~~^~~~~[m[K
+[3.286s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 2; Value = float][m[K’:
+[3.286s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:23:[m[K   required from here
+[3.286s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[3.287s]    16 |         virtual Value sense(){[01;35m[K}[m[K
+[3.287s]       |                               [01;35m[K^[m[K
+[3.287s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 1; Value = float][m[K’:
+[3.287s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:22:[m[K   required from here
+[3.287s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.287s]    17 |         virtual void actuate([01;35m[Kconst Value &value[m[K){}
+[3.287s]       |                              [01;35m[K~~~~~~~~~~~~~^~~~~[m[K
+[3.288s] /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 1; Value = float][m[K’:
+[3.288s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:23:[m[K   required from here
+[3.288s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/concept/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[3.288s]    16 |         virtual Value sense(){[01;35m[K}[m[K
+[3.288s]       |                               [01;35m[K^[m[K
+[6.149s] [100%] [32m[1mLinking CXX executable concept[0m
+[6.468s] [100%] Built target concept
+[6.481s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept -- -j8 -l8
+[6.507s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --install /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept
+[6.516s] -- Install configuration: ""
+[6.516s] -- Installing: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/lib/concept/concept
+[6.519s] -- Set runtime path of "/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/lib/concept/concept" to ""
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/ament_index/resource_index/package_run_dependencies/concept
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/ament_index/resource_index/parent_prefix_path/concept
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/environment/ament_prefix_path.sh
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/environment/ament_prefix_path.dsv
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/environment/path.sh
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/environment/path.dsv
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/local_setup.bash
+[6.520s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/local_setup.sh
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/local_setup.zsh
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/local_setup.dsv
+[6.521s] -- Installing: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/package.dsv
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/ament_index/resource_index/packages/concept
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/cmake/conceptConfig.cmake
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/cmake/conceptConfig-version.cmake
+[6.521s] -- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept/share/concept/package.xml
+[6.524s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --install /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/concept

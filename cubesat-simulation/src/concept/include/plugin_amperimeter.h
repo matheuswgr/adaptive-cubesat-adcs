@@ -3,7 +3,7 @@
 
 #include "transducer.h"
 #include "smartdata.h"
-#include "../../../include/units.h"
+#include "units.h"
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include <string>
@@ -44,7 +44,6 @@ class PluginAmperimeter : public Transducer<A, float>, public rclcpp::Node
 
         void handleInterrupt(std_msgs::msg::Float32::SharedPtr message)
         {
-            RCLCPP_INFO(this->get_logger(), "I'm about to update");
             this->value = message->data;
             this->smartdata->setValue(this->value);
             this->smartdata->update();

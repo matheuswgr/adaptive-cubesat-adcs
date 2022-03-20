@@ -1,7 +1,7 @@
 #ifndef __node_name_server_h
 #define __node_name_server_h
 
-#include "../../../include/units.h"
+#include "units.h"
 #include <string>
 
 class NodeNameServer
