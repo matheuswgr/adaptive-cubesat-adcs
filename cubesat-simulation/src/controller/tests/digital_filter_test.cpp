@@ -9,7 +9,7 @@ int main()
     DigitalFilter digital_filter(inputGains, ouputGains,5,4);
 
     const int samples = 30;
-    float input = 1;
+    float input = 0.1;
     
     float outputSignal[samples];
 

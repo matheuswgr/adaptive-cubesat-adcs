@@ -5,6 +5,7 @@
 #include <eigen3/Eigen/Sparse>
 #include <math.h>
 
+
 class SlidingModeController
 {
     private:
@@ -26,6 +27,7 @@ class SlidingModeController
     }
 
     public: 
+        SlidingModeController(){}
         SlidingModeController(float boundaryLayerThickness, float errorLimit,Eigen::Matrix<float,3,3> slidingVariableGain,  Eigen::Matrix<float,3,3> controllerGain, FeedbackLinearizationControler feedbackLinearizationController)
         {
             this->boundaryLayerThickness = boundaryLayerThickness;

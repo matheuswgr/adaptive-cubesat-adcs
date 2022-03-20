@@ -2,40 +2,48 @@
 #define __hybrid_controller_h
 
 #include "observer.h"
+#include "signal_monitor.h"
+#include "adaptive_controller_system.h"
+#include "nonadaptive_control_system.h"
+#include "sliding_controller_system.h"
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
+#include <iostream>
 
 class HybridController : public Observer
 {
     private:
-        ControlSystem controlSystem;
-        ControlSystem[] availableControlSystems;
         int currentState;
-        SignalMonitor signalMonitor;
+        SignalMonitor<HybridController>*  signalMonitor;
         Eigen::Matrix<float,7,1> trackingError;
         Eigen::Matrix<float,3,1> referenceVelocity;
-        Eigen::Quaternion referenceAttitude;
+        Eigen::Quaternion<float> referenceAttitude;
+        AdaptiveControllerControlSystem adaptiveController; 
+        NonAdaptiveControlSystem controller; 
+        SlidingControllerSystem slidingController;
+
 
     public:
         Eigen::Matrix<float,3,1> controlSignal;
     
     public:
-        HybridController(SignalMonitor signalMonitor, ControlSystem[] controlSystems)
+        HybridController(SignalMonitor<HybridController>* signalMonitor, AdaptiveControllerControlSystem adaptiveController, 
+                            NonAdaptiveControlSystem controller, SlidingControllerSystem slidingController)
         {
-            signalMonitor.startObserving();
+            this->adaptiveController = adaptiveController;
+            this->controller = controller;
+            this->slidingController = slidingController;
+            signalMonitor->startObserving(this);
             this->signalMonitor = signalMonitor;
             currentState = 2;
-            controlSystem = controlSystems[currentState];
-            this->controlSystems = controlSystems;
         }
 
-        void SetReferenceSignal(float satelliteVelocityX, float satelliteVelocityY, float satelliteVelocityZ, 
-                                        Eigen::Quaternion attitude)
+        void SetReferenceAttitude(Eigen::Quaternion<float> attitude)
         {
-            referenceVelocity(0) = satelliteVelocityX
-            referenceVelocity(1) = satelliteVelocityY;
-            referenceVelocity(2) = satelliteVelocityZ;
             referenceAttitude = attitude;
+            controller.SetReferenceAttitude(attitude);
+            adaptiveController.SetReferenceAttitude(attitude);
+            slidingController.SetReferenceAttitude(attitude);
         }
 
         void UpdateControlSignal(float satelliteVelocityX, float satelliteVelocityY, float satelliteVelocityZ, 
@@ -52,15 +60,15 @@ class HybridController : public Observer
             reactionWheelVelocities(1) = reactionWheelVelocityY;
             reactionWheelVelocities(2) = reactionWheelVelocityZ;
 
-            Eigen::Quaternion attitudeError = referenceAttitude.conjugate()*attitude;
+            Eigen::Quaternion<float> attitudeError = referenceAttitude.conjugate()*attitude;
 
-            trackingError(0) = referenceVelocty(0) - satelliteVelocityX
-            trackingError(1) = referenceVelocty(1) - satelliteVelocityY;
-            trackingError(2) = referenceVelocty(2) - satelliteVelocityZ;
-            trackingError(3) = attitudeError.w;
-            trackingError(4) = attitudeError.x;
-            trackingError(5) = attitudeError.y;
-            trackingError(6) = attitudeError.z;
+            trackingError(0) = satelliteVelocityX;
+            trackingError(1) = satelliteVelocityY;
+            trackingError(2) = satelliteVelocityZ;
+            trackingError(3) = attitudeError.w();
+            trackingError(4) = attitudeError.x();
+            trackingError(5) = attitudeError.y();
+            trackingError(6) = attitudeError.z();
 
             Eigen::Matrix<float,10,1> measurement;
 
@@ -70,33 +78,50 @@ class HybridController : public Observer
             measurement(3) = reactionWheelVelocityX;
             measurement(4) = reactionWheelVelocityY;
             measurement(5) = reactionWheelVelocityZ;
-            measurement(6) = attitude.w;
-            measurement(7) = attitude.x;
-            measurement(8) = attitude.y;
-            measurement(9) = attitude.z;
-
-            signalMonitor.UpdateTrackingErrorStatisics(trackingError);
-            signalMonitor.UpdateSensorMeasurementsStatistics(measurement);
-
-
-            controlSystem.UpdateControlSignal(satelliteVelocity, reactionWheelVelocities,attitude, attitudeError );
+            measurement(6) = attitude.w();
+            measurement(7) = attitude.x();
+            measurement(8) = attitude.y();
+            measurement(9) = attitude.z();
             
-            controlSignal = controlSystem.controlSignal;
+            signalMonitor->UpdateSensorMeasurementsStatistics(measurement);
+            signalMonitor->UpdateTrackingErrorStatisics(trackingError);
+
+            if(currentState == 1)
+            {
+                controller.UpdateControlSignal(satelliteVelocity, reactionWheelVelocities, attitude);
+                controlSignal = controller.controlSignal;
+            }
+            else
+            if(currentState == 2)
+            {
+                adaptiveController.UpdateControlSignal(satelliteVelocity, reactionWheelVelocities, attitude);
+                controlSignal = adaptiveController.controlSignal;
+            }
+            else
+            if(currentState == 3)
+            {
+                slidingController.UpdateControlSignal(satelliteVelocity, reactionWheelVelocities, attitude);
+                controlSignal = adaptiveController.controlSignal;
+            }   
         }
 
         void notify()
         {
-            int event = signalMonitor.lastEvent;
+            int event = signalMonitor->lastEvent;
             
             if(currentState == 1)
             {
                 if(event == 2)
                 {
-                    controlSystem = controlSystems[2];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 2;
+                    currentState = 2;
+                    //controlSystem = controlSystems[2];
                 }
                 if(event == 3)
                 {
-                    controlSystem = controlSystems[3];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 3;
+                    currentState = 3;
+                    //controlSystem = controlSystems[3];
                 }
             }
 
@@ -104,11 +129,15 @@ class HybridController : public Observer
             {
                 if(event == 1)
                 {
-                    controlSystem = controlSystems[1];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 1;
+                    currentState = 1;
+                    //controlSystem = controlSystems[1];
                 }
                 if(event == 3)
                 {
-                    controlSystem = controlSystems[3];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 3;
+                    currentState = 3;
+                    //controlSystem = controlSystems[3];
                 }
             }
 
@@ -116,14 +145,19 @@ class HybridController : public Observer
             {
                 if(event == 1)
                 {
-                    controlSystem = controlSystems[1];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 1;
+                    currentState = 1;
+                    //controlSystem = controlSystems[1];
                 }
                 if(event == 2)
                 {
-                    controlSystem = controlSystems[2];
+                    std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 2;
+                    currentState = 2;
+                    //controlSystem = controlSystems[2];
                 }
             }
+            std::cout << "\n";
         }
-}
+};
 
 #endif

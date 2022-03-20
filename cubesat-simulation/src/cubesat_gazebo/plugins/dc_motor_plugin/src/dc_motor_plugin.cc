@@ -54,7 +54,7 @@ namespace gazebo
 
                 this->dutycycle_subscriber = this->ros_node->create_subscription<std_msgs::msg::Float32>(this->jointName + "/duty_cycle", 10,std::bind(&DcMotorPlugin::OnDutyCycleUpdate, this, std::placeholders::_1));
 
-                this->dc_motor = new DcMotor(1, 0.001, 0.005,0.1,12);
+                this->dc_motor = new DcMotor(16, 26e-6, 8.98e-4,0.902e-4,4);
             }
 
             void OnUpdate()

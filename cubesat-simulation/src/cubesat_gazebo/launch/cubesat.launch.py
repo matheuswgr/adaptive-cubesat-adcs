@@ -53,10 +53,10 @@ def generate_launch_description():
    #         parameters=[{'use_sim_time': True}],
    #     )
 
-    bag_node = launch.actions.ExecuteProcess(
-            cmd=['ros2', 'bag', 'record', '-a'],
-            output='log'
-        )
+   # bag_node = launch.actions.ExecuteProcess(
+   #         cmd=['ros2', 'bag', 'record', '-a'],
+   #         output='log'
+   #     )
 
     return LaunchDescription([
         start_world,

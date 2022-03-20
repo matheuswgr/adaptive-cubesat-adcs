@@ -45,43 +45,43 @@ class AdaptiveSquareRootCubatureKalmanFilter
 
         void UpdateAverageInnovationCovariance(Eigen::Matrix<float,10,10> sample)
         {
-            averageInnovationCovariance = 0.998*averageInnovationCovariance + (1-0.998)*sample;
+            averageInnovationCovariance = (1-0.2)*averageInnovationCovariance + 0.2*sample;
         }
 
         void UpdateAveragePriorCovariance(Eigen::Matrix<float,10,10> sample)
         {
             Eigen::LLT<Eigen::Matrix<float,10,10>> CholeskyDecomposition;
 
-            Eigen::Matrix<float,10,10> buffer = sample*sample.transpose() - posteriorPredictedErrorCovariance*posteriorPredictedErrorCovariance.transpose();
-            Eigen::Matrix<float,10,10> bufferTriangular = Eigen::Matrix<float, 10,10>(CholeskyDecomposition.compute(buffer).matrixL());
+            Eigen::Matrix<float,10,10> bufferTriangular = Eigen::Matrix<float, 10,10>(CholeskyDecomposition.compute(sample).matrixL());
 
-            averagePrioPredictedCovariance = 0.998*averagePrioPredictedCovariance + (1-0.998)*bufferTriangular;
+            averagePrioPredictedCovariance = (1-0.2)*averagePrioPredictedCovariance + 0.2*bufferTriangular;
         }
 
         void UpdateMeasurementCovariance(Eigen::Matrix<float,10,1> sample)
         {
             Eigen::LLT<Eigen::Matrix<float,10,10>> bufferLLT(averageInnovationCovariance);
             bufferLLT.rankUpdate(sample,-1);
-            measurementNoiseCovariance = measurementNoiseCovariance*0.998 - (1-0.998)*(Eigen::Matrix<float,10,10>(bufferLLT.matrixL()).transpose());
+            measurementNoiseCovariance = measurementNoiseCovariance*(1-0.25) + 0.25*(Eigen::Matrix<float,10,10>(bufferLLT.matrixL()).transpose());
         }
 
         void UpdateProcessCovariance(Eigen::Matrix<float,10,1> sample)
         {
             Eigen::LLT<Eigen::Matrix<float,10,10>> bufferLLT(averagePrioPredictedCovariance);
             bufferLLT.rankUpdate(sample,-1);
-            processNoiseCovariance = processNoiseCovariance*0.998 - (1-0.998)*(Eigen::Matrix<float,10,10>(bufferLLT.matrixL()).transpose());
+            processNoiseCovariance = processNoiseCovariance*(1-0.25) + 0.25*(Eigen::Matrix<float,10,10>(bufferLLT.matrixL()).transpose());
         }
 
 
     public:
+        AdaptiveSquareRootCubatureKalmanFilter(){}
         AdaptiveSquareRootCubatureKalmanFilter(SatelliteModel satelliteModel, Eigen::Matrix<float,10,1> initialState)
         {
             this->satelliteModel = satelliteModel;
             this->updatedState = initialState;
 
-            measurementNoiseCovariance = 1e-10*Eigen::Matrix<float,10,10>::Identity();
-            processNoiseCovariance = 1e-10*Eigen::Matrix<float,10,10>::Identity();
-            posteriorPredictedErrorCovariance = 1e-10*Eigen::Matrix<float,10,10>::Identity();
+            measurementNoiseCovariance = 1e-5*Eigen::Matrix<float,10,10>::Identity();
+            processNoiseCovariance = 1e-5*Eigen::Matrix<float,10,10>::Identity();
+            posteriorPredictedErrorCovariance = 1e-3*Eigen::Matrix<float,10,10>::Identity();
 
             Eigen::LLT<Eigen::Matrix<float,10,10>> CholeskyDecomposition;
 
@@ -104,6 +104,14 @@ class AdaptiveSquareRootCubatureKalmanFilter
             predictedState = Eigen::Matrix<float,10,1>::Zero();
 
             Eigen::Matrix<float, 10,30> matrixForDecomposition;
+
+            //std::cout << "measurement: " << measurement.transpose() << "\n";
+            //std::cout << "prior: " << measurement.transpose() << "\n";
+            //std::cout << "measurement cov: " << measurementNoiseCovariance.diagonal().transpose() << "\n";
+            //std::cout << "process cov: " << processNoiseCovariance.diagonal().transpose() << "\n";
+            //std::cout << "innovation avg: " << averageInnovationCovariance.diagonal().transpose() << "\n";
+            //std::cout << "prior avg: " << averagePrioPredictedCovariance.diagonal().transpose() << "\n";
+            //std::cout << "input: " << controlInput.transpose() << "\n";
 
             for(int i = 0; i<points;i++)
             {
@@ -131,6 +139,7 @@ class AdaptiveSquareRootCubatureKalmanFilter
 
                 predictedState = predictedState + (1.0/points)*cubaturePoints[i];
             }
+            //std::cout << "prediction: " << predictedState.transpose() << "\n";
 
             for(int i = 0; i<points; i++)
             {
@@ -144,7 +153,11 @@ class AdaptiveSquareRootCubatureKalmanFilter
             
             priorPredictedErrorCovariance = QRDecomposition(matrixForDecomposition);
 
+            //std::cout << "priorPredictedErrorCovariance: \n" << priorPredictedErrorCovariance << "\n\n";
+
             matrixForDecomposition = Eigen::Matrix<float, 10,30>::Zero();
+
+            predictedMeasurement = Eigen::Matrix<float,10,1>::Zero();
 
             for(int i = 0; i<points;i++)
             {
@@ -153,7 +166,10 @@ class AdaptiveSquareRootCubatureKalmanFilter
                 predictedMeasurement = predictedMeasurement + (1.0/points)*cubaturePoints[i];
             }
 
-            for(int i = 0; i<points; i++)
+            //std::cout << "predictedMeasurement: " << predictedMeasurement.transpose() << "\n";
+            //std::cout << "innovation: " << measurement.transpose()-predictedMeasurement.transpose() << "\n";
+
+            /*for(int i = 0; i<points; i++)
             {
                 matrixForDecomposition.col(i) = (cubaturePoints[i] - predictedMeasurement)/(std::sqrt(20.0));
             }
@@ -161,18 +177,23 @@ class AdaptiveSquareRootCubatureKalmanFilter
             for(int i = 20; i<30; i++)
             {
                 matrixForDecomposition.col(i) = measurementNoiseCovariance.col(i-20);
-            }
-            
-            innovationCovariance = QRDecomposition(matrixForDecomposition);
+            }*/
+            Eigen::LLT<Eigen::Matrix<float,10,10>> CholeskyDecomposition;
+
+            innovationCovariance = Eigen::Matrix<float, 10,10>(CholeskyDecomposition.compute(priorPredictedErrorCovariance*priorPredictedErrorCovariance.transpose() + measurementNoiseCovariance*measurementNoiseCovariance.transpose()).matrixL());
+
+            //std::cout << "innovationCovariance: \n" << innovationCovariance << "\n\n";
+            //std::cout << "innovationCovariaceInverse: \n" << innovationCovariance.transpose().inverse() << "\n\n";
+
         
-            matrixForDecomposition = Eigen::Matrix<float, 10,30>::Zero();
+            /*matrixForDecomposition = Eigen::Matrix<float, 10,30>::Zero();
 
             for(int i = 0; i<points; i++)
             {
                 matrixForDecomposition.col(i) = (cubaturePoints[i] - predictedMeasurement)/(std::sqrt(20.0));
-            }
+            }*/
             
-            UpdateAverageInnovationCovariance(QRDecomposition(matrixForDecomposition));
+            UpdateAverageInnovationCovariance(Eigen::Matrix<float, 10,10>(CholeskyDecomposition.compute(priorPredictedErrorCovariance*priorPredictedErrorCovariance.transpose()).matrixL()));
 
             Eigen::Matrix<float, 10,20> weightedCenteredStateForCrossCovariance;
 
@@ -182,11 +203,21 @@ class AdaptiveSquareRootCubatureKalmanFilter
             }
 
             crossCovariance = weightedCenteredStateForCrossCovariance*(weightedCenteredStateForCrossCovariance.transpose());
-            kalmanGain = (crossCovariance*(innovationCovariance.transpose().inverse()))*innovationCovariance.inverse();
-            
+
+            //std::cout << "crossCovariance: \n" << crossCovariance << "\n\n";
+
+            //std::cout << "1. : \n" << crossCovariance*(innovationCovariance.inverse()) << "\n\n";
+
+            //std::cout << "2. : \n" << innovationCovariance.inverse()*innovationCovariance.transpose().inverse() << "\n\n";
+
+
+            kalmanGain = (crossCovariance*(innovationCovariance.inverse()))*innovationCovariance.transpose().inverse();
+
+            //std::cout << "kalmanGain: \n" << kalmanGain << "\n\n";
+
             updatedState = predictedState + kalmanGain*(measurement - predictedMeasurement);
 
-            matrixForDecomposition << (weightedCenteredStateForCrossCovariance - kalmanGain*weightedCenteredStateForCrossCovariance), priorPredictedErrorCovariance;
+            matrixForDecomposition << (weightedCenteredStateForCrossCovariance - kalmanGain*weightedCenteredStateForCrossCovariance), kalmanGain*priorPredictedErrorCovariance;
         
             posteriorPredictedErrorCovariance = QRDecomposition(matrixForDecomposition);
 
@@ -197,7 +228,7 @@ class AdaptiveSquareRootCubatureKalmanFilter
                         
             Eigen::Matrix<float, 10,10> priorPredictedErrorCovarianceNoQ = QRDecomposition(matrixForDecomposition);
 
-            UpdateAveragePriorCovariance(priorPredictedErrorCovarianceNoQ);
+            UpdateAveragePriorCovariance(kalmanGain*priorPredictedErrorCovariance*priorPredictedErrorCovariance.transpose());
 
             Eigen::Quaternion<float> updatedQuaternion(Eigen::Matrix<float,4,1>(updatedState(Eigen::seq(6,9))));
 
@@ -208,6 +239,9 @@ class AdaptiveSquareRootCubatureKalmanFilter
             updatedState(8) = updatedQuaternion.y();
             updatedState(9) = updatedQuaternion.z();
 
+
+            //std::cout << "update: " << updatedState.transpose() << "\n\n";
+
             return updatedState;
 
         }
@@ -216,16 +250,11 @@ class AdaptiveSquareRootCubatureKalmanFilter
         {
             float forgettingFactor = 0.998;
             
-            averageInnovation = averageInnovation*forgettingFactor + (1-forgettingFactor)*(measurement-predictedMeasurement);
-            averageResidual = averageResidual*forgettingFactor + (1-forgettingFactor)*(updatedState-predictedState);
-            std::cout << measurementNoiseCovariance<< "\n\n";
-            std::cout <<processNoiseCovariance<< "\n\n";
+            averageInnovation = averageInnovation*(1-forgettingFactor) + forgettingFactor*(measurement-predictedMeasurement);
+            averageResidual = averageResidual*(1-forgettingFactor)  + forgettingFactor*(updatedState-predictedState);
 
             UpdateMeasurementCovariance(averageInnovation-(measurement-predictedMeasurement));
             UpdateProcessCovariance(averageInnovation-(measurement-predictedMeasurement));
-
-            std::cout << measurementNoiseCovariance<< "\n\n";
-            std::cout << processNoiseCovariance << "\n\n";
         }
 };
 

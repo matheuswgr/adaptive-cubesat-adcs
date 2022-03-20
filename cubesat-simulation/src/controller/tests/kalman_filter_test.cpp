@@ -37,10 +37,15 @@ int main()
     initialState(8) = attitude.y();
     initialState(9) = attitude.z();
 
-    Eigen::Matrix<float,3,1> controlTorque {0.2e-4,0.2e-4,0.2e-3};
+    Eigen::Matrix<float,3,1> controlTorque {0,0,0};
 
     AdaptiveSquareRootCubatureKalmanFilter kalmanFilter(satelliteModel,initialState);
     std::cout << initialState << "\n\n";
-    std::cout << kalmanFilter.Filter(initialState + disturbance, controlTorque) << "\n\n";
+
+    for(int i = 0; i< 10; i++)
+    {
+        std::cout << kalmanFilter.Filter(initialState + disturbance, controlTorque) << "\n\n";
+    }
+
     kalmanFilter.UpdateCovarianceMatrices(initialState + disturbance);
 }

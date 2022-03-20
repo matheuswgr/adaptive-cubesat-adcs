@@ -12,6 +12,7 @@ class Observed
         int id = -1;
 
     public:
+        Observed(){}
         void startObserving(T* observer)
         {
             observers.push_front(observer);

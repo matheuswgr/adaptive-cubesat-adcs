@@ -3,10 +3,11 @@
 
 #include "circular_buffer.h"
 #include "iterator.h"
+#include <iostream>
 
 class DigitalFilter
 {
-    private:
+    public:
         float* inputGains;
         float* outputGains;
         float outputSignal;
@@ -16,10 +17,22 @@ class DigitalFilter
     public:
         DigitalFilter(float* inputGains, float* outputGains, int inputOrder, int outputOrder)
         {
-            this->inputGains = inputGains;
-            this->outputGains = outputGains;
+            this-> inputGains = new float[inputOrder];
+            this-> outputGains = new float[outputOrder];
+
             inputBuffer = new CircularBuffer<float>(inputOrder);
             outputBuffer = new CircularBuffer<float>(outputOrder);
+
+            for(int i = 0; i < inputOrder; i++)
+            {
+                this->inputGains[i] = inputGains[i];
+                inputBuffer->push(0.0);
+            }
+            for(int i = 0; i < outputOrder; i++)
+            {
+                this->outputGains[i] = outputGains[i];
+                outputBuffer->push(0.0);
+            }
         }
         
         float Filter(float input)
@@ -32,7 +45,7 @@ class DigitalFilter
             while(iterator->hasNext())
             {
                 float* bufferContent = iterator->next();
-                outputSignal = outputSignal + inputGains[i]*(*bufferContent);
+                outputSignal = outputSignal + this->inputGains[i]*(*bufferContent);
                 i++;
             }
 
