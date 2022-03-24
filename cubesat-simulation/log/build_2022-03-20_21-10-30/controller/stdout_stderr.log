@@ -1,0 +1,79 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller
+[35m[1mScanning dependencies of target controller[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:5[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:[m[K In member function ‘[01m[Kvirtual void Observer::notify(int)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:8:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+    8 |         virtual void notify([01;35m[Kint id[m[K){};
+      |                             [01;35m[K~~~~^~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1[m[K:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual float SmartData::value()[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:34:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   34 |         virtual float value(){[01;35m[K}[m[K
+      |                               [01;35m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual float SmartData::update()[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:32:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   36 |         virtual float update(){[01;35m[K}[m[K
+      |                                [01;35m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:[m[K In member function ‘[01m[Kvirtual void SmartData::setValue(float)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:38:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   38 |         virtual void setValue([01;35m[Kfloat value[m[K){}
+      |                               [01;35m[K~~~~~~^~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ has not been declared
+   17 |     [01;31m[KEigen[m[K::Matrix<float,1,2> q;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:17:19:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kfloat[m[K’
+   17 |     Eigen::Matrix<[01;31m[Kfloat[m[K,1,2> q;
+      |                   [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1[m[K:
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 2; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   17 |         virtual void actuate([01;35m[Kconst Value &value[m[K){}
+      |                              [01;35m[K~~~~~~~~~~~~~^~~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 2; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   16 |         virtual Value sense(){[01;35m[K}[m[K
+      |                               [01;35m[K^[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of ‘[01m[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 3; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   17 |         virtual void actuate([01;35m[Kconst Value &value[m[K){}
+      |                              [01;35m[K~~~~~~~~~~~~~^~~~~[m[K
+/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of ‘[01m[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 3; Value = float][m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:[m[K   required from here
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   16 |         virtual Value sense(){[01;35m[K}[m[K
+      |                               [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/controller.dir/build.make:63: CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

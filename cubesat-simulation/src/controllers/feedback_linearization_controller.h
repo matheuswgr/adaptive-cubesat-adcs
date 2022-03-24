@@ -45,15 +45,7 @@ class FeedbackLinearizationControler
             vectorPartQuaternionErrorDerivative(1) = quaternionErrorDerivative.y();
             vectorPartQuaternionErrorDerivative(2) = quaternionErrorDerivative.z();
 
-
-            if (atitudeError.w() >= 0)
-            {
-                controlSignal = controlSignal + satelliteModel.satelliteFrameInertiaTensor*slidingVariableGains*0.5*vectorPartQuaternionErrorDerivative;
-            }
-            else
-            {
-                controlSignal = controlSignal - satelliteModel.satelliteFrameInertiaTensor*slidingVariableGains*0.5*vectorPartQuaternionErrorDerivative;
-            }
+            std::cout << slidingVariable.transpose() << "\n";
             
             return controlSignal;
         }

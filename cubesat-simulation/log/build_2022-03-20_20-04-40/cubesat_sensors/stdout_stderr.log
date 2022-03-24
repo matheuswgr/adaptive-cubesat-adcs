@@ -1,0 +1,81 @@
+[35m[1mScanning dependencies of target imu_adapter[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:126:38:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’?
+  126 |     rclcpp::Publisher<geometry_msgs::[01;31m[KQuaternion[m[K>::SharedPtr orientationPublisher;
+      |                                      [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:173:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’ declared here
+  173 | using [01;36m[KQuaternion[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:126:38:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’?
+  126 |     rclcpp::Publisher<geometry_msgs::[01;31m[KQuaternion[m[K>::SharedPtr orientationPublisher;
+      |                                      [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:173:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’ declared here
+  173 | using [01;36m[KQuaternion[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:126:48:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  126 |     rclcpp::Publisher<geometry_msgs::Quaternion[01;31m[K>[m[K::SharedPtr orientationPublisher;
+      |                                                [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:126:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  126 |     rclcpp::Publisher<geometry_msgs::Quaternion>::[01;31m[KSharedPtr[m[K orientationPublisher;
+      |                                                   [01;31m[K^~~~~~~~~[m[K
+      |                                                            [32m[K;[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:126:61:[m[K [01;31m[Kerror: [m[K‘[01m[KorientationPublisher[m[K’ does not name a type
+  126 |     rclcpp::Publisher<geometry_msgs::Quaternion>::SharedPtr [01;31m[KorientationPublisher[m[K;
+      |                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In constructor ‘[01m[KImuAdapter::ImuAdapter()[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:7:[m[K [01;31m[Kerror: [m[K‘[01m[KorientationPublisher[m[K’ was not declared in this scope; did you mean ‘[01m[KorientationOPublisher[m[K’?
+   30 |       [01;31m[KorientationPublisher[m[K = this->create_publisher<geometry_msgs::Quaternion>("imu_orientation", 10);
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |       [32m[KorientationOPublisher[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:68:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’?
+   30 |       orientationPublisher = this->create_publisher<geometry_msgs::[01;31m[KQuaternion[m[K>("imu_orientation", 10);
+      |                                                                    [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:173:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’ declared here
+  173 | using [01;36m[KQuaternion[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:68:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’?
+   30 |       orientationPublisher = this->create_publisher<geometry_msgs::[01;31m[KQuaternion[m[K>("imu_orientation", 10);
+      |                                                                    [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:173:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’ declared here
+  173 | using [01;36m[KQuaternion[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:101:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImuAdapter::create_publisher<<expression error> >(const char [16], int)[m[K’
+   30 |       orientationPublisher = this->create_publisher<geometry_msgs::Quaternion>("imu_orientation", 10[01;31m[K)[m[K;
+      |                                                                                                     [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:8[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   71 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:30:101:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   30 |       orientationPublisher = this->create_publisher<geometry_msgs::Quaternion>("imu_orientation", 10[01;31m[K)[m[K;
+      |                                                                                                     [01;31m[K^[m[K
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:106:48:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’?
+  106 |       auto messageOrientation = geometry_msgs::[01;31m[KQuaternion[m[K;
+      |                                                [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:173:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Quaternion[m[K’ declared here
+  173 | using [01;36m[KQuaternion[m[K =
+      |       [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/imu_adapter.dir/build.make:63: CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/imu_adapter.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

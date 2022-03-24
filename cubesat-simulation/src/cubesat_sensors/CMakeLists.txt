@@ -18,10 +18,11 @@ endif()
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 add_executable(imu_adapter src/imu_adapter.cpp)
 
-ament_target_dependencies(imu_adapter rclcpp std_msgs sensor_msgs) 
+ament_target_dependencies(imu_adapter rclcpp std_msgs sensor_msgs geometry_msgs) 
 
 # find dependencies
 find_package(ament_cmake REQUIRED)

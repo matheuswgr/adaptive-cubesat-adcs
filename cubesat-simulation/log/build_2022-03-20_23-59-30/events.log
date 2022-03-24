@@ -1,0 +1,723 @@
+[0.000000] (-) TimerEvent: {}
+[0.000358] (-) JobUnselected: {'identifier': 'concept'}
+[0.000617] (-) JobUnselected: {'identifier': 'cubesat_actuators'}
+[0.001095] (-) JobUnselected: {'identifier': 'cubesat_description'}
+[0.001964] (-) JobUnselected: {'identifier': 'cubesat_gazebo'}
+[0.002037] (-) JobUnselected: {'identifier': 'cubesat_sensors'}
+[0.002098] (-) JobUnselected: {'identifier': 'smartdata_test'}
+[0.002173] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.002285] (controller) JobStarted: {'identifier': 'controller'}
+[0.017481] (controller) JobProgress: {'identifier': 'controller', 'progress': 'cmake'}
+[0.018992] (controller) JobProgress: {'identifier': 'controller', 'progress': 'build'}
+[0.020192] (controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller', '--', '-j8', '-l8'], 'cwd': '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matheuswagner'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1755'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matheuswagner'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.65.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/91/usr/share/code/code'), ('MANAGERPID', '1563'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2109'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matheuswagner'), ('JOURNAL_STREAM', '8:43833'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matheuswagner'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matheuswagner-Inspiron-7572:@/tmp/.ICE-unix/1793,unix/matheuswagner-Inspiron-7572:/tmp/.ICE-unix/1793'), ('INVOCATION_ID', '3a7b5d084aa846359879c5c23f193547'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d128db98ba.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/91/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy')]), 'shell': False}
+[0.079630] (controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target controller\x1b[0m\n'}
+[0.099592] (-) TimerEvent: {}
+[0.120346] (controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o\x1b[0m\n'}
+[0.199681] (-) TimerEvent: {}
+[0.299995] (-) TimerEvent: {}
+[0.400374] (-) TimerEvent: {}
+[0.500677] (-) TimerEvent: {}
+[0.585138] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:5\x1b[m\x1b[K,\n'}
+[0.585389] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[0.585502] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[0.585615] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void Observer::notify(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.585708] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:8:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[0.585863] (controller) StderrLine: {'line': b'    8 |         virtual void notify(\x1b[01;35m\x1b[Kint id\x1b[m\x1b[K){};\n'}
+[0.585991] (controller) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~^~\x1b[m\x1b[K\n'}
+[0.600788] (-) TimerEvent: {}
+[0.701194] (-) TimerEvent: {}
+[0.801805] (-) TimerEvent: {}
+[0.902135] (-) TimerEvent: {}
+[1.002644] (-) TimerEvent: {}
+[1.102977] (-) TimerEvent: {}
+[1.203337] (-) TimerEvent: {}
+[1.303791] (-) TimerEvent: {}
+[1.404175] (-) TimerEvent: {}
+[1.504748] (-) TimerEvent: {}
+[1.605055] (-) TimerEvent: {}
+[1.705341] (-) TimerEvent: {}
+[1.805735] (-) TimerEvent: {}
+[1.906138] (-) TimerEvent: {}
+[2.006446] (-) TimerEvent: {}
+[2.106720] (-) TimerEvent: {}
+[2.207003] (-) TimerEvent: {}
+[2.307330] (-) TimerEvent: {}
+[2.407640] (-) TimerEvent: {}
+[2.507993] (-) TimerEvent: {}
+[2.608380] (-) TimerEvent: {}
+[2.708657] (-) TimerEvent: {}
+[2.808976] (-) TimerEvent: {}
+[2.909454] (-) TimerEvent: {}
+[3.009973] (-) TimerEvent: {}
+[3.110367] (-) TimerEvent: {}
+[3.210721] (-) TimerEvent: {}
+[3.280625] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/disturbance_predictor.h:8\x1b[m\x1b[K,\n'}
+[3.280815] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/satellite_model.h:8\x1b[m\x1b[K,\n'}
+[3.280905] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[3.280989] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[3.281070] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.281147] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.281223] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.281296] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/chebyshev_polynomials.h:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic float ChebyshevPolynomials::T0(float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.281373] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/chebyshev_polynomials.h:9:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kx\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.281466] (controller) StderrLine: {'line': b'    9 |         static float T0(\x1b[01;35m\x1b[Kfloat x\x1b[m\x1b[K)\n'}
+[3.281542] (controller) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~^\x1b[m\x1b[K\n'}
+[3.310850] (-) TimerEvent: {}
+[3.411198] (-) TimerEvent: {}
+[3.511477] (-) TimerEvent: {}
+[3.611807] (-) TimerEvent: {}
+[3.640849] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[3.641147] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[3.641293] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.641413] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.641553] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.641680] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/satellite_model.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SatelliteModel::UpdateDynamicMatrix(Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Quaternion<float>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.641776] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/satellite_model.h:25:195:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kattitude\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.641858] (controller) StderrLine: {'line': b'   25 | loat,3,1> slidingVariable, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, \x1b[01;35m\x1b[KEigen::Quaternion<float> attitude\x1b[m\x1b[K)\n'}
+[3.641932] (controller) StderrLine: {'line': b'      |                                                                                                                          \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[3.642009] (controller) StderrLine: {'line': b'\n'}
+[3.711926] (-) TimerEvent: {}
+[3.812238] (-) TimerEvent: {}
+[3.912554] (-) TimerEvent: {}
+[3.932832] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[3.933245] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[3.933422] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.933526] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.933663] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.933827] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/satellite_model.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 3, 1> SatelliteModel::InverseDynamicsSignal(Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Quaternion<float>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.933925] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/satellite_model.h:120:81:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KslidingVariable\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.934014] (controller) StderrLine: {'line': b'  120 |         Eigen::Matrix<float,3,1> InverseDynamicsSignal(\x1b[01;35m\x1b[KEigen::Matrix<float,3,1> slidingVariable\x1b[m\x1b[K, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, Eigen::Quaternion<float> attitude)\n'}
+[3.934144] (controller) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.012756] (-) TimerEvent: {}
+[4.113235] (-) TimerEvent: {}
+[4.151943] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[4.152181] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[4.152302] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[4.152400] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_controller_system.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KAdaptiveControllerControlSystem::AdaptiveControllerControlSystem(DisturbancePredictor, SatelliteModel, FeedbackLinearizationControler, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.152522] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_controller_system.h:52:89:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kadaptive\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.152645] (controller) StderrLine: {'line': b'   52 |                                         FeedbackLinearizationControler controller, \x1b[01;35m\x1b[Kbool adaptive\x1b[m\x1b[K)\n'}
+[4.152743] (controller) StderrLine: {'line': b'      |                                                                                    \x1b[01;35m\x1b[K~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[4.213352] (-) TimerEvent: {}
+[4.313622] (-) TimerEvent: {}
+[4.413968] (-) TimerEvent: {}
+[4.514279] (-) TimerEvent: {}
+[4.614581] (-) TimerEvent: {}
+[4.714857] (-) TimerEvent: {}
+[4.815174] (-) TimerEvent: {}
+[4.915493] (-) TimerEvent: {}
+[4.996891] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/nonadaptive_control_system.h:12\x1b[m\x1b[K,\n'}
+[4.997136] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:7\x1b[m\x1b[K,\n'}
+[4.997305] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[4.997444] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[4.997570] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_square_root_cubature_kalman_filter.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 10, 1> AdaptiveSquareRootCubatureKalmanFilter::Filter(Eigen::Matrix<float, 10, 1>, Eigen::Matrix<float, 3, 1>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.997700] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/adaptive_square_root_cubature_kalman_filter.h:229:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KpriorPredictedErrorCovarianceNoQ\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[4.997832] (controller) StderrLine: {'line': b'  229 |             Eigen::Matrix<float, 10,10> \x1b[01;35m\x1b[KpriorPredictedErrorCovarianceNoQ\x1b[m\x1b[K = QRDecomposition(matrixForDecomposition);\n'}
+[4.997954] (controller) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.015629] (-) TimerEvent: {}
+[5.104804] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[5.105041] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[5.105184] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid HybridController::UpdateControlSignal(Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Quaternion<float>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.105338] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:54:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocityX\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocity\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.105474] (controller) StderrLine: {'line': b'   54 |             trackingError(0) = \x1b[01;31m\x1b[KsatelliteVelocityX\x1b[m\x1b[K;\n'}
+[5.105604] (controller) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.105731] (controller) StderrLine: {'line': b'      |                                \x1b[32m\x1b[KsatelliteVelocity\x1b[m\x1b[K\n'}
+[5.108395] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:55:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocityY\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocity\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.108584] (controller) StderrLine: {'line': b'   55 |             trackingError(1) = \x1b[01;31m\x1b[KsatelliteVelocityY\x1b[m\x1b[K;\n'}
+[5.108731] (controller) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.108871] (controller) StderrLine: {'line': b'      |                                \x1b[32m\x1b[KsatelliteVelocity\x1b[m\x1b[K\n'}
+[5.112039] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:56:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocityZ\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KsatelliteVelocity\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.112300] (controller) StderrLine: {'line': b'   56 |             trackingError(2) = \x1b[01;31m\x1b[KsatelliteVelocityZ\x1b[m\x1b[K;\n'}
+[5.112453] (controller) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.112589] (controller) StderrLine: {'line': b'      |                                \x1b[32m\x1b[KsatelliteVelocity\x1b[m\x1b[K\n'}
+[5.115718] (-) TimerEvent: {}
+[5.120060] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:67:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocityX\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.120338] (controller) StderrLine: {'line': b'   67 |             measurement(3) = \x1b[01;31m\x1b[KreactionWheelVelocityX\x1b[m\x1b[K;\n'}
+[5.120494] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.120628] (controller) StderrLine: {'line': b'      |                              \x1b[32m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\n'}
+[5.126671] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:68:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocityY\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.126945] (controller) StderrLine: {'line': b'   68 |             measurement(4) = \x1b[01;31m\x1b[KreactionWheelVelocityY\x1b[m\x1b[K;\n'}
+[5.127140] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.127287] (controller) StderrLine: {'line': b'      |                              \x1b[32m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\n'}
+[5.133413] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../../controllers/hybrid_controller.h:69:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocityZ\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.133916] (controller) StderrLine: {'line': b'   69 |             measurement(5) = \x1b[01;31m\x1b[KreactionWheelVelocityZ\x1b[m\x1b[K;\n'}
+[5.134048] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.134162] (controller) StderrLine: {'line': b'      |                              \x1b[32m\x1b[KreactionWheelVelocities\x1b[m\x1b[K\n'}
+[5.148003] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[5.148468] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:\x1b[m\x1b[K At global scope:\n'}
+[5.148652] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:23:88:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.148807] (controller) StderrLine: {'line': b'   23 |     : public SmartData<Value>, public Controller, public Observed<LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>>\n'}
+[5.148910] (controller) StderrLine: {'line': b'      |                                                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.149044] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:23:88:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.149176] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:23:105:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[5.149311] (controller) StderrLine: {'line': b'   23 |     : public SmartData<Value>, public Controller, public Observed<LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>>\x1b[m\x1b[K\n'}
+[5.149437] (controller) StderrLine: {'line': b'      |                                                                                                         \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.155697] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:26:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.155968] (controller) StderrLine: {'line': b'   26 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroX;\n'}
+[5.156084] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.156216] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:26:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.156320] (controller) StderrLine: {'line': b'   26 |         LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroX;\n'}
+[5.156419] (controller) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.161619] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:27:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.161829] (controller) StderrLine: {'line': b'   27 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroY;\n'}
+[5.161960] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.162088] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:27:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.162213] (controller) StderrLine: {'line': b'   27 |         LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroY;\n'}
+[5.162329] (controller) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.167521] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:28:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.167812] (controller) StderrLine: {'line': b'   28 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroZ;\n'}
+[5.167961] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.168088] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:28:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.168210] (controller) StderrLine: {'line': b'   28 |         LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroZ;\n'}
+[5.168326] (controller) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.175085] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:29:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.175290] (controller) StderrLine: {'line': b'   29 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterX;\n'}
+[5.175407] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.175521] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:29:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.175636] (controller) StderrLine: {'line': b'   29 |         LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterX;\n'}
+[5.175748] (controller) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.183778] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:30:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.183993] (controller) StderrLine: {'line': b'   30 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterY;\n'}
+[5.184080] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.184178] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:30:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.184265] (controller) StderrLine: {'line': b'   30 |         LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterY;\n'}
+[5.184344] (controller) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.191642] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:31:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.191822] (controller) StderrLine: {'line': b'   31 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterZ;\n'}
+[5.191909] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.191989] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:31:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.192098] (controller) StderrLine: {'line': b'   31 |         LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterZ;\n'}
+[5.192397] (controller) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.199165] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:32:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginOrientationSensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.199401] (controller) StderrLine: {'line': b'   32 |         LocalSmartData<Eigen::Quaternion<float>,\x1b[01;31m\x1b[KPluginOrientationSensor\x1b[m\x1b[K>* orientation;;\n'}
+[5.199530] (controller) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.199657] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:32:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.199785] (controller) StderrLine: {'line': b'   32 |         LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* orientation;;\n'}
+[5.199903] (controller) StderrLine: {'line': b'      |                                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.200024] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:32:87:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.200140] (controller) StderrLine: {'line': b'   32 |         LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor>* orientation;\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[5.200237] (controller) StderrLine: {'line': b'      |                                                                                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.200318] (controller) StderrLine: {'line': b'      |                                                                                       \x1b[31m\x1b[K-\x1b[m\x1b[K\n'}
+[5.205019] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:33:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.205152] (controller) StderrLine: {'line': b'   33 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverX;\n'}
+[5.205234] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.205313] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:33:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.205391] (controller) StderrLine: {'line': b'   33 |         LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverX;\n'}
+[5.205467] (controller) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.210564] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:34:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.210750] (controller) StderrLine: {'line': b'   34 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverY;\n'}
+[5.210841] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.210925] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:34:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.211007] (controller) StderrLine: {'line': b'   34 |         LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverY;\n'}
+[5.211098] (controller) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.215847] (-) TimerEvent: {}
+[5.217059] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:35:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.217251] (controller) StderrLine: {'line': b'   35 |         LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverZ;\n'}
+[5.217347] (controller) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.217435] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:35:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.217528] (controller) StderrLine: {'line': b'   35 |         LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverZ;\n'}
+[5.217606] (controller) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.223000] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.223209] (controller) StderrLine: {'line': b'   46 |         ControllerSmartData(LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroX, LocalSmartData<float,PluginGyroscope>* gyroY,\n'}
+[5.223326] (controller) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.223450] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.223577] (controller) StderrLine: {'line': b'   46 |         ControllerSmartData(LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroX, LocalSmartData<float,PluginGyroscope>* gyroY,\n'}
+[5.223708] (controller) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.230110] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.230380] (controller) StderrLine: {'line': b'   46 |         ControllerSmartData(LocalSmartData<float,PluginGyroscope>* gyroX, LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroY,\n'}
+[5.230534] (controller) StderrLine: {'line': b'      |                                                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.230693] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:111:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.230832] (controller) StderrLine: {'line': b'   46 |         ControllerSmartData(LocalSmartData<float,PluginGyroscope>* gyroX, LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroY,\n'}
+[5.230960] (controller) StderrLine: {'line': b'      |                                                                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.236419] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:47:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginGyroscope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.236630] (controller) StderrLine: {'line': b'   47 |                              LocalSmartData<float,\x1b[01;31m\x1b[KPluginGyroscope\x1b[m\x1b[K>* gyroZ, LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterX,\n'}
+[5.236720] (controller) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.236799] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:47:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.236878] (controller) StderrLine: {'line': b'   47 |                              LocalSmartData<float,PluginGyroscope\x1b[01;31m\x1b[K>\x1b[m\x1b[K* gyroZ, LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterX,\n'}
+[5.236954] (controller) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.245685] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:47:97:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.246040] (controller) StderrLine: {'line': b'   47 |                              LocalSmartData<float,PluginGyroscope>* gyroZ, LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterX,\n'}
+[5.246184] (controller) StderrLine: {'line': b'      |                                                                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.246310] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:47:122:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.246436] (controller) StderrLine: {'line': b'   47 |                              LocalSmartData<float,PluginGyroscope>* gyroZ, LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterX,\n'}
+[5.246582] (controller) StderrLine: {'line': b'      |                                                                                                                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.254651] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[5.254880] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:48:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.255012] (controller) StderrLine: {'line': b'   48 |                               LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterY, LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterZ,\n'}
+[5.255136] (controller) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.255247] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:48:77:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.255368] (controller) StderrLine: {'line': b'   48 |                               LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterY, LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterZ,\n'}
+[5.255495] (controller) StderrLine: {'line': b'      |                                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.264116] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:48:115:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.264352] (controller) StderrLine: {'line': b'   48 |                               LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterY, LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorVelocitySensor\x1b[m\x1b[K>* velocimeterZ,\n'}
+[5.264458] (controller) StderrLine: {'line': b'      |                                                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.264554] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:48:140:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.264659] (controller) StderrLine: {'line': b'   48 |                               LocalSmartData<float,PluginMotorVelocitySensor>* velocimeterY, LocalSmartData<float,PluginMotorVelocitySensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* velocimeterZ,\n'}
+[5.264757] (controller) StderrLine: {'line': b'      |                                                                                                                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.270874] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:49:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginOrientationSensor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.271084] (controller) StderrLine: {'line': b'   49 |                               LocalSmartData<Eigen::Quaternion<float>,\x1b[01;31m\x1b[KPluginOrientationSensor\x1b[m\x1b[K>* orientation, LocalSmartData<float,PluginMotorDriver>* driverX,\n'}
+[5.271164] (controller) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.271235] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:49:94:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.271305] (controller) StderrLine: {'line': b'   49 |                               LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor\x1b[01;31m\x1b[K>\x1b[m\x1b[K* orientation, LocalSmartData<float,PluginMotorDriver>* driverX,\n'}
+[5.271376] (controller) StderrLine: {'line': b'      |                                                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.276859] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:49:131:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.277279] (controller) StderrLine: {'line': b'   49 |                               LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor>* orientation, LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverX,\n'}
+[5.277429] (controller) StderrLine: {'line': b'      |                                                                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.277519] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:49:148:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.277603] (controller) StderrLine: {'line': b'   49 |                            LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor>* orientation, LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverX,\n'}
+[5.277691] (controller) StderrLine: {'line': b'      |                                                                                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.277806] (controller) StderrLine: {'line': b'\n'}
+[5.284185] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:50:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.284408] (controller) StderrLine: {'line': b'   50 |                               LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverY, LocalSmartData<float,PluginMotorDriver>* driverZ)\n'}
+[5.284529] (controller) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.284630] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:50:69:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.284715] (controller) StderrLine: {'line': b'   50 |                               LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverY, LocalSmartData<float,PluginMotorDriver>* driverZ)\n'}
+[5.284796] (controller) StderrLine: {'line': b'      |                                                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.289969] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:50:102:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPluginMotorDriver\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.290174] (controller) StderrLine: {'line': b'   50 |                               LocalSmartData<float,PluginMotorDriver>* driverY, LocalSmartData<float,\x1b[01;31m\x1b[KPluginMotorDriver\x1b[m\x1b[K>* driverZ)\n'}
+[5.290601] (controller) StderrLine: {'line': b'      |                                                                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.290733] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:50:119:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[5.290894] (controller) StderrLine: {'line': b'   50 |                               LocalSmartData<float,PluginMotorDriver>* driverY, LocalSmartData<float,PluginMotorDriver\x1b[01;31m\x1b[K>\x1b[m\x1b[K* driverZ)\n'}
+[5.290984] (controller) StderrLine: {'line': b'      |                                                                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.291084] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<Controller, Value>::ControllerSmartData(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.291171] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:56:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.291264] (controller) StderrLine: {'line': b'   56 |             this->gyroX->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(0);\n'}
+[5.291345] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.291425] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:57:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroY->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.291507] (controller) StderrLine: {'line': b'   57 |             this->gyroY->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(1);\n'}
+[5.291585] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.291670] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:58:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroZ->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.291757] (controller) StderrLine: {'line': b'   58 |             this->gyroZ->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(2);\n'}
+[5.291838] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.291918] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:68:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.292002] (controller) StderrLine: {'line': b'   68 |             this->velocimeterX->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(3);\n'}
+[5.292118] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.292200] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:69:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterY->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.292289] (controller) StderrLine: {'line': b'   69 |             this->velocimeterY->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(4);\n'}
+[5.292367] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.292443] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:70:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterZ->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.292528] (controller) StderrLine: {'line': b'   70 |             this->velocimeterZ->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(5);\n'}
+[5.292606] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.292682] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:78:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KgiveId\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->orientation->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.292770] (controller) StderrLine: {'line': b'   78 |             this->orientation->\x1b[01;31m\x1b[KgiveId\x1b[m\x1b[K(6);\n'}
+[5.292851] (controller) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.292936] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:86:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.293025] (controller) StderrLine: {'line': b'   86 |             this->gyroX->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.293102] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.293179] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:87:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroY->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.293265] (controller) StderrLine: {'line': b'   87 |             this->gyroY->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.293343] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.293422] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:88:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->gyroZ->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.293511] (controller) StderrLine: {'line': b'   88 |             this->gyroZ->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.293590] (controller) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.293671] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:90:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.293751] (controller) StderrLine: {'line': b'   90 |             this->velocimeterX->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.293828] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.293905] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:91:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterY->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.293984] (controller) StderrLine: {'line': b'   91 |             this->velocimeterY->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.294061] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.294157] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:92:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->velocimeterZ->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.294242] (controller) StderrLine: {'line': b'   92 |             this->velocimeterZ->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.294318] (controller) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.294393] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:94:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[KstartObserving\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->orientation->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.294471] (controller) StderrLine: {'line': b'   94 |             this->orientation->\x1b[01;31m\x1b[KstartObserving\x1b[m\x1b[K(this);\n'}
+[5.294548] (controller) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.294623] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:96:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kget\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[KdriverX\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.294703] (controller) StderrLine: {'line': b'   96 |             this->startObserving(driverX.\x1b[01;31m\x1b[Kget\x1b[m\x1b[K());\n'}
+[5.294786] (controller) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[5.294862] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:97:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kget\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[KdriverY\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.294949] (controller) StderrLine: {'line': b'   97 |             this->startObserving(driverY.\x1b[01;31m\x1b[Kget\x1b[m\x1b[K());\n'}
+[5.295038] (controller) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[5.295112] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:98:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kget\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[KdriverZ\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.295187] (controller) StderrLine: {'line': b'   98 |             this->startObserving(driverZ.\x1b[01;31m\x1b[Kget\x1b[m\x1b[K());\n'}
+[5.295280] (controller) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[5.315947] (-) TimerEvent: {}
+[5.330664] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:148:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khcontroller\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcontroller\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.330970] (controller) StderrLine: {'line': b'  148 |             \x1b[01;31m\x1b[Khcontroller\x1b[m\x1b[K.SetReferenceAttitude(referenceAttitude);\n'}
+[5.331116] (controller) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.331205] (controller) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kcontroller\x1b[m\x1b[K\n'}
+[5.331305] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:150:131:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.331401] (controller) StderrLine: {'line': b'  150 |             this->controller = std::make_shared<Controller>(signalMonitor,adaptiveController,ncontroller, slidingControllerSystem)\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[5.331484] (controller) StderrLine: {'line': b'      |                                                                                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.331563] (controller) StderrLine: {'line': b'      |                                                                                                                                   \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[5.416081] (-) TimerEvent: {}
+[5.516471] (-) TimerEvent: {}
+[5.617048] (-) TimerEvent: {}
+[5.717352] (-) TimerEvent: {}
+[5.772295] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kfloat ControllerSmartData<Controller, Value>::update()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.772662] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:165:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->ControllerSmartData<Controller, Value>::gyroX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.772829] (controller) StderrLine: {'line': b'  165 |             satelliteVelocity(0) = gyroX->\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K();\n'}
+[5.773048] (controller) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.773296] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:166:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->ControllerSmartData<Controller, Value>::gyroY->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.773495] (controller) StderrLine: {'line': b'  166 |             satelliteVelocity(1) = gyroY->\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K();\n'}
+[5.773639] (controller) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.773770] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:167:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->ControllerSmartData<Controller, Value>::gyroZ->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.773888] (controller) StderrLine: {'line': b'  167 |             satelliteVelocity(2) = gyroZ->\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K();\n'}
+[5.774012] (controller) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.774161] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:169:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((ControllerSmartData<Controller, Value>*)this)->ControllerSmartData<Controller, Value>::velocimeterX->\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.774321] (controller) StderrLine: {'line': b'  169 |             reactionWheelVelocities(0) = velocimeterX->\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K():\n'}
+[5.774447] (controller) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.774571] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:169:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K:\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.774693] (controller) StderrLine: {'line': b'  169 |             reactionWheelVelocities(0) = velocimeterX->value()\x1b[01;31m\x1b[K:\x1b[m\x1b[K\n'}
+[5.774809] (controller) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.774916] (controller) StderrLine: {'line': b'      |                                                               \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[5.817498] (-) TimerEvent: {}
+[5.917985] (-) TimerEvent: {}
+[5.920216] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.920521] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:35:100:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<HybridController, float>::ControllerSmartData(std::shared_ptr<LocalSmartData<float, PluginGyroscope> >&, std::shared_ptr<LocalSmartData<float, PluginGyroscope> >&, std::shared_ptr<LocalSmartData<float, PluginGyroscope> >&, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor> >&, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor> >&, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor> >&, std::shared_ptr<LocalSmartData<Eigen::Quaternion<float>, PluginOrientationSensor> >&, std::shared_ptr<LocalSmartData<float, PluginMotorDriver> >&, std::shared_ptr<LocalSmartData<float, PluginMotorDriver> >&, std::shared_ptr<LocalSmartData<float, PluginMotorDriver> >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.920696] (controller) StderrLine: {'line': b'   35 |                                                              orientation, driverX, driverY, driverZ\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[5.920838] (controller) StderrLine: {'line': b'      |                                                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.920967] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[5.921106] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<Controller, Value>::ControllerSmartData(int*, int*, int*, int*, int*, int*, int*, int*, int*, int*) [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.921249] (controller) StderrLine: {'line': b'   46 |         \x1b[01;36m\x1b[KControllerSmartData\x1b[m\x1b[K(LocalSmartData<float,PluginGyroscope>* gyroX, LocalSmartData<float,PluginGyroscope>* gyroY,\n'}
+[5.921388] (controller) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.921517] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:46:68:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<LocalSmartData<float, PluginGyroscope> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.921659] (controller) StderrLine: {'line': b'   46 |         ControllerSmartData(\x1b[01;36m\x1b[KLocalSmartData<float,PluginGyroscope>* gyroX\x1b[m\x1b[K, LocalSmartData<float,PluginGyroscope>* gyroY,\n'}
+[5.921785] (controller) StderrLine: {'line': b'      |                             \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.921918] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:22:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<HybridController, float>::ControllerSmartData(const ControllerSmartData<HybridController, float>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.922064] (controller) StderrLine: {'line': b'   22 | class \x1b[01;36m\x1b[KControllerSmartData\x1b[m\x1b[K\n'}
+[5.922202] (controller) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.922313] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:22:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 10 provided\n'}
+[5.922416] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:22:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<HybridController, float>::ControllerSmartData(ControllerSmartData<HybridController, float>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.922554] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:22:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 10 provided\n'}
+[6.018133] (-) TimerEvent: {}
+[6.118405] (-) TimerEvent: {}
+[6.218759] (-) TimerEvent: {}
+[6.319216] (-) TimerEvent: {}
+[6.340014] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[6.340262] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[6.340400] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid SmartData<Value>::setValue(Value) [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.340557] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/plugin_orientation_sensor.h:55:50:\x1b[m\x1b[K   required from here\n'}
+[6.340728] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:40:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[6.340879] (controller) StderrLine: {'line': b'   40 |         virtual void setValue(\x1b[01;35m\x1b[KValue value\x1b[m\x1b[K){}\n'}
+[6.341002] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[6.341113] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::update() [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.341223] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/plugin_orientation_sensor.h:56:37:\x1b[m\x1b[K   required from here\n'}
+[6.341354] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:38:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.341488] (controller) StderrLine: {'line': b'   38 |         virtual Value update(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.341625] (controller) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.347046] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid SmartData<Value>::setValue(Value) [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.347377] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/plugin_gyroscope.h:49:50:\x1b[m\x1b[K   required from here\n'}
+[6.347538] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:40:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[6.347665] (controller) StderrLine: {'line': b'   40 |         virtual void setValue(\x1b[01;35m\x1b[KValue value\x1b[m\x1b[K){}\n'}
+[6.347779] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[6.347887] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::update() [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.347996] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/plugin_gyroscope.h:50:37:\x1b[m\x1b[K   required from here\n'}
+[6.348120] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:38:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.348253] (controller) StderrLine: {'line': b'   38 |         virtual Value update(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.348391] (controller) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.350924] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::value() [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.351142] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/plugin_motor_driver.h:45:51:\x1b[m\x1b[K   required from here\n'}
+[6.351296] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.351455] (controller) StderrLine: {'line': b'   36 |         virtual Value value(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.351605] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.419351] (-) TimerEvent: {}
+[6.519646] (-) TimerEvent: {}
+[6.620025] (-) TimerEvent: {}
+[6.720496] (-) TimerEvent: {}
+[6.820820] (-) TimerEvent: {}
+[6.921125] (-) TimerEvent: {}
+[7.021495] (-) TimerEvent: {}
+[7.121833] (-) TimerEvent: {}
+[7.222163] (-) TimerEvent: {}
+[7.322491] (-) TimerEvent: {}
+[7.422838] (-) TimerEvent: {}
+[7.523200] (-) TimerEvent: {}
+[7.623469] (-) TimerEvent: {}
+[7.723827] (-) TimerEvent: {}
+[7.824168] (-) TimerEvent: {}
+[7.924524] (-) TimerEvent: {}
+[8.024835] (-) TimerEvent: {}
+[8.125212] (-) TimerEvent: {}
+[8.225801] (-) TimerEvent: {}
+[8.326105] (-) TimerEvent: {}
+[8.426418] (-) TimerEvent: {}
+[8.526733] (-) TimerEvent: {}
+[8.627052] (-) TimerEvent: {}
+[8.727379] (-) TimerEvent: {}
+[8.827658] (-) TimerEvent: {}
+[8.928018] (-) TimerEvent: {}
+[9.028327] (-) TimerEvent: {}
+[9.128639] (-) TimerEvent: {}
+[9.229046] (-) TimerEvent: {}
+[9.329555] (-) TimerEvent: {}
+[9.429874] (-) TimerEvent: {}
+[9.530233] (-) TimerEvent: {}
+[9.630570] (-) TimerEvent: {}
+[9.730896] (-) TimerEvent: {}
+[9.831187] (-) TimerEvent: {}
+[9.931486] (-) TimerEvent: {}
+[10.031922] (-) TimerEvent: {}
+[10.132251] (-) TimerEvent: {}
+[10.232597] (-) TimerEvent: {}
+[10.333036] (-) TimerEvent: {}
+[10.433689] (-) TimerEvent: {}
+[10.534041] (-) TimerEvent: {}
+[10.634359] (-) TimerEvent: {}
+[10.734702] (-) TimerEvent: {}
+[10.835076] (-) TimerEvent: {}
+[10.935389] (-) TimerEvent: {}
+[11.035748] (-) TimerEvent: {}
+[11.136129] (-) TimerEvent: {}
+[11.236456] (-) TimerEvent: {}
+[11.336780] (-) TimerEvent: {}
+[11.437222] (-) TimerEvent: {}
+[11.537753] (-) TimerEvent: {}
+[11.638115] (-) TimerEvent: {}
+[11.738478] (-) TimerEvent: {}
+[11.838819] (-) TimerEvent: {}
+[11.939160] (-) TimerEvent: {}
+[12.039478] (-) TimerEvent: {}
+[12.139821] (-) TimerEvent: {}
+[12.240271] (-) TimerEvent: {}
+[12.340595] (-) TimerEvent: {}
+[12.440924] (-) TimerEvent: {}
+[12.541310] (-) TimerEvent: {}
+[12.641849] (-) TimerEvent: {}
+[12.742131] (-) TimerEvent: {}
+[12.842458] (-) TimerEvent: {}
+[12.942774] (-) TimerEvent: {}
+[13.043108] (-) TimerEvent: {}
+[13.143449] (-) TimerEvent: {}
+[13.243779] (-) TimerEvent: {}
+[13.344159] (-) TimerEvent: {}
+[13.444504] (-) TimerEvent: {}
+[13.544840] (-) TimerEvent: {}
+[13.645136] (-) TimerEvent: {}
+[13.745539] (-) TimerEvent: {}
+[13.845875] (-) TimerEvent: {}
+[13.946189] (-) TimerEvent: {}
+[14.046780] (-) TimerEvent: {}
+[14.147130] (-) TimerEvent: {}
+[14.247470] (-) TimerEvent: {}
+[14.347799] (-) TimerEvent: {}
+[14.448248] (-) TimerEvent: {}
+[14.548634] (-) TimerEvent: {}
+[14.648983] (-) TimerEvent: {}
+[14.749381] (-) TimerEvent: {}
+[14.849933] (-) TimerEvent: {}
+[14.950274] (-) TimerEvent: {}
+[15.050617] (-) TimerEvent: {}
+[15.151010] (-) TimerEvent: {}
+[15.251309] (-) TimerEvent: {}
+[15.351643] (-) TimerEvent: {}
+[15.452009] (-) TimerEvent: {}
+[15.552383] (-) TimerEvent: {}
+[15.652732] (-) TimerEvent: {}
+[15.753064] (-) TimerEvent: {}
+[15.853511] (-) TimerEvent: {}
+[15.954015] (-) TimerEvent: {}
+[16.054337] (-) TimerEvent: {}
+[16.154724] (-) TimerEvent: {}
+[16.255065] (-) TimerEvent: {}
+[16.355392] (-) TimerEvent: {}
+[16.455773] (-) TimerEvent: {}
+[16.556121] (-) TimerEvent: {}
+[16.656553] (-) TimerEvent: {}
+[16.756864] (-) TimerEvent: {}
+[16.857218] (-) TimerEvent: {}
+[16.957620] (-) TimerEvent: {}
+[17.058194] (-) TimerEvent: {}
+[17.158529] (-) TimerEvent: {}
+[17.258913] (-) TimerEvent: {}
+[17.359281] (-) TimerEvent: {}
+[17.459622] (-) TimerEvent: {}
+[17.559962] (-) TimerEvent: {}
+[17.660365] (-) TimerEvent: {}
+[17.761043] (-) TimerEvent: {}
+[17.861402] (-) TimerEvent: {}
+[17.961788] (-) TimerEvent: {}
+[18.062147] (-) TimerEvent: {}
+[18.162482] (-) TimerEvent: {}
+[18.262809] (-) TimerEvent: {}
+[18.363109] (-) TimerEvent: {}
+[18.463426] (-) TimerEvent: {}
+[18.563761] (-) TimerEvent: {}
+[18.664195] (-) TimerEvent: {}
+[18.764508] (-) TimerEvent: {}
+[18.864906] (-) TimerEvent: {}
+[18.965189] (-) TimerEvent: {}
+[19.065502] (-) TimerEvent: {}
+[19.165860] (-) TimerEvent: {}
+[19.266425] (-) TimerEvent: {}
+[19.366761] (-) TimerEvent: {}
+[19.467092] (-) TimerEvent: {}
+[19.567460] (-) TimerEvent: {}
+[19.667781] (-) TimerEvent: {}
+[19.768100] (-) TimerEvent: {}
+[19.868431] (-) TimerEvent: {}
+[19.968826] (-) TimerEvent: {}
+[20.069123] (-) TimerEvent: {}
+[20.169462] (-) TimerEvent: {}
+[20.269947] (-) TimerEvent: {}
+[20.370517] (-) TimerEvent: {}
+[20.470869] (-) TimerEvent: {}
+[20.571219] (-) TimerEvent: {}
+[20.671615] (-) TimerEvent: {}
+[20.771973] (-) TimerEvent: {}
+[20.872285] (-) TimerEvent: {}
+[20.972612] (-) TimerEvent: {}
+[21.072990] (-) TimerEvent: {}
+[21.173343] (-) TimerEvent: {}
+[21.273664] (-) TimerEvent: {}
+[21.374008] (-) TimerEvent: {}
+[21.474407] (-) TimerEvent: {}
+[21.574654] (-) TimerEvent: {}
+[21.675025] (-) TimerEvent: {}
+[21.775355] (-) TimerEvent: {}
+[21.875693] (-) TimerEvent: {}
+[21.976021] (-) TimerEvent: {}
+[22.076342] (-) TimerEvent: {}
+[22.176742] (-) TimerEvent: {}
+[22.277066] (-) TimerEvent: {}
+[22.377375] (-) TimerEvent: {}
+[22.477695] (-) TimerEvent: {}
+[22.578037] (-) TimerEvent: {}
+[22.678358] (-) TimerEvent: {}
+[22.778703] (-) TimerEvent: {}
+[22.879055] (-) TimerEvent: {}
+[22.979353] (-) TimerEvent: {}
+[23.079764] (-) TimerEvent: {}
+[23.180089] (-) TimerEvent: {}
+[23.280429] (-) TimerEvent: {}
+[23.380777] (-) TimerEvent: {}
+[23.481096] (-) TimerEvent: {}
+[23.581407] (-) TimerEvent: {}
+[23.681759] (-) TimerEvent: {}
+[23.782094] (-) TimerEvent: {}
+[23.882431] (-) TimerEvent: {}
+[23.982784] (-) TimerEvent: {}
+[24.083069] (-) TimerEvent: {}
+[24.183424] (-) TimerEvent: {}
+[24.283731] (-) TimerEvent: {}
+[24.384097] (-) TimerEvent: {}
+[24.484407] (-) TimerEvent: {}
+[24.584750] (-) TimerEvent: {}
+[24.685141] (-) TimerEvent: {}
+[24.785679] (-) TimerEvent: {}
+[24.885993] (-) TimerEvent: {}
+[24.986331] (-) TimerEvent: {}
+[25.086629] (-) TimerEvent: {}
+[25.186969] (-) TimerEvent: {}
+[25.287273] (-) TimerEvent: {}
+[25.387627] (-) TimerEvent: {}
+[25.488023] (-) TimerEvent: {}
+[25.588390] (-) TimerEvent: {}
+[25.688738] (-) TimerEvent: {}
+[25.789177] (-) TimerEvent: {}
+[25.889686] (-) TimerEvent: {}
+[25.990004] (-) TimerEvent: {}
+[26.090357] (-) TimerEvent: {}
+[26.190684] (-) TimerEvent: {}
+[26.291059] (-) TimerEvent: {}
+[26.391408] (-) TimerEvent: {}
+[26.491783] (-) TimerEvent: {}
+[26.592128] (-) TimerEvent: {}
+[26.692487] (-) TimerEvent: {}
+[26.792867] (-) TimerEvent: {}
+[26.893319] (-) TimerEvent: {}
+[26.993746] (-) TimerEvent: {}
+[27.094103] (-) TimerEvent: {}
+[27.194432] (-) TimerEvent: {}
+[27.294793] (-) TimerEvent: {}
+[27.395150] (-) TimerEvent: {}
+[27.495465] (-) TimerEvent: {}
+[27.595839] (-) TimerEvent: {}
+[27.696207] (-) TimerEvent: {}
+[27.796570] (-) TimerEvent: {}
+[27.896873] (-) TimerEvent: {}
+[27.997306] (-) TimerEvent: {}
+[28.097866] (-) TimerEvent: {}
+[28.198244] (-) TimerEvent: {}
+[28.298614] (-) TimerEvent: {}
+[28.398910] (-) TimerEvent: {}
+[28.499411] (-) TimerEvent: {}
+[28.599916] (-) TimerEvent: {}
+[28.700265] (-) TimerEvent: {}
+[28.800593] (-) TimerEvent: {}
+[28.900873] (-) TimerEvent: {}
+[29.001198] (-) TimerEvent: {}
+[29.016975] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[29.017214] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kfloat ControllerSmartData<Controller, Value>::value() [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.017369] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:153:15:\x1b[m\x1b[K   required from here\n'}
+[29.017536] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:155:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass ControllerSmartData<HybridController, float>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KoutputSmartData\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[K_vptr.SmartData\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[29.017713] (controller) StderrLine: {'line': b'  155 |             return \x1b[01;31m\x1b[Kthis->outputSmartData\x1b[m\x1b[K.front()->smartdataValue;\n'}
+[29.017868] (controller) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.018016] (controller) StderrLine: {'line': b'      |                    \x1b[32m\x1b[K_vptr.SmartData\x1b[m\x1b[K\n'}
+[29.018178] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kfloat ControllerSmartData<Controller, Value>::update() [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.018351] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:158:15:\x1b[m\x1b[K   required from here\n'}
+[29.018593] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:160:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[29.018862] (controller) StderrLine: {'line': b'  160 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->freshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[29.019004] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.019294] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:177:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass ControllerSmartData<HybridController, float>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KnotifyObservers\x1b[m\x1b[K\xe2\x80\x99\n'}
+[29.019596] (controller) StderrLine: {'line': b'  177 |             \x1b[01;31m\x1b[Kthis->notifyObservers\x1b[m\x1b[K();\n'}
+[29.019713] (controller) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.019862] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid ControllerSmartData<Controller, Value>::notify(int) [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.019992] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:191:14:\x1b[m\x1b[K   required from here\n'}
+[29.020157] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:197:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[29.020314] (controller) StderrLine: {'line': b'  197 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->freshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[29.020435] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.020552] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:7\x1b[m\x1b[K,\n'}
+[29.020686] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[29.020784] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[29.020888] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 2; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.021069] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[29.021231] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[29.021376] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[29.021507] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[29.021607] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 2; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.021696] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[29.021828] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[29.021959] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[29.022049] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[29.022194] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 3; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.022348] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[29.022496] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[29.022665] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[29.022792] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[29.029510] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 3; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.029871] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[29.030034] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[29.030205] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[29.030348] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[29.030480] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[29.030613] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[29.030734] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::value() [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.030848] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:23:\x1b[m\x1b[K   required from here\n'}
+[29.030973] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[29.031107] (controller) StderrLine: {'line': b'   36 |         virtual Value value(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[29.031229] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[29.031355] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:7\x1b[m\x1b[K,\n'}
+[29.031468] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[29.031583] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[29.031703] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 4; Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.031838] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[29.031954] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[29.032052] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[29.032131] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[29.034569] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 4; Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.034786] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[29.034947] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[29.035099] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[29.035259] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[29.101447] (-) TimerEvent: {}
+[29.202221] (-) TimerEvent: {}
+[29.302632] (-) TimerEvent: {}
+[29.403029] (-) TimerEvent: {}
+[29.503327] (-) TimerEvent: {}
+[29.603682] (-) TimerEvent: {}
+[29.704039] (-) TimerEvent: {}
+[29.804474] (-) TimerEvent: {}
+[29.904969] (-) TimerEvent: {}
+[30.005276] (-) TimerEvent: {}
+[30.105589] (-) TimerEvent: {}
+[30.206115] (-) TimerEvent: {}
+[30.306815] (-) TimerEvent: {}
+[30.407142] (-) TimerEvent: {}
+[30.507440] (-) TimerEvent: {}
+[30.569064] (controller) StderrLine: {'line': b'make[2]: *** [CMakeFiles/controller.dir/build.make:63: CMakeFiles/controller.dir/src/controller.cpp.o] Error 1\n'}
+[30.569312] (controller) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller.dir/all] Error 2\n'}
+[30.569489] (controller) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[30.572403] (controller) CommandEnded: {'returncode': 2}
+[30.608375] (-) TimerEvent: {}
+[30.617822] (controller) JobEnded: {'identifier': 'controller', 'rc': 2}
+[30.628538] (-) EventReactorShutdown: {}

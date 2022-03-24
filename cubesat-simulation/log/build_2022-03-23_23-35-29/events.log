@@ -1,0 +1,841 @@
+[0.000000] (-) TimerEvent: {}
+[0.000322] (-) JobUnselected: {'identifier': 'concept'}
+[0.000562] (-) JobUnselected: {'identifier': 'cubesat_actuators'}
+[0.000965] (-) JobUnselected: {'identifier': 'cubesat_description'}
+[0.001031] (-) JobUnselected: {'identifier': 'cubesat_gazebo'}
+[0.001062] (-) JobUnselected: {'identifier': 'cubesat_sensors'}
+[0.001099] (-) JobUnselected: {'identifier': 'smartdata_test'}
+[0.001155] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.001200] (controller) JobStarted: {'identifier': 'controller'}
+[0.014299] (controller) JobProgress: {'identifier': 'controller', 'progress': 'cmake'}
+[0.015329] (controller) JobProgress: {'identifier': 'controller', 'progress': 'build'}
+[0.016350] (controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller', '--', '-j8', '-l8'], 'cwd': '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matheuswagner'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1715'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matheuswagner'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.65.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/91/usr/share/code/code'), ('MANAGERPID', '1533'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2079'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matheuswagner'), ('JOURNAL_STREAM', '8:41776'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matheuswagner'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/matheuswagner/.local/bin:/home/matheuswagner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matheuswagner-Inspiron-7572:@/tmp/.ICE-unix/1753,unix/matheuswagner-Inspiron-7572:/tmp/.ICE-unix/1753'), ('INVOCATION_ID', '5dad6637acd2411fae813c5286cbfd56'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d128db98ba.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/91/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy')]), 'shell': False}
+[0.067482] (controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target controller\x1b[0m\n'}
+[0.099342] (-) TimerEvent: {}
+[0.104075] (controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o\x1b[0m\n'}
+[0.199475] (-) TimerEvent: {}
+[0.299798] (-) TimerEvent: {}
+[0.400129] (-) TimerEvent: {}
+[0.467570] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:5\x1b[m\x1b[K,\n'}
+[0.467764] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[0.467847] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[0.467924] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void Observer::notify(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.467994] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/observer.h:8:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[0.468071] (controller) StderrLine: {'line': b'    8 |         virtual void notify(\x1b[01;35m\x1b[Kint id\x1b[m\x1b[K){};\n'}
+[0.468149] (controller) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~^~\x1b[m\x1b[K\n'}
+[0.500235] (-) TimerEvent: {}
+[0.600590] (-) TimerEvent: {}
+[0.700980] (-) TimerEvent: {}
+[0.801384] (-) TimerEvent: {}
+[0.901708] (-) TimerEvent: {}
+[1.002049] (-) TimerEvent: {}
+[1.102431] (-) TimerEvent: {}
+[1.202742] (-) TimerEvent: {}
+[1.303045] (-) TimerEvent: {}
+[1.403374] (-) TimerEvent: {}
+[1.503746] (-) TimerEvent: {}
+[1.604141] (-) TimerEvent: {}
+[1.704527] (-) TimerEvent: {}
+[1.804870] (-) TimerEvent: {}
+[1.905225] (-) TimerEvent: {}
+[2.005574] (-) TimerEvent: {}
+[2.105902] (-) TimerEvent: {}
+[2.206306] (-) TimerEvent: {}
+[2.306651] (-) TimerEvent: {}
+[2.406984] (-) TimerEvent: {}
+[2.509732] (-) TimerEvent: {}
+[2.610091] (-) TimerEvent: {}
+[2.710490] (-) TimerEvent: {}
+[2.810841] (-) TimerEvent: {}
+[2.857295] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/disturbance_predictor.h:8\x1b[m\x1b[K,\n'}
+[2.857497] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/satellite_model.h:8\x1b[m\x1b[K,\n'}
+[2.857621] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[2.857737] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[2.857850] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[2.857960] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[2.858070] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[2.858178] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/chebyshev_polynomials.h:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic float ChebyshevPolynomials::T0(float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.858287] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/chebyshev_polynomials.h:9:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kx\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.858397] (controller) StderrLine: {'line': b'    9 |         static float T0(\x1b[01;35m\x1b[Kfloat x\x1b[m\x1b[K)\n'}
+[2.858514] (controller) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~^\x1b[m\x1b[K\n'}
+[2.911013] (-) TimerEvent: {}
+[3.011297] (-) TimerEvent: {}
+[3.111599] (-) TimerEvent: {}
+[3.211972] (-) TimerEvent: {}
+[3.267706] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[3.267950] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[3.268050] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.268140] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.268236] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.268322] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/satellite_model.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SatelliteModel::UpdateDynamicMatrix(Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Quaternion<float>, Eigen::Quaternion<float>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.268413] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/satellite_model.h:26:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KslidingVariable\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.268517] (controller) StderrLine: {'line': b'   26 |         void UpdateDynamicMatrix(\x1b[01;35m\x1b[KEigen::Matrix<float,3,1> slidingVariable\x1b[m\x1b[K, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, Eigen::Quaternion<float> attitude,Eigen::Quaternion<float> attitudeErrorDerivative)\n'}
+[3.268602] (controller) StderrLine: {'line': b'      |                                  \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.312077] (-) TimerEvent: {}
+[3.412413] (-) TimerEvent: {}
+[3.512689] (-) TimerEvent: {}
+[3.613037] (-) TimerEvent: {}
+[3.638188] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/feedback_linearization_controller.h:6\x1b[m\x1b[K,\n'}
+[3.638495] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_controller_system.h:4\x1b[m\x1b[K,\n'}
+[3.638679] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.638830] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.638989] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.639143] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/satellite_model.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 3, 1> SatelliteModel::InverseDynamicsSignal(Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Matrix<float, 3, 1>, Eigen::Quaternion<float>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.639304] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/satellite_model.h:160:81:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KslidingVariable\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.639436] (controller) StderrLine: {'line': b'  160 |         Eigen::Matrix<float,3,1> InverseDynamicsSignal(\x1b[01;35m\x1b[KEigen::Matrix<float,3,1> slidingVariable\x1b[m\x1b[K, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, Eigen::Quaternion<float> attitude)\n'}
+[3.639568] (controller) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.713124] (-) TimerEvent: {}
+[3.797314] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/hybrid_controller.h:6\x1b[m\x1b[K,\n'}
+[3.797569] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[3.797685] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[3.797759] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_controller_system.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KAdaptiveControllerControlSystem::AdaptiveControllerControlSystem(DisturbancePredictor, SatelliteModel, FeedbackLinearizationControler, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.797837] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_controller_system.h:94:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KcontrolSignal\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[3.797913] (controller) StderrLine: {'line': b'   94 |             Eigen::Matrix<float,3,1> \x1b[01;35m\x1b[KcontrolSignal\x1b[m\x1b[K = Eigen::Matrix<float,3,1>::Zero();\n'}
+[3.797977] (controller) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.813206] (-) TimerEvent: {}
+[3.913449] (-) TimerEvent: {}
+[4.013800] (-) TimerEvent: {}
+[4.114157] (-) TimerEvent: {}
+[4.214486] (-) TimerEvent: {}
+[4.314899] (-) TimerEvent: {}
+[4.415227] (-) TimerEvent: {}
+[4.515553] (-) TimerEvent: {}
+[4.615923] (-) TimerEvent: {}
+[4.624841] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/nonadaptive_control_system.h:12\x1b[m\x1b[K,\n'}
+[4.625055] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/hybrid_controller.h:7\x1b[m\x1b[K,\n'}
+[4.625195] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:11\x1b[m\x1b[K,\n'}
+[4.625342] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[4.625466] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_square_root_cubature_kalman_filter.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 10, 1> AdaptiveSquareRootCubatureKalmanFilter::Filter(Eigen::Matrix<float, 10, 1>, Eigen::Matrix<float, 3, 1>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.625583] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/adaptive_square_root_cubature_kalman_filter.h:229:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KpriorPredictedErrorCovarianceNoQ\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[4.625697] (controller) StderrLine: {'line': b'  229 |             Eigen::Matrix<float, 10,10> \x1b[01;35m\x1b[KpriorPredictedErrorCovarianceNoQ\x1b[m\x1b[K = QRDecomposition(matrixForDecomposition);\n'}
+[4.625805] (controller) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.716026] (-) TimerEvent: {}
+[4.816491] (-) TimerEvent: {}
+[4.917211] (-) TimerEvent: {}
+[5.017501] (-) TimerEvent: {}
+[5.117946] (-) TimerEvent: {}
+[5.218589] (-) TimerEvent: {}
+[5.318993] (-) TimerEvent: {}
+[5.419299] (-) TimerEvent: {}
+[5.512918] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[5.513131] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:\x1b[m\x1b[K At global scope:\n'}
+[5.513262] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:38:147:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.513411] (controller) StderrLine: {'line': b'   38 |         std::shared_ptr<LocalSmartData<Eigen::Quaternion<float>,PluginOrientationSensor,ControllerSmartData<HybridController,float>>> orientation;\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[5.513527] (controller) StderrLine: {'line': b'      |                                                                                                                                                   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.513653] (controller) StderrLine: {'line': b'      |                                                                                                                                                   \x1b[31m\x1b[K-\x1b[m\x1b[K\n'}
+[5.519410] (-) TimerEvent: {}
+[5.619789] (-) TimerEvent: {}
+[5.720110] (-) TimerEvent: {}
+[5.820404] (-) TimerEvent: {}
+[5.920707] (-) TimerEvent: {}
+[6.021003] (-) TimerEvent: {}
+[6.102792] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[6.103116] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[6.103296] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid SmartData<Value>::setValue(Value) [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.103467] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/plugin_orientation_sensor.h:55:50:\x1b[m\x1b[K   required from here\n'}
+[6.103635] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:40:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[6.103792] (controller) StderrLine: {'line': b'   40 |         virtual void setValue(\x1b[01;35m\x1b[KValue value\x1b[m\x1b[K){}\n'}
+[6.103947] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[6.104096] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::update() [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.104247] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/plugin_orientation_sensor.h:56:37:\x1b[m\x1b[K   required from here\n'}
+[6.104396] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:38:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.104546] (controller) StderrLine: {'line': b'   38 |         virtual Value update(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.104693] (controller) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.109104] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid SmartData<Value>::setValue(Value) [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.109404] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/plugin_gyroscope.h:49:50:\x1b[m\x1b[K   required from here\n'}
+[6.109572] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:40:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[6.109733] (controller) StderrLine: {'line': b'   40 |         virtual void setValue(\x1b[01;35m\x1b[KValue value\x1b[m\x1b[K){}\n'}
+[6.109889] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[6.110041] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::update() [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.110199] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/plugin_gyroscope.h:50:37:\x1b[m\x1b[K   required from here\n'}
+[6.110352] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:38:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.110507] (controller) StderrLine: {'line': b'   38 |         virtual Value update(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.110659] (controller) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.112528] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::value() [with Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.112814] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/../include/plugin_motor_driver.h:46:51:\x1b[m\x1b[K   required from here\n'}
+[6.112993] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[6.113155] (controller) StderrLine: {'line': b'   36 |         virtual Value value(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[6.113308] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[6.121103] (-) TimerEvent: {}
+[6.221442] (-) TimerEvent: {}
+[6.234600] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[6.234899] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KControllerSmartData<Controller, Value>::ControllerSmartData(std::shared_ptr<LocalSmartData<float, PluginGyroscope, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginGyroscope, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginGyroscope, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorVelocitySensor, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<Eigen::Quaternion<float>, PluginOrientationSensor, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorDriver, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorDriver, ControllerSmartData<HybridController, float> > >, std::shared_ptr<LocalSmartData<float, PluginMotorDriver, ControllerSmartData<HybridController, float> > >) [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.235174] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:34:161:\x1b[m\x1b[K   required from here\n'}
+[6.235364] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:137:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KslidingControllerGain\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[6.235570] (controller) StderrLine: {'line': b'  137 |             Eigen::Matrix<float,3,3> \x1b[01;35m\x1b[KslidingControllerGain\x1b[m\x1b[K  = 2.22e-4*Eigen::Matrix<float,3,3>::Identity();\n'}
+[6.235761] (controller) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235942] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:168:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Knoise\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[6.236135] (controller) StderrLine: {'line': b'  168 |             Eigen::Matrix<float,3,1> \x1b[01;35m\x1b[Knoise\x1b[m\x1b[K = Eigen::Matrix<float,3,1>::Random();\n'}
+[6.236312] (controller) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.321523] (-) TimerEvent: {}
+[6.421836] (-) TimerEvent: {}
+[6.522134] (-) TimerEvent: {}
+[6.622593] (-) TimerEvent: {}
+[6.723021] (-) TimerEvent: {}
+[6.823368] (-) TimerEvent: {}
+[6.923719] (-) TimerEvent: {}
+[7.024281] (-) TimerEvent: {}
+[7.124574] (-) TimerEvent: {}
+[7.224872] (-) TimerEvent: {}
+[7.325205] (-) TimerEvent: {}
+[7.425478] (-) TimerEvent: {}
+[7.525768] (-) TimerEvent: {}
+[7.626101] (-) TimerEvent: {}
+[7.726566] (-) TimerEvent: {}
+[7.826871] (-) TimerEvent: {}
+[7.927550] (-) TimerEvent: {}
+[8.027892] (-) TimerEvent: {}
+[8.128390] (-) TimerEvent: {}
+[8.228734] (-) TimerEvent: {}
+[8.329211] (-) TimerEvent: {}
+[8.429871] (-) TimerEvent: {}
+[8.530195] (-) TimerEvent: {}
+[8.630478] (-) TimerEvent: {}
+[8.730825] (-) TimerEvent: {}
+[8.831245] (-) TimerEvent: {}
+[8.931873] (-) TimerEvent: {}
+[9.032165] (-) TimerEvent: {}
+[9.132494] (-) TimerEvent: {}
+[9.232767] (-) TimerEvent: {}
+[9.333124] (-) TimerEvent: {}
+[9.433502] (-) TimerEvent: {}
+[9.534088] (-) TimerEvent: {}
+[9.634384] (-) TimerEvent: {}
+[9.734766] (-) TimerEvent: {}
+[9.835057] (-) TimerEvent: {}
+[9.935559] (-) TimerEvent: {}
+[10.036047] (-) TimerEvent: {}
+[10.136382] (-) TimerEvent: {}
+[10.236713] (-) TimerEvent: {}
+[10.337003] (-) TimerEvent: {}
+[10.437323] (-) TimerEvent: {}
+[10.537668] (-) TimerEvent: {}
+[10.638090] (-) TimerEvent: {}
+[10.738542] (-) TimerEvent: {}
+[10.838891] (-) TimerEvent: {}
+[10.939262] (-) TimerEvent: {}
+[11.039789] (-) TimerEvent: {}
+[11.140134] (-) TimerEvent: {}
+[11.240459] (-) TimerEvent: {}
+[11.340866] (-) TimerEvent: {}
+[11.441203] (-) TimerEvent: {}
+[11.541559] (-) TimerEvent: {}
+[11.641920] (-) TimerEvent: {}
+[11.742471] (-) TimerEvent: {}
+[11.842792] (-) TimerEvent: {}
+[11.943133] (-) TimerEvent: {}
+[12.043529] (-) TimerEvent: {}
+[12.143962] (-) TimerEvent: {}
+[12.244371] (-) TimerEvent: {}
+[12.344905] (-) TimerEvent: {}
+[12.445313] (-) TimerEvent: {}
+[12.545883] (-) TimerEvent: {}
+[12.646240] (-) TimerEvent: {}
+[12.746722] (-) TimerEvent: {}
+[12.847374] (-) TimerEvent: {}
+[12.947776] (-) TimerEvent: {}
+[13.048146] (-) TimerEvent: {}
+[13.148536] (-) TimerEvent: {}
+[13.249083] (-) TimerEvent: {}
+[13.349424] (-) TimerEvent: {}
+[13.449782] (-) TimerEvent: {}
+[13.550126] (-) TimerEvent: {}
+[13.650452] (-) TimerEvent: {}
+[13.750749] (-) TimerEvent: {}
+[13.851135] (-) TimerEvent: {}
+[13.951718] (-) TimerEvent: {}
+[14.052045] (-) TimerEvent: {}
+[14.152351] (-) TimerEvent: {}
+[14.252704] (-) TimerEvent: {}
+[14.353050] (-) TimerEvent: {}
+[14.453382] (-) TimerEvent: {}
+[14.553748] (-) TimerEvent: {}
+[14.654219] (-) TimerEvent: {}
+[14.754507] (-) TimerEvent: {}
+[14.854802] (-) TimerEvent: {}
+[14.955129] (-) TimerEvent: {}
+[15.055466] (-) TimerEvent: {}
+[15.155827] (-) TimerEvent: {}
+[15.256127] (-) TimerEvent: {}
+[15.356438] (-) TimerEvent: {}
+[15.456730] (-) TimerEvent: {}
+[15.557071] (-) TimerEvent: {}
+[15.657411] (-) TimerEvent: {}
+[15.757987] (-) TimerEvent: {}
+[15.858266] (-) TimerEvent: {}
+[15.958627] (-) TimerEvent: {}
+[16.058912] (-) TimerEvent: {}
+[16.159501] (-) TimerEvent: {}
+[16.259827] (-) TimerEvent: {}
+[16.360244] (-) TimerEvent: {}
+[16.460621] (-) TimerEvent: {}
+[16.560973] (-) TimerEvent: {}
+[16.661349] (-) TimerEvent: {}
+[16.761751] (-) TimerEvent: {}
+[16.862375] (-) TimerEvent: {}
+[16.963145] (-) TimerEvent: {}
+[17.063687] (-) TimerEvent: {}
+[17.164489] (-) TimerEvent: {}
+[17.265004] (-) TimerEvent: {}
+[17.365380] (-) TimerEvent: {}
+[17.465742] (-) TimerEvent: {}
+[17.566042] (-) TimerEvent: {}
+[17.666366] (-) TimerEvent: {}
+[17.766673] (-) TimerEvent: {}
+[17.867092] (-) TimerEvent: {}
+[17.967675] (-) TimerEvent: {}
+[18.067988] (-) TimerEvent: {}
+[18.168328] (-) TimerEvent: {}
+[18.268647] (-) TimerEvent: {}
+[18.368991] (-) TimerEvent: {}
+[18.469315] (-) TimerEvent: {}
+[18.569696] (-) TimerEvent: {}
+[18.670055] (-) TimerEvent: {}
+[18.770406] (-) TimerEvent: {}
+[18.870715] (-) TimerEvent: {}
+[18.971075] (-) TimerEvent: {}
+[19.071463] (-) TimerEvent: {}
+[19.171768] (-) TimerEvent: {}
+[19.272061] (-) TimerEvent: {}
+[19.372418] (-) TimerEvent: {}
+[19.472739] (-) TimerEvent: {}
+[19.573141] (-) TimerEvent: {}
+[19.673597] (-) TimerEvent: {}
+[19.774169] (-) TimerEvent: {}
+[19.874583] (-) TimerEvent: {}
+[19.975016] (-) TimerEvent: {}
+[20.075321] (-) TimerEvent: {}
+[20.175689] (-) TimerEvent: {}
+[20.276038] (-) TimerEvent: {}
+[20.376396] (-) TimerEvent: {}
+[20.476743] (-) TimerEvent: {}
+[20.577138] (-) TimerEvent: {}
+[20.677614] (-) TimerEvent: {}
+[20.778024] (-) TimerEvent: {}
+[20.878489] (-) TimerEvent: {}
+[20.978971] (-) TimerEvent: {}
+[21.079270] (-) TimerEvent: {}
+[21.179621] (-) TimerEvent: {}
+[21.280016] (-) TimerEvent: {}
+[21.380325] (-) TimerEvent: {}
+[21.480638] (-) TimerEvent: {}
+[21.580946] (-) TimerEvent: {}
+[21.681257] (-) TimerEvent: {}
+[21.781596] (-) TimerEvent: {}
+[21.882024] (-) TimerEvent: {}
+[21.982385] (-) TimerEvent: {}
+[22.082691] (-) TimerEvent: {}
+[22.183084] (-) TimerEvent: {}
+[22.283603] (-) TimerEvent: {}
+[22.384293] (-) TimerEvent: {}
+[22.484638] (-) TimerEvent: {}
+[22.584990] (-) TimerEvent: {}
+[22.685619] (-) TimerEvent: {}
+[22.786074] (-) TimerEvent: {}
+[22.886556] (-) TimerEvent: {}
+[22.987012] (-) TimerEvent: {}
+[23.087675] (-) TimerEvent: {}
+[23.187997] (-) TimerEvent: {}
+[23.288385] (-) TimerEvent: {}
+[23.388951] (-) TimerEvent: {}
+[23.489338] (-) TimerEvent: {}
+[23.589677] (-) TimerEvent: {}
+[23.689987] (-) TimerEvent: {}
+[23.790451] (-) TimerEvent: {}
+[23.891006] (-) TimerEvent: {}
+[23.991344] (-) TimerEvent: {}
+[24.091667] (-) TimerEvent: {}
+[24.192062] (-) TimerEvent: {}
+[24.292414] (-) TimerEvent: {}
+[24.392784] (-) TimerEvent: {}
+[24.493146] (-) TimerEvent: {}
+[24.593577] (-) TimerEvent: {}
+[24.694365] (-) TimerEvent: {}
+[24.794705] (-) TimerEvent: {}
+[24.895157] (-) TimerEvent: {}
+[24.995603] (-) TimerEvent: {}
+[25.096001] (-) TimerEvent: {}
+[25.196353] (-) TimerEvent: {}
+[25.296725] (-) TimerEvent: {}
+[25.397074] (-) TimerEvent: {}
+[25.497398] (-) TimerEvent: {}
+[25.597793] (-) TimerEvent: {}
+[25.698100] (-) TimerEvent: {}
+[25.798431] (-) TimerEvent: {}
+[25.898872] (-) TimerEvent: {}
+[25.999270] (-) TimerEvent: {}
+[26.099616] (-) TimerEvent: {}
+[26.200024] (-) TimerEvent: {}
+[26.300428] (-) TimerEvent: {}
+[26.400831] (-) TimerEvent: {}
+[26.501244] (-) TimerEvent: {}
+[26.601623] (-) TimerEvent: {}
+[26.702044] (-) TimerEvent: {}
+[26.802464] (-) TimerEvent: {}
+[26.902842] (-) TimerEvent: {}
+[27.007049] (-) TimerEvent: {}
+[27.107658] (-) TimerEvent: {}
+[27.208175] (-) TimerEvent: {}
+[27.308635] (-) TimerEvent: {}
+[27.409147] (-) TimerEvent: {}
+[27.509601] (-) TimerEvent: {}
+[27.610159] (-) TimerEvent: {}
+[27.710564] (-) TimerEvent: {}
+[27.810908] (-) TimerEvent: {}
+[27.911256] (-) TimerEvent: {}
+[28.011728] (-) TimerEvent: {}
+[28.112042] (-) TimerEvent: {}
+[28.212351] (-) TimerEvent: {}
+[28.312699] (-) TimerEvent: {}
+[28.413071] (-) TimerEvent: {}
+[28.513503] (-) TimerEvent: {}
+[28.613896] (-) TimerEvent: {}
+[28.714243] (-) TimerEvent: {}
+[28.814581] (-) TimerEvent: {}
+[28.914883] (-) TimerEvent: {}
+[29.015203] (-) TimerEvent: {}
+[29.115520] (-) TimerEvent: {}
+[29.215942] (-) TimerEvent: {}
+[29.316246] (-) TimerEvent: {}
+[29.416558] (-) TimerEvent: {}
+[29.516867] (-) TimerEvent: {}
+[29.617190] (-) TimerEvent: {}
+[29.717517] (-) TimerEvent: {}
+[29.817942] (-) TimerEvent: {}
+[29.918539] (-) TimerEvent: {}
+[30.018875] (-) TimerEvent: {}
+[30.119275] (-) TimerEvent: {}
+[30.219852] (-) TimerEvent: {}
+[30.320407] (-) TimerEvent: {}
+[30.421018] (-) TimerEvent: {}
+[30.521640] (-) TimerEvent: {}
+[30.622122] (-) TimerEvent: {}
+[30.722732] (-) TimerEvent: {}
+[30.823219] (-) TimerEvent: {}
+[30.923888] (-) TimerEvent: {}
+[31.024898] (-) TimerEvent: {}
+[31.125401] (-) TimerEvent: {}
+[31.225711] (-) TimerEvent: {}
+[31.326058] (-) TimerEvent: {}
+[31.426425] (-) TimerEvent: {}
+[31.526885] (-) TimerEvent: {}
+[31.627408] (-) TimerEvent: {}
+[31.727997] (-) TimerEvent: {}
+[31.828309] (-) TimerEvent: {}
+[31.928675] (-) TimerEvent: {}
+[32.028994] (-) TimerEvent: {}
+[32.129316] (-) TimerEvent: {}
+[32.229656] (-) TimerEvent: {}
+[32.330014] (-) TimerEvent: {}
+[32.430419] (-) TimerEvent: {}
+[32.530705] (-) TimerEvent: {}
+[32.631020] (-) TimerEvent: {}
+[32.731365] (-) TimerEvent: {}
+[32.831920] (-) TimerEvent: {}
+[32.932296] (-) TimerEvent: {}
+[33.032690] (-) TimerEvent: {}
+[33.133079] (-) TimerEvent: {}
+[33.233473] (-) TimerEvent: {}
+[33.333822] (-) TimerEvent: {}
+[33.434202] (-) TimerEvent: {}
+[33.534794] (-) TimerEvent: {}
+[33.635314] (-) TimerEvent: {}
+[33.735826] (-) TimerEvent: {}
+[33.836355] (-) TimerEvent: {}
+[33.936922] (-) TimerEvent: {}
+[34.037494] (-) TimerEvent: {}
+[34.137989] (-) TimerEvent: {}
+[34.238500] (-) TimerEvent: {}
+[34.339114] (-) TimerEvent: {}
+[34.439759] (-) TimerEvent: {}
+[34.541223] (-) TimerEvent: {}
+[34.641890] (-) TimerEvent: {}
+[34.742192] (-) TimerEvent: {}
+[34.842499] (-) TimerEvent: {}
+[34.942856] (-) TimerEvent: {}
+[35.043231] (-) TimerEvent: {}
+[35.143527] (-) TimerEvent: {}
+[35.243860] (-) TimerEvent: {}
+[35.344181] (-) TimerEvent: {}
+[35.444524] (-) TimerEvent: {}
+[35.544874] (-) TimerEvent: {}
+[35.645224] (-) TimerEvent: {}
+[35.745517] (-) TimerEvent: {}
+[35.845846] (-) TimerEvent: {}
+[35.946155] (-) TimerEvent: {}
+[36.046533] (-) TimerEvent: {}
+[36.146845] (-) TimerEvent: {}
+[36.247200] (-) TimerEvent: {}
+[36.347552] (-) TimerEvent: {}
+[36.447960] (-) TimerEvent: {}
+[36.548268] (-) TimerEvent: {}
+[36.648622] (-) TimerEvent: {}
+[36.749001] (-) TimerEvent: {}
+[36.849401] (-) TimerEvent: {}
+[36.949808] (-) TimerEvent: {}
+[37.050531] (-) TimerEvent: {}
+[37.151060] (-) TimerEvent: {}
+[37.251424] (-) TimerEvent: {}
+[37.351806] (-) TimerEvent: {}
+[37.452233] (-) TimerEvent: {}
+[37.552617] (-) TimerEvent: {}
+[37.600933] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kfloat ControllerSmartData<Controller, Value>::update() [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.601220] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:181:15:\x1b[m\x1b[K   required from here\n'}
+[37.601355] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:183:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[37.601488] (controller) StderrLine: {'line': b'  183 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->freshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[37.601594] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.607841] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid ControllerSmartData<Controller, Value>::notify(int) [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.608249] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:277:14:\x1b[m\x1b[K   required from here\n'}
+[37.608443] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:288:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[37.608646] (controller) StderrLine: {'line': b'  288 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->freshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[37.608827] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.609007] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:302:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[37.609214] (controller) StderrLine: {'line': b'  302 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->driveFreshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[37.609365] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.609950] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:7\x1b[m\x1b[K,\n'}
+[37.610263] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[37.610607] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[37.610815] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 2; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.611048] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[37.611286] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[37.611510] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[37.611692] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[37.611867] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 2; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.612054] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[37.612229] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[37.612429] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[37.612607] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[37.612793] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 3; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.612974] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[37.613154] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[37.613333] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[37.613505] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[37.622496] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 3; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.623045] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[37.623305] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[37.623541] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[37.623737] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[37.623944] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[37.624143] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[37.624333] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue SmartData<Value>::value() [with Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.624537] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:23:\x1b[m\x1b[K   required from here\n'}
+[37.624735] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:36:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[37.624930] (controller) StderrLine: {'line': b'   36 |         virtual Value value(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[37.625120] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[37.625328] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/smartdata.h:7\x1b[m\x1b[K,\n'}
+[37.625527] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/local_smartdata.h:4\x1b[m\x1b[K,\n'}
+[37.625726] (controller) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:1\x1b[m\x1b[K:\n'}
+[37.625932] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Transducer<UNIT, Value>::actuate(const Value&) [with long unsigned int UNIT = 4; Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.626112] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:22:\x1b[m\x1b[K   required from here\n'}
+[37.626291] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:17:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[37.626491] (controller) StderrLine: {'line': b'   17 |         virtual void actuate(\x1b[01;35m\x1b[Kconst Value &value\x1b[m\x1b[K){}\n'}
+[37.626665] (controller) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[37.628904] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KValue Transducer<UNIT, Value>::sense() [with long unsigned int UNIT = 4; Value = Eigen::Quaternion<float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.629215] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:23:\x1b[m\x1b[K   required from here\n'}
+[37.629418] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/transducer.h:16:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kno return statement in function returning non-void [\x1b[01;35m\x1b[K-Wreturn-type\x1b[m\x1b[K]\n'}
+[37.629610] (controller) StderrLine: {'line': b'   16 |         virtual Value sense(){\x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[37.629794] (controller) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[37.652733] (-) TimerEvent: {}
+[37.670393] (controller) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/controller.cpp:3\x1b[m\x1b[K:\n'}
+[37.670869] (controller) StderrLine: {'line': b'/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid ControllerSmartData<Controller, Value>::updateDrive() [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.671122] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:312:23:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid ControllerSmartData<Controller, Value>::notify(int) [with Controller = HybridController; Value = float]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[37.671410] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:277:14:\x1b[m\x1b[K   required from here\n'}
+[37.671609] (controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/controller/src/../include/controller_smartdata.h:245:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<bool, std::allocator<bool> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[37.671811] (controller) StderrLine: {'line': b'  245 |             for(int i = 0; \x1b[01;35m\x1b[Ki<this->driveFreshnessList.size()\x1b[m\x1b[K; i++)\n'}
+[37.671990] (controller) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.752851] (-) TimerEvent: {}
+[37.853292] (-) TimerEvent: {}
+[37.954132] (-) TimerEvent: {}
+[38.054461] (-) TimerEvent: {}
+[38.154757] (-) TimerEvent: {}
+[38.255288] (-) TimerEvent: {}
+[38.355782] (-) TimerEvent: {}
+[38.456126] (-) TimerEvent: {}
+[38.556679] (-) TimerEvent: {}
+[38.657386] (-) TimerEvent: {}
+[38.757738] (-) TimerEvent: {}
+[38.858071] (-) TimerEvent: {}
+[38.958407] (-) TimerEvent: {}
+[39.058706] (-) TimerEvent: {}
+[39.159051] (-) TimerEvent: {}
+[39.259452] (-) TimerEvent: {}
+[39.360975] (-) TimerEvent: {}
+[39.461251] (-) TimerEvent: {}
+[39.561598] (-) TimerEvent: {}
+[39.661929] (-) TimerEvent: {}
+[39.762232] (-) TimerEvent: {}
+[39.862635] (-) TimerEvent: {}
+[39.963066] (-) TimerEvent: {}
+[40.063932] (-) TimerEvent: {}
+[40.164251] (-) TimerEvent: {}
+[40.264568] (-) TimerEvent: {}
+[40.365050] (-) TimerEvent: {}
+[40.465372] (-) TimerEvent: {}
+[40.565775] (-) TimerEvent: {}
+[40.666275] (-) TimerEvent: {}
+[40.766813] (-) TimerEvent: {}
+[40.867221] (-) TimerEvent: {}
+[40.967674] (-) TimerEvent: {}
+[41.068239] (-) TimerEvent: {}
+[41.168958] (-) TimerEvent: {}
+[41.269415] (-) TimerEvent: {}
+[41.369898] (-) TimerEvent: {}
+[41.470470] (-) TimerEvent: {}
+[41.571178] (-) TimerEvent: {}
+[41.671616] (-) TimerEvent: {}
+[41.772378] (-) TimerEvent: {}
+[41.872837] (-) TimerEvent: {}
+[41.973164] (-) TimerEvent: {}
+[42.073500] (-) TimerEvent: {}
+[42.173837] (-) TimerEvent: {}
+[42.274137] (-) TimerEvent: {}
+[42.374419] (-) TimerEvent: {}
+[42.474732] (-) TimerEvent: {}
+[42.575206] (-) TimerEvent: {}
+[42.675550] (-) TimerEvent: {}
+[42.775818] (-) TimerEvent: {}
+[42.876172] (-) TimerEvent: {}
+[42.976535] (-) TimerEvent: {}
+[43.076925] (-) TimerEvent: {}
+[43.177355] (-) TimerEvent: {}
+[43.278102] (-) TimerEvent: {}
+[43.378378] (-) TimerEvent: {}
+[43.478683] (-) TimerEvent: {}
+[43.579096] (-) TimerEvent: {}
+[43.679678] (-) TimerEvent: {}
+[43.780057] (-) TimerEvent: {}
+[43.880502] (-) TimerEvent: {}
+[43.980856] (-) TimerEvent: {}
+[44.081217] (-) TimerEvent: {}
+[44.181453] (-) TimerEvent: {}
+[44.281794] (-) TimerEvent: {}
+[44.382266] (-) TimerEvent: {}
+[44.482589] (-) TimerEvent: {}
+[44.582899] (-) TimerEvent: {}
+[44.683398] (-) TimerEvent: {}
+[44.784106] (-) TimerEvent: {}
+[44.884529] (-) TimerEvent: {}
+[44.985219] (-) TimerEvent: {}
+[45.085976] (-) TimerEvent: {}
+[45.186631] (-) TimerEvent: {}
+[45.286967] (-) TimerEvent: {}
+[45.387305] (-) TimerEvent: {}
+[45.487646] (-) TimerEvent: {}
+[45.587935] (-) TimerEvent: {}
+[45.688265] (-) TimerEvent: {}
+[45.788596] (-) TimerEvent: {}
+[45.888922] (-) TimerEvent: {}
+[45.989245] (-) TimerEvent: {}
+[46.089603] (-) TimerEvent: {}
+[46.189904] (-) TimerEvent: {}
+[46.290212] (-) TimerEvent: {}
+[46.390521] (-) TimerEvent: {}
+[46.490835] (-) TimerEvent: {}
+[46.591558] (-) TimerEvent: {}
+[46.691851] (-) TimerEvent: {}
+[46.792098] (-) TimerEvent: {}
+[46.892403] (-) TimerEvent: {}
+[46.992834] (-) TimerEvent: {}
+[47.093092] (-) TimerEvent: {}
+[47.193350] (-) TimerEvent: {}
+[47.293658] (-) TimerEvent: {}
+[47.394010] (-) TimerEvent: {}
+[47.494331] (-) TimerEvent: {}
+[47.594828] (-) TimerEvent: {}
+[47.695653] (-) TimerEvent: {}
+[47.796115] (-) TimerEvent: {}
+[47.896402] (-) TimerEvent: {}
+[47.996730] (-) TimerEvent: {}
+[48.097112] (-) TimerEvent: {}
+[48.197453] (-) TimerEvent: {}
+[48.298051] (-) TimerEvent: {}
+[48.398767] (-) TimerEvent: {}
+[48.499038] (-) TimerEvent: {}
+[48.599374] (-) TimerEvent: {}
+[48.699712] (-) TimerEvent: {}
+[48.800395] (-) TimerEvent: {}
+[48.900886] (-) TimerEvent: {}
+[49.001447] (-) TimerEvent: {}
+[49.102177] (-) TimerEvent: {}
+[49.202762] (-) TimerEvent: {}
+[49.303048] (-) TimerEvent: {}
+[49.403475] (-) TimerEvent: {}
+[49.503911] (-) TimerEvent: {}
+[49.604223] (-) TimerEvent: {}
+[49.704485] (-) TimerEvent: {}
+[49.804772] (-) TimerEvent: {}
+[49.905031] (-) TimerEvent: {}
+[50.005272] (-) TimerEvent: {}
+[50.105543] (-) TimerEvent: {}
+[50.205843] (-) TimerEvent: {}
+[50.306112] (-) TimerEvent: {}
+[50.406438] (-) TimerEvent: {}
+[50.506783] (-) TimerEvent: {}
+[50.607162] (-) TimerEvent: {}
+[50.707450] (-) TimerEvent: {}
+[50.807825] (-) TimerEvent: {}
+[50.908247] (-) TimerEvent: {}
+[51.008593] (-) TimerEvent: {}
+[51.108894] (-) TimerEvent: {}
+[51.209231] (-) TimerEvent: {}
+[51.309569] (-) TimerEvent: {}
+[51.409906] (-) TimerEvent: {}
+[51.510220] (-) TimerEvent: {}
+[51.610808] (-) TimerEvent: {}
+[51.711624] (-) TimerEvent: {}
+[51.812223] (-) TimerEvent: {}
+[51.912563] (-) TimerEvent: {}
+[52.012929] (-) TimerEvent: {}
+[52.113406] (-) TimerEvent: {}
+[52.213862] (-) TimerEvent: {}
+[52.314263] (-) TimerEvent: {}
+[52.414654] (-) TimerEvent: {}
+[52.514920] (-) TimerEvent: {}
+[52.615236] (-) TimerEvent: {}
+[52.715639] (-) TimerEvent: {}
+[52.816016] (-) TimerEvent: {}
+[52.916304] (-) TimerEvent: {}
+[53.016598] (-) TimerEvent: {}
+[53.116903] (-) TimerEvent: {}
+[53.217215] (-) TimerEvent: {}
+[53.317475] (-) TimerEvent: {}
+[53.417731] (-) TimerEvent: {}
+[53.518040] (-) TimerEvent: {}
+[53.618386] (-) TimerEvent: {}
+[53.718589] (-) TimerEvent: {}
+[53.818905] (-) TimerEvent: {}
+[53.919329] (-) TimerEvent: {}
+[54.019651] (-) TimerEvent: {}
+[54.119934] (-) TimerEvent: {}
+[54.220227] (-) TimerEvent: {}
+[54.320555] (-) TimerEvent: {}
+[54.420809] (-) TimerEvent: {}
+[54.521117] (-) TimerEvent: {}
+[54.621555] (-) TimerEvent: {}
+[54.721885] (-) TimerEvent: {}
+[54.822129] (-) TimerEvent: {}
+[54.922507] (-) TimerEvent: {}
+[55.023249] (-) TimerEvent: {}
+[55.123523] (-) TimerEvent: {}
+[55.223876] (-) TimerEvent: {}
+[55.324295] (-) TimerEvent: {}
+[55.424738] (-) TimerEvent: {}
+[55.525062] (-) TimerEvent: {}
+[55.625378] (-) TimerEvent: {}
+[55.725688] (-) TimerEvent: {}
+[55.826054] (-) TimerEvent: {}
+[55.926449] (-) TimerEvent: {}
+[56.026848] (-) TimerEvent: {}
+[56.127460] (-) TimerEvent: {}
+[56.228131] (-) TimerEvent: {}
+[56.328565] (-) TimerEvent: {}
+[56.429082] (-) TimerEvent: {}
+[56.529795] (-) TimerEvent: {}
+[56.630430] (-) TimerEvent: {}
+[56.730809] (-) TimerEvent: {}
+[56.831408] (-) TimerEvent: {}
+[56.932173] (-) TimerEvent: {}
+[57.032574] (-) TimerEvent: {}
+[57.132969] (-) TimerEvent: {}
+[57.233272] (-) TimerEvent: {}
+[57.333601] (-) TimerEvent: {}
+[57.433913] (-) TimerEvent: {}
+[57.534225] (-) TimerEvent: {}
+[57.634488] (-) TimerEvent: {}
+[57.734739] (-) TimerEvent: {}
+[57.835082] (-) TimerEvent: {}
+[57.935645] (-) TimerEvent: {}
+[58.035956] (-) TimerEvent: {}
+[58.136246] (-) TimerEvent: {}
+[58.236577] (-) TimerEvent: {}
+[58.336862] (-) TimerEvent: {}
+[58.437243] (-) TimerEvent: {}
+[58.537547] (-) TimerEvent: {}
+[58.637926] (-) TimerEvent: {}
+[58.738257] (-) TimerEvent: {}
+[58.838883] (-) TimerEvent: {}
+[58.939365] (-) TimerEvent: {}
+[59.040086] (-) TimerEvent: {}
+[59.140382] (-) TimerEvent: {}
+[59.240870] (-) TimerEvent: {}
+[59.341179] (-) TimerEvent: {}
+[59.441494] (-) TimerEvent: {}
+[59.541756] (-) TimerEvent: {}
+[59.642142] (-) TimerEvent: {}
+[59.742754] (-) TimerEvent: {}
+[59.843648] (-) TimerEvent: {}
+[59.944289] (-) TimerEvent: {}
+[60.044635] (-) TimerEvent: {}
+[60.145108] (-) TimerEvent: {}
+[60.245713] (-) TimerEvent: {}
+[60.346494] (-) TimerEvent: {}
+[60.447425] (-) TimerEvent: {}
+[60.548109] (-) TimerEvent: {}
+[60.648465] (-) TimerEvent: {}
+[60.748969] (-) TimerEvent: {}
+[60.849783] (-) TimerEvent: {}
+[60.950477] (-) TimerEvent: {}
+[61.050945] (-) TimerEvent: {}
+[61.151456] (-) TimerEvent: {}
+[61.251779] (-) TimerEvent: {}
+[61.352072] (-) TimerEvent: {}
+[61.452494] (-) TimerEvent: {}
+[61.552956] (-) TimerEvent: {}
+[61.653256] (-) TimerEvent: {}
+[61.753565] (-) TimerEvent: {}
+[61.853923] (-) TimerEvent: {}
+[61.954223] (-) TimerEvent: {}
+[62.054628] (-) TimerEvent: {}
+[62.078321] (controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller\x1b[0m\n'}
+[62.154786] (-) TimerEvent: {}
+[62.255444] (-) TimerEvent: {}
+[62.355834] (-) TimerEvent: {}
+[62.456464] (-) TimerEvent: {}
+[62.557096] (-) TimerEvent: {}
+[62.657641] (-) TimerEvent: {}
+[62.758403] (-) TimerEvent: {}
+[62.858836] (-) TimerEvent: {}
+[62.959385] (-) TimerEvent: {}
+[63.059976] (-) TimerEvent: {}
+[63.160618] (-) TimerEvent: {}
+[63.261367] (-) TimerEvent: {}
+[63.362166] (-) TimerEvent: {}
+[63.462854] (-) TimerEvent: {}
+[63.563473] (-) TimerEvent: {}
+[63.663879] (-) TimerEvent: {}
+[63.764284] (-) TimerEvent: {}
+[63.864582] (-) TimerEvent: {}
+[63.964951] (-) TimerEvent: {}
+[64.065266] (-) TimerEvent: {}
+[64.165704] (-) TimerEvent: {}
+[64.266018] (-) TimerEvent: {}
+[64.366483] (-) TimerEvent: {}
+[64.466758] (-) TimerEvent: {}
+[64.567036] (-) TimerEvent: {}
+[64.599117] (controller) StdoutLine: {'line': b'[100%] Built target controller\n'}
+[64.622846] (controller) CommandEnded: {'returncode': 0}
+[64.664961] (controller) JobProgress: {'identifier': 'controller', 'progress': 'install'}
+[64.667659] (-) TimerEvent: {}
+[64.687939] (controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller'], 'cwd': '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'matheuswagner'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1715'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/matheuswagner'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.65.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/91/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/91/usr/share/code/code'), ('MANAGERPID', '1533'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2079'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'matheuswagner'), ('JOURNAL_STREAM', '8:41776'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'matheuswagner'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/matheuswagner/.local/bin:/home/matheuswagner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/matheuswagner-Inspiron-7572:@/tmp/.ICE-unix/1753,unix/matheuswagner-Inspiron-7572:/tmp/.ICE-unix/1753'), ('INVOCATION_ID', '5dad6637acd2411fae813c5286cbfd56'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d128db98ba.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/91/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_sensors:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_gazebo:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/concept:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy')]), 'shell': False}
+[64.709806] (controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[64.710423] (controller) StdoutLine: {'line': b'-- Installing: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/lib/controller/controller\n'}
+[64.735640] (controller) StdoutLine: {'line': b'-- Set runtime path of "/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/lib/controller/controller" to ""\n'}
+[64.735951] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/ament_index/resource_index/package_run_dependencies/controller\n'}
+[64.736244] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/ament_index/resource_index/parent_prefix_path/controller\n'}
+[64.736476] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/environment/ament_prefix_path.sh\n'}
+[64.736729] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/environment/ament_prefix_path.dsv\n'}
+[64.736945] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/environment/path.sh\n'}
+[64.737207] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/environment/path.dsv\n'}
+[64.737433] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/local_setup.bash\n'}
+[64.737683] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/local_setup.sh\n'}
+[64.737901] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/local_setup.zsh\n'}
+[64.738097] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/local_setup.dsv\n'}
+[64.738290] (controller) StdoutLine: {'line': b'-- Installing: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/package.dsv\n'}
+[64.738476] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/ament_index/resource_index/packages/controller\n'}
+[64.738666] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/cmake/controllerConfig.cmake\n'}
+[64.738857] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/cmake/controllerConfig-version.cmake\n'}
+[64.739091] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/controller/share/controller/package.xml\n'}
+[64.740686] (controller) CommandEnded: {'returncode': 0}
+[64.767694] (-) TimerEvent: {}
+[64.853849] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[64.862654] (-) EventReactorShutdown: {}

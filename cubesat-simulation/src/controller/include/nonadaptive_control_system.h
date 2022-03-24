@@ -84,7 +84,7 @@ class NonAdaptiveControlSystem
 
             Eigen::Matrix<float,10,1> filteredstate = filter.Filter(stateVector, controlSignal);
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if(i < 3)
                 {
@@ -95,11 +95,12 @@ class NonAdaptiveControlSystem
                 {
                     filteredReactionWheelVelocities(i-3) = filteredstate(i); 
                 }
-                else
-                {
-                    filteredAttitude.coeffs()(i-6) =  filteredstate(i);
-                }
-            } 
+            }
+
+            filteredAttitude.w() =  filteredstate(6);
+            filteredAttitude.x() =  filteredstate(7);
+            filteredAttitude.y() =  filteredstate(8);
+            filteredAttitude.z() =  filteredstate(9);
 
             Eigen::Quaternion<float> atitudeError = referenceAttitude.conjugate()*filteredAttitude;
 

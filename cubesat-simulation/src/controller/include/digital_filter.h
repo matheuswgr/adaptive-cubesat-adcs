@@ -15,10 +15,11 @@ class DigitalFilter
         CircularBuffer<float>* outputBuffer;
     
     public:
+        DigitalFilter(){}
         DigitalFilter(float* inputGains, float* outputGains, int inputOrder, int outputOrder)
         {
-            this-> inputGains = new float[inputOrder];
-            this-> outputGains = new float[outputOrder];
+            this->inputGains = new float[inputOrder];
+            this->outputGains = new float[outputOrder];
 
             inputBuffer = new CircularBuffer<float>(inputOrder);
             outputBuffer = new CircularBuffer<float>(outputOrder);

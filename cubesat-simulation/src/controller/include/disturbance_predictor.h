@@ -7,9 +7,11 @@
 #include <eigen3/Eigen/Geometry>
 #include "chebyshev_polynomials.h"
 
+#include <iostream>
+
 class DisturbancePredictor
 {
-    private:
+    public:
         Eigen::Matrix<float,90,1> weights;
         Eigen::Matrix<float,3,1> slidingVariable;
         Eigen::Matrix<float,90,90> learningLawWeights;
@@ -91,6 +93,10 @@ class DisturbancePredictor
             UpdateKernel(satelliteVelocity,reactionWheelVelocities, attitude);
             Eigen::Matrix<float,3,1> prediction = kernel*weights;
             kernel = lastKernel;
+
+            //std::cout << "\n\n" << kernel << "\n\n";
+            //std::cout << "\n\n" << weights.transpose() << "\n\n";
+
             return prediction;
         }
 

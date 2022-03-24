@@ -95,19 +95,32 @@
     <origin rpy="0 1.57 0" xyz="0.04 0.0 0.0"/>
     <parent link="frame"/>
     <child link="reaction_wheel_x_axis"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 1">
+<dynamics>
+            <friction>0.0</friction>
+            <damping>0.1</damping>
+        </dynamics>    </axis>
   </joint>
   <joint name="reaction_wheel_y_axis_shaft" type="continuous">
     <origin rpy="1.57 0 0" xyz="0 0.04 0.0"/>
     <parent link="frame"/>
     <child link="reaction_wheel_y_axis"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 -1">
+<dynamics>
+            <friction>0.0</friction>
+            <damping>0.1</damping>
+        </dynamics>    </axis>
   </joint>
   <joint name="reaction_wheel_z_axis_shaft" type="continuous">
     <origin rpy="0 0 0" xyz="0 0 -0.04"/>
     <parent link="frame"/>
     <child link="reaction_wheel_z_axis"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 1">
+      <dynamics>
+            <friction>0.0</friction>
+            <damping>0.1</damping>
+        </dynamics>
+    </axis>
   </joint>
 
     <gazebo>
@@ -130,19 +143,45 @@
           <motor_shaft_joint>reaction_wheel_z_axis_shaft</motor_shaft_joint>
         </plugin>
     </gazebo>
-    
+      <gazebo>
+
+    <plugin name="lifting_surface" filename="libLiftDragPlugin.so">
+
+        <!-- taken from the lift curve figure -->
+        <!-- alpha_0 is 5 degrees -->
+        <a0>0</a0>
+        <!-- alpha_stall is 19.3 degrees -->
+        <alpha_stall>0.7854</alpha_stall>
+        <!-- slope of the lift curve to the left of the stall angle -->
+        <cla>0.002</cla>
+        <!-- slope of the lift curve to the right of the stall angle -->
+        <cla_stall>-0.002</cla_stall>
+
+        <!-- below are just random values in this example -->
+        <cda>26</cda>
+        <cda_stall>-26</cda_stall>
+        <area>0.01</area>
+        <fluid_density>10e-12</fluid_density>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>
+        <cp>0 0 0</cp>
+        <link_name>frame</link_name>
+        <radial_symmetry>false</radial_symmetry>
+    </plugin>
+        </gazebo>
+
     <gazebo reference="frame">
       <turnGravityOff>true</turnGravityOff>
       <sensor name="imu_sensor" type="imu">
         <always_on>true</always_on>
-        <update_rate>150</update_rate>
+        <update_rate>2000</update_rate>
         <visualize>1</visualize>
         <topic>__default_topic__</topic>
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <topicName>imu</topicName>
         <bodyName>frame</bodyName>
-        <updateRateHZ>200</updateRateHZ>
-        <gaussianNoise>0.05</gaussianNoise>
+        <updateRateHZ>2000</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
         <xyzOffset>0 0 0</xyzOffset>
         <rpyOffset>0 0 0</rpyOffset>
       </plugin>

@@ -8,6 +8,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include "sensor_msgs/msg/imu.hpp"
+#include "geometry_msgs/msg/quaternion.hpp"
 
 using namespace std::chrono_literals;
 
@@ -26,13 +27,15 @@ class ImuAdapter : public rclcpp::Node
       velocityYPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_velocity_y", 10);
       velocityZPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_velocity_z", 10);
 
-      orientationOPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_o", 10);
+      orientationPublisher = this->create_publisher<geometry_msgs::msg::Quaternion>("imu_orientation", 10);
+
+      /*orientationOPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_o", 10);
       orientationXPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_x", 10);
       orientationYPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_y", 10);
-      orientationZPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_z", 10);
+      orientationZPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_orientation_z", 10);*/
 
-      velocityNoise = std::normal_distribution<float>(0.0,1e-1);
-      orientationNoise= std::normal_distribution<float>(0.0,5e-2);
+      velocityNoise = std::normal_distribution<float>(0.0,1e-2);
+      orientationNoise= std::normal_distribution<float>(0.0,1e-2);
     }
 
   private:
@@ -74,36 +77,21 @@ class ImuAdapter : public rclcpp::Node
       messageVelocityZ.data[6] = msg->angular_velocity.z + velocityNoise(velocityNoiseGenerator);
       velocityZPublisher->publish(messageVelocityZ);
 
+      float orientationW = msg->orientation.w + orientationNoise(orientationNoiseGenerator);
+      float orientationX = msg->orientation.x + orientationNoise(orientationNoiseGenerator);
+      float orientationY = msg->orientation.y + orientationNoise(orientationNoiseGenerator);
+      float orientationZ = msg->orientation.z + orientationNoise(orientationNoiseGenerator);
       
+      float orientationNorm = std::sqrt( orientationW*orientationW + orientationX*orientationX +
+                                orientationY*orientationY + orientationZ*orientationZ);
 
-      auto messageOrientationO = std_msgs::msg::Float32MultiArray();
-      this->BuildEmptyPacket(&messageOrientationO);
-      messageOrientationO.data[6] = msg->orientation.w + orientationNoise(orientationNoiseGenerator);
+      auto messageOrientation = geometry_msgs::msg::Quaternion();
+      messageOrientation.w = orientationW/orientationNorm;
+      messageOrientation.x = orientationX/orientationNorm;
+      messageOrientation.y = orientationY/orientationNorm;
+      messageOrientation.z = orientationZ/orientationNorm;
 
-      auto messageOrientationX = std_msgs::msg::Float32MultiArray();
-      this->BuildEmptyPacket(&messageOrientationX);
-      messageOrientationX.data[6] = msg->orientation.x + orientationNoise(orientationNoiseGenerator);
-
-      auto messageOrientationY = std_msgs::msg::Float32MultiArray();
-      this->BuildEmptyPacket(&messageOrientationY);
-      messageOrientationY.data[6] = msg->orientation.y + orientationNoise(orientationNoiseGenerator);
-
-      auto messageOrientationZ = std_msgs::msg::Float32MultiArray();
-      this->BuildEmptyPacket(&messageOrientationZ);
-      messageOrientationZ.data[6] = msg->orientation.z + orientationNoise(orientationNoiseGenerator);
-      
-      float orientationNorm = std::sqrt(messageOrientationO.data[6]*messageOrientationO.data[6] + messageOrientationX.data[6]*messageOrientationX.data[6] +
-                                messageOrientationY.data[6]*messageOrientationY.data[6] + messageOrientationZ.data[6]*messageOrientationZ.data[6]);
-
-      messageOrientationO.data[6] = messageOrientationO.data[6]/orientationNorm;
-      messageOrientationX.data[6] = messageOrientationX.data[6]/orientationNorm;
-      messageOrientationY.data[6] = messageOrientationY.data[6]/orientationNorm;
-      messageOrientationZ.data[6] = messageOrientationZ.data[6]/orientationNorm;
-
-      orientationOPublisher->publish(messageOrientationO);
-      orientationXPublisher->publish(messageOrientationX);
-      orientationZPublisher->publish(messageOrientationZ);
-      orientationYPublisher->publish(messageOrientationY);
+      orientationPublisher->publish(messageOrientation);
     }
 
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription;
@@ -112,10 +100,8 @@ class ImuAdapter : public rclcpp::Node
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr velocityYPublisher;
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr velocityZPublisher;
 
-    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr orientationOPublisher;
-    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr orientationXPublisher;
-    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr orientationYPublisher;
-    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr orientationZPublisher;
+    rclcpp::Publisher<geometry_msgs::msg::Quaternion>::SharedPtr orientationPublisher;
+
     std::default_random_engine velocityNoiseGenerator;
     std::default_random_engine orientationNoiseGenerator;
     std::normal_distribution<float> velocityNoise;

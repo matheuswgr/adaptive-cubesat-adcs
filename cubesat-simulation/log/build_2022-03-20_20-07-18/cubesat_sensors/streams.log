@@ -1,0 +1,14 @@
+[0.299s] Invoking command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8
+[0.360s] [35m[1mScanning dependencies of target imu_adapter[0m
+[0.399s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[2.144s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.144s] [01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:107:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KmessageOrientation[m[K’
+[2.144s]   107 |       messageOrientation.w = messageOrientationO.data[6]
+[2.144s]       |                                                         [01;31m[K^[m[K
+[2.144s]       |                                                         [32m[K;[m[K
+[2.145s]   108 |       [32m[KmessageOrientation[m[K.x = messageOrientationX.data[6]
+[2.145s]       |       [32m[K~~~~~~~~~~~~~~~~~~[m[K                                 
+[4.171s] make[2]: *** [CMakeFiles/imu_adapter.dir/build.make:63: CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+[4.172s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/imu_adapter.dir/all] Error 2
+[4.172s] make: *** [Makefile:141: all] Error 2
+[4.176s] Invoked command in '/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/install/cubesat_description:/opt/ros/foxy /usr/bin/cmake --build /home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/build/cubesat_sensors -- -j8 -l8

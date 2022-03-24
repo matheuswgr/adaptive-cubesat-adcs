@@ -8,7 +8,7 @@
 
 class SlidingModeController
 {
-    private:
+    public:
         float boundaryLayerThickness;
         float errorLimit;
         Eigen::Matrix<float,3,3> controllerGain;

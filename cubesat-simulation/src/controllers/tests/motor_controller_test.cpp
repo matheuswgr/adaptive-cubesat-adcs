@@ -1,4 +1,4 @@
-#include "motor_controller.h"
+#include "../motor_controller.h"
 #include <iostream>
 #include <fstream>
 
@@ -9,7 +9,7 @@ int main()
     float sampling_period = 1/600.0;
     float rotorInertia = 5.67e-7;
     MotorController motorController(inputGains, ouputGains, rotorInertia, sampling_period);
-    motorController.SetReferenceTorque(2.2e-4);
+    motorController.SetReferenceTorque(1e-5);
 
     const int samples = 18000;
     float input = 0;

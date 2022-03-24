@@ -10,7 +10,7 @@
 
 class FeedbackLinearizationControler
 {
-    private: 
+    public: 
         Eigen::Matrix<float,3,3> controllerGain;
         Eigen::Matrix<float,3,3> slidingVariableGains;
         Eigen::Matrix<float,3,1> controlSignal;
@@ -37,6 +37,9 @@ class FeedbackLinearizationControler
 
             controlSignal = controllerGain*slidingVariable + satelliteModel.InverseDynamicsSignal(slidingVariable, satelliteVelocity, reactionWheelVelocities, attitude);
             
+            //std::cout << "\n controllerGain: " << controllerGain << "\n";
+            //std::cout << "\n slidingVariable: " << slidingVariable.transpose() << "\n\n";
+
             Eigen::Matrix<float,3,1> vectorPartQuaternionErrorDerivative;
 
             Eigen::Quaternion<float> quaternionErrorDerivative = atitudeError*velocityQuaternion;
@@ -44,16 +47,6 @@ class FeedbackLinearizationControler
             vectorPartQuaternionErrorDerivative(0) = quaternionErrorDerivative.x();
             vectorPartQuaternionErrorDerivative(1) = quaternionErrorDerivative.y();
             vectorPartQuaternionErrorDerivative(2) = quaternionErrorDerivative.z();
-
-
-            if (atitudeError.w() >= 0)
-            {
-                controlSignal = controlSignal + satelliteModel.satelliteFrameInertiaTensor*slidingVariableGains*0.5*vectorPartQuaternionErrorDerivative;
-            }
-            else
-            {
-                controlSignal = controlSignal - satelliteModel.satelliteFrameInertiaTensor*slidingVariableGains*0.5*vectorPartQuaternionErrorDerivative;
-            }
             
             return controlSignal;
         }

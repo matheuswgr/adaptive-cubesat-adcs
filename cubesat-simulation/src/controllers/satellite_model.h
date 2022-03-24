@@ -93,6 +93,7 @@ class SatelliteModel
         void SetInitialDynamicMatrix(Eigen::Matrix<float,3,1> slidingVariable, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, Eigen::Quaternion<float> attitude)
         {
             UpdateDynamicMatrix(slidingVariable, satelliteVelocity, reactionWheelVelocities, attitude);
+            UpdateInertiaMatrices();
         }
 
         void UpdateParameters(Eigen::Matrix<float,3,1> slidingVariable, Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities, Eigen::Quaternion<float> attitude)

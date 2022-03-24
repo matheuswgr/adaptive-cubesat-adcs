@@ -10,10 +10,12 @@ CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/builtin_
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__traits.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/time.hpp
+CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__builder.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__traits.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__struct.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__traits.hpp
+CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/geometry_msgs/msg/quaternion.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/libstatistics_collector/collector/collector.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp
 CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o: /opt/ros/foxy/include/libstatistics_collector/collector/metric_details_interface.hpp

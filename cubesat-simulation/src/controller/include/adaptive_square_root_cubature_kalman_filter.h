@@ -92,8 +92,17 @@ class AdaptiveSquareRootCubatureKalmanFilter
             for(int i = 0; i<10;i++)
             {
                 deviation[i] = Eigen::Matrix<float,10,1>::Zero();
-                deviation[i](i) = 1;
-                deviation[i+10](i) = -deviation[i](i);
+                if(i < 6)
+                {
+                    deviation[i](i) = 1;
+                    deviation[i+10](i) = -deviation[i](i);
+                }
+                else
+                {
+                    deviation[i](i) = 0.1;
+                    deviation[i+10](i) = -deviation[i](i);
+                }
+
             }
         }
 
@@ -105,7 +114,7 @@ class AdaptiveSquareRootCubatureKalmanFilter
 
             Eigen::Matrix<float, 10,30> matrixForDecomposition;
 
-            //std::cout << "measurement: " << measurement.transpose() << "\n";
+            std::cout << "measurement: " << measurement.transpose() << "\n";
             //std::cout << "prior: " << measurement.transpose() << "\n";
             //std::cout << "measurement cov: " << measurementNoiseCovariance.diagonal().transpose() << "\n";
             //std::cout << "process cov: " << processNoiseCovariance.diagonal().transpose() << "\n";
@@ -115,14 +124,15 @@ class AdaptiveSquareRootCubatureKalmanFilter
 
             for(int i = 0; i<points;i++)
             {
+                
                 cubaturePoints[i] = posteriorPredictedErrorCovariance*deviation[i] + updatedState;
                 Eigen::Matrix<float,3,1> satelliteVelocity = cubaturePoints[i](Eigen::seq(0,2));
                 Eigen::Matrix<float,3,1> reactionWheelVelocities = cubaturePoints[i](Eigen::seq(3,5));
-                Eigen::Quaternion<float> attitude(Eigen::Matrix<float,4,1>(cubaturePoints[i](Eigen::seq(6,9))));
+                Eigen::Quaternion<float> attitude(cubaturePoints[i](6),cubaturePoints[i](7),cubaturePoints[i](8),cubaturePoints[i](9));
                 
                 attitude.normalize();
 
-                SatelliteState state = satelliteModel.Predict(satelliteVelocity,reactionWheelVelocities,attitude, controlInput, 1.0/(150.0));
+                SatelliteState state = satelliteModel.Predict(satelliteVelocity,reactionWheelVelocities,attitude, controlInput, 1.0/(900.0));
 
                 for(int j = 0; j<3; j++)
                 {
@@ -132,14 +142,18 @@ class AdaptiveSquareRootCubatureKalmanFilter
                 {
                     cubaturePoints[i](j+3) = state.reactionWheelVelocities(j);
                 }
-                for(int j = 0; j<4; j++)
-                {
-                    cubaturePoints[i](j+6) = state.attitude.coeffs()(j);
-                }
+
+                cubaturePoints[i](6) = state.attitude.w();
+                cubaturePoints[i](7) = state.attitude.x();
+                cubaturePoints[i](8) = state.attitude.y();
+                cubaturePoints[i](9) = state.attitude.z();
+
+                std::cout << "predicted: " << state.attitude << "\n";
+                std::cout << "cubature point: " << cubaturePoints[i].transpose() << "\n";
 
                 predictedState = predictedState + (1.0/points)*cubaturePoints[i];
             }
-            //std::cout << "prediction: " << predictedState.transpose() << "\n";
+            std::cout << "prediction: " << predictedState.transpose() << "\n";
 
             for(int i = 0; i<points; i++)
             {
@@ -230,17 +244,17 @@ class AdaptiveSquareRootCubatureKalmanFilter
 
             UpdateAveragePriorCovariance(kalmanGain*priorPredictedErrorCovariance*priorPredictedErrorCovariance.transpose());
 
-            Eigen::Quaternion<float> updatedQuaternion(Eigen::Matrix<float,4,1>(updatedState(Eigen::seq(6,9))));
+            Eigen::Quaternion<float> updatedQuaternion(updatedState(6),updatedState(7),updatedState(8),updatedState(9));
 
-            updatedQuaternion.normalize();
 
             updatedState(6) = updatedQuaternion.w();
             updatedState(7) = updatedQuaternion.x();
             updatedState(8) = updatedQuaternion.y();
             updatedState(9) = updatedQuaternion.z();
 
+            updatedQuaternion.normalize();
 
-            //std::cout << "update: " << updatedState.transpose() << "\n\n";
+            std::cout << "update: " << updatedState.transpose() << "\n\n";
 
             return updatedState;
 

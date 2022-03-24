@@ -16,9 +16,9 @@ int main()
 
     SatelliteModel satelliteModel(satelliteFrameInertiaTensor,reactionWheelsInertiaTensor,predictor,learningLawWeights);   
     
-    Eigen::Matrix<float,3,1> slidingVariable {0.1*31,0.1*31,0.1*31};
-    Eigen::Matrix<float,3,1> satelliteVelocity {0.3,0.3,0.3};
-    Eigen::Matrix<float,3,1> reactionWheelVelocities {4188*0.1,4188*0.1,4188*0.1};
+    Eigen::Matrix<float,3,1> slidingVariable {30,0.0,0.0};
+    Eigen::Matrix<float,3,1> satelliteVelocity {0.0,0.0,0.0};
+    Eigen::Matrix<float,3,1> reactionWheelVelocities {0,0,0};
     Eigen::Quaternion<float> attitude {1,0,0,0};
 
     for(int i = 0; i < 50; i++)
@@ -30,12 +30,14 @@ int main()
 
     SatelliteState state = satelliteModel.Predict(satelliteVelocity,reactionWheelVelocities,attitude, controlTorque, 1.0/150);
 
-    std::cout << satelliteVelocity << "\n\n";
+    std::cout << satelliteModel.InverseDynamicsSignal(slidingVariable, satelliteVelocity, reactionWheelVelocities, attitude).transpose() << "\n\n";
+
+    /*std::cout << satelliteVelocity << "\n\n";
     std::cout << reactionWheelVelocities << "\n\n";
     std::cout << attitude << "\n\n";
 
     std::cout << state.satelliteVelocity<< "\n\n";
     std::cout << state.reactionWheelVelocities<< "\n\n";
-    std::cout << state.attitude.coeffs() << "\n\n";
+    std::cout << state.attitude.coeffs() << "\n\n";*/
 
 }

@@ -47,6 +47,12 @@ namespace gazebo
 
                 this->jointName = _sdf->Get<std::string>("motor_shaft_joint");
 
+                this->model->GetJoint("reaction_wheel_x_axis_shaft")->SetDamping(0, 2.5e-7);
+                this->model->GetJoint("reaction_wheel_y_axis_shaft")->SetDamping(0, 2.5e-7);
+                this->model->GetJoint("reaction_wheel_z_axis_shaft")->SetDamping(0, 2.5e-7);
+                //this->model->GetLink("frame")->SetLinearVel({0, 7800, 0}); // Satellite Initial Linear Velocity
+                
+                //this->model->GetLink("white_link_0")->SetAngularVel({1, 1, 1}); // Satellite Initial Angular Velocity
 
                 this->joint = this->model->GetJoint(this->jointName);
                 this->updateConnection = event::Events::ConnectWorldUpdateBegin(std::bind(&DcMotorPlugin::OnUpdate, this));
@@ -77,7 +83,7 @@ namespace gazebo
                 {
                     elapsed_time = 0;
                     auto message = std_msgs::msg::Float32();
-                    message.data = dc_motor->velocity + velocityNoise(velocityNoiseGenerator);
+                    message.data = dc_motor->velocity + 0*velocityNoise(velocityNoiseGenerator);
 
                     velocity_publisher->publish(message);
 

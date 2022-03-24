@@ -8,7 +8,7 @@
 
 class MotorController
 {
-    private:
+    public:
         float* inputGains;
         float* outputGains;
         float controlSignal;
@@ -21,10 +21,12 @@ class MotorController
         CircularBuffer<float>* referenceBuffer;
     
     public:
+        MotorController(){}
         MotorController(float* inputGains , float* outputGains, float rotorInertia, float samplingPeriod)
         {
-            this->inputGains = inputGains;
-            this->outputGains = outputGains;
+            this->inputGains = new float[4];
+            this->outputGains = new float[3];
+            
             inputBuffer = new CircularBuffer<float>(4);
             outputBuffer = new CircularBuffer<float>(3);
             referenceBuffer = new CircularBuffer<float>(2);
@@ -35,17 +37,18 @@ class MotorController
 
             for(int i = 0; i < 4; i++)
             {
-                inputBuffer->push(0);
+                this->inputGains[i] = inputGains[i];
+                inputBuffer->push(0.0);
             }
-            
             for(int i = 0; i < 3; i++)
             {
-                outputBuffer->push(0);
+                this->outputGains[i] = outputGains[i];
+                outputBuffer->push(0.0);
             }
             
             for(int i = 0; i < 2; i++)
             {
-                referenceBuffer->push(0);
+                referenceBuffer->push(0.0);
             }
 
         }
@@ -67,7 +70,15 @@ class MotorController
                 referenceTorqueIntegral = referenceTorqueIntegral + 0.5*samplingPeriod*acceleration;
             }
 
-            referenceVelocity = referenceVelocity + referenceTorqueIntegral;
+            if (referenceVelocity + referenceTorqueIntegral < 4100.0 && referenceVelocity + referenceTorqueIntegral > -4100.0)
+            {
+                referenceVelocity = referenceVelocity + referenceTorqueIntegral;
+            }
+            else
+            {
+                referenceVelocity = 4100;
+            }
+
 
             inputBuffer->push(referenceVelocity-measurement);
             controlSignal = 0;
@@ -90,6 +101,7 @@ class MotorController
                 controlSignal = controlSignal + outputGains[i]*(*bufferContent);
                 i++;
             }
+
             if (controlSignal > 1)
             {
                 controlSignal = 1;

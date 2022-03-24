@@ -8,6 +8,7 @@
 #include "motor_controller.h"
 #include <list>
 #include <iostream>
+#include <fstream>
 
 class AdaptiveControllerControlSystem 
 {
@@ -117,7 +118,7 @@ class AdaptiveControllerControlSystem
                 }
             }
 
-            controlSignal = controller.UpdateControlSignal(SlidingVariable(filteredSatelliteVelocity,filteredAttitude), filteredSatelliteVelocity, filteredReactionWheelVelocities, filteredAttitude, atitudeError);
+            controlSignal = controller.UpdateControlSignal(SlidingVariable(filteredSatelliteVelocity,atitudeError), filteredSatelliteVelocity, filteredReactionWheelVelocities, filteredAttitude, atitudeError);
             for(int i =0; i < 3; i++)
             {
                 if(controlSignal(i) > 2.22e-4)

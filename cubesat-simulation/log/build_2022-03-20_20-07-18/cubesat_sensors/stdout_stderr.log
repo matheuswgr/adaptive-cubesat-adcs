@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target imu_adapter[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o[0m
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:[m[K In member function ‘[01m[Kvoid ImuAdapter::AtMessageArival(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/matheuswagner/repos/adaptive-cubesat-adcs/cubesat-simulation/src/cubesat_sensors/src/imu_adapter.cpp:107:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KmessageOrientation[m[K’
+  107 |       messageOrientation.w = messageOrientationO.data[6]
+      |                                                         [01;31m[K^[m[K
+      |                                                         [32m[K;[m[K
+  108 |       [32m[KmessageOrientation[m[K.x = messageOrientationX.data[6]
+      |       [32m[K~~~~~~~~~~~~~~~~~~[m[K                                 
+make[2]: *** [CMakeFiles/imu_adapter.dir/build.make:63: CMakeFiles/imu_adapter.dir/src/imu_adapter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/imu_adapter.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

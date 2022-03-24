@@ -27,6 +27,7 @@ class HybridController : public Observer
         Eigen::Matrix<float,3,1> controlSignal;
     
     public:
+        HybridController(){}
         HybridController(SignalMonitor<HybridController>* signalMonitor, AdaptiveControllerControlSystem adaptiveController, 
                             NonAdaptiveControlSystem controller, SlidingControllerSystem slidingController)
         {
@@ -46,25 +47,14 @@ class HybridController : public Observer
             slidingController.SetReferenceAttitude(attitude);
         }
 
-        void UpdateControlSignal(float satelliteVelocityX, float satelliteVelocityY, float satelliteVelocityZ, 
-                                    float reactionWheelVelocityX, float reactionWheelVelocityY, float reactionWheelVelocityZ,
+        void UpdateControlSignal(Eigen::Matrix<float,3,1> satelliteVelocity, Eigen::Matrix<float,3,1> reactionWheelVelocities,
                                         Eigen::Quaternion<float> attitude)
         {
-            Eigen::Matrix<float,3,1> satelliteVelocity;
-            satelliteVelocity(0) = satelliteVelocityX;
-            satelliteVelocity(1) = satelliteVelocityY;
-            satelliteVelocity(2) = satelliteVelocityZ;
-            
-            Eigen::Matrix<float,3,1> reactionWheelVelocities;
-            reactionWheelVelocities(0) = reactionWheelVelocityX;
-            reactionWheelVelocities(1) = reactionWheelVelocityY;
-            reactionWheelVelocities(2) = reactionWheelVelocityZ;
-
             Eigen::Quaternion<float> attitudeError = referenceAttitude.conjugate()*attitude;
 
-            trackingError(0) = satelliteVelocityX;
-            trackingError(1) = satelliteVelocityY;
-            trackingError(2) = satelliteVelocityZ;
+            trackingError(0) = satelliteVelocity(0);
+            trackingError(1) = satelliteVelocity(1);
+            trackingError(2) = satelliteVelocity(2);
             trackingError(3) = attitudeError.w();
             trackingError(4) = attitudeError.x();
             trackingError(5) = attitudeError.y();
@@ -72,12 +62,12 @@ class HybridController : public Observer
 
             Eigen::Matrix<float,10,1> measurement;
 
-            measurement(0) = satelliteVelocityX;
-            measurement(1) = satelliteVelocityY;
-            measurement(2) = satelliteVelocityZ;
-            measurement(3) = reactionWheelVelocityX;
-            measurement(4) = reactionWheelVelocityY;
-            measurement(5) = reactionWheelVelocityZ;
+            measurement(0) = satelliteVelocity(0);
+            measurement(1) = satelliteVelocity(1);
+            measurement(2) = satelliteVelocity(2);
+            measurement(3) = reactionWheelVelocities(0);
+            measurement(4) = reactionWheelVelocities(1);
+            measurement(5) = reactionWheelVelocities(2);
             measurement(6) = attitude.w();
             measurement(7) = attitude.x();
             measurement(8) = attitude.y();
@@ -130,13 +120,13 @@ class HybridController : public Observer
                 if(event == 1)
                 {
                     std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 1;
-                    currentState = 1;
+                    //currentState = 1;
                     //controlSystem = controlSystems[1];
                 }
                 if(event == 3)
                 {
                     std::cout << "event: " << event << " state " << currentState << " -> " << "state" << 3;
-                    currentState = 3;
+                    //currentState = 3;
                     //controlSystem = controlSystems[3];
                 }
             }
